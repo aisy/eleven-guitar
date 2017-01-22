@@ -1,7 +1,7 @@
 <!doctype html>
 
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
@@ -26,6 +26,7 @@
 
     <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en"> -->
     <link rel="stylesheet" href="<?= base_url().'mdl/' ?>css/material.css">
+    <link rel="stylesheet" href="<?= base_url().'mdl/' ?>css/mdl-selectfield.css">
     <link rel="stylesheet" href="<?= base_url().'mdl/' ?>css/admin.css">
     
-  </head>
+</head>

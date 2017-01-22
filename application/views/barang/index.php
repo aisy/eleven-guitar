@@ -87,10 +87,10 @@
       <div class="mdl-grid demo-content">
 
         <div class="demo-cards mdl-cell mdl-cell--8-col mdl-cell--8-col-tablet mdl-grid mdl-grid--no-spacing">
-          <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+          <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp full-width">
             <thead>
               <tr>
-              <th class="mdl-data-table__cell--non-numeric">Nama Barang</th>
+                <th class="mdl-data-table__cell--non-numeric full-width">Nama Barang</th>
                 <th>Jenis</th>
                 <th>Harga</th>
                 <th>Pilihan</th>
@@ -102,7 +102,7 @@
                 <td>25</td>
                 <td>$2.90</td>
                 <td>
-                  
+
                 </td>
               </tr>
             </tbody>
@@ -111,14 +111,45 @@
 
         <div class="demo-cards mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet mdl-grid mdl-grid--no-spacing">
           <div class="demo-updates mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--12-col-desktop">
-            <div class="mdl-card__title mdl-card--expand mdl-color--teal-300">
-              <h2 class="mdl-card__title-text">Updates</h2>
-            </div>
+
             <div class="mdl-card__supporting-text mdl-color-text--grey-600">
-              Non dolore elit adipisicing ea reprehenderit consectetur culpa.
+              <i class="material-icons">note_add</i> <span>Form Penambahan Data Barang</span>
             </div>
             <div class="mdl-card__actions mdl-card--border">
-              <a href="#" class="mdl-button mdl-js-button mdl-js-ripple-effect">Read More</a>
+
+              <form action="#">
+
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label full-width">
+                  <input class="mdl-textfield__input" type="text" id="nama_barang" name="nama_barang">
+                  <label class="mdl-textfield__label" for="nama_barang">Nama Barang...</label>
+                </div>
+
+                <div class="mdl-selectfield mdl-js-selectfield mdl-selectfield--floating-label full-width">
+                  <select class="mdl-selectfield__select" name="kategori_barang" id="kategori_barang">
+                    <option value=""></option>
+                    <option value="2">Gitar</option>
+                    <option value="3">Bass</option>
+                    <option value="3">Ampli</option>
+                    <option value="3">Effect</option>
+                    <option value="3">Pickup</option>
+                  </select>
+                  <div class="mdl-selectfield__icon"><i class="material-icons">arrow_drop_down</i></div>
+                  <label class="mdl-selectfield__label" for="kategori_barang">Pilih kategori barang</label>
+                </div>
+
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label full-width">
+                  <input class="mdl-textfield__input" type="text" id="harga" name="harga">
+                  <label class="mdl-textfield__label" for="harga">Harga Barang...</label>
+                </div>
+
+                <div class="mdl-textfield mdl-js-textfield full-width">
+                <textarea name="keterangan" class="mdl-textfield__input" rows= "3" id="keterangan" ></textarea>
+                  <label class="mdl-textfield__label" for="keterangan">Keterangan...</label>
+                </div>
+
+
+              </form>
+
             </div>
           </div>
         </div>
@@ -130,5 +161,6 @@
   </div>
 
   <script src="<?= base_url().'mdl/' ?>js/material.min.js"></script>
+  <script src="<?= base_url().'mdl/' ?>js/mdl-selectfield.js"></script>
 </body>
 </html>

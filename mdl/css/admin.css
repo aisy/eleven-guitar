@@ -215,6 +215,6 @@ _:-ms-input-placeholder, :root .demo-graph {
   align-items: center;
 }
 
-.mdl-data-table {
-  width: 100%;
+.full-width {
+    width: 100%;
 }
