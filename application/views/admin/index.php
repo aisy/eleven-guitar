@@ -52,7 +52,7 @@
       </header>
 
       <nav class="demo-navigation mdl-navigation mdl-color--blue-grey-800">
-        <a class="mdl-navigation__link" href="">
+        <a class="mdl-navigation__link" href="<?= base_url('admin/halaman-utama') ?>">
           <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i>
           Dahsboard
         </a>

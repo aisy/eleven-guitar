@@ -52,11 +52,11 @@
       </header>
 
       <nav class="demo-navigation mdl-navigation mdl-color--blue-grey-800">
-        <a class="mdl-navigation__link" href="">
+        <a class="mdl-navigation__link" href="<?= base_url('admin/halaman-utama') ?>">
           <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i>
           Dahsboard
         </a>
-        <a class="mdl-navigation__link" href="">
+        <a class="mdl-navigation__link" href="<?= base_url('admin/barang') ?>">
           <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">list</i>
           Barang
         </a>
@@ -87,7 +87,7 @@
       <div class="mdl-grid demo-content">
 
         <div class="demo-cards mdl-cell mdl-cell--8-col mdl-cell--8-col-tablet mdl-grid mdl-grid--no-spacing">
-          <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp full-width">
+          <table id="data_barang" cellspacing="0" width="100%" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp full-width">
             <thead>
               <tr>
                 <th class="mdl-data-table__cell--non-numeric full-width">Nama Barang</th>
