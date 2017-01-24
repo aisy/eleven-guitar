@@ -1,4 +1,6 @@
 
+<link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+
 <!-- HEADER -->
 <div class="android-content mdl-layout__content">
   <a name="top"></a>
@@ -44,12 +46,14 @@
        <div class="mdh-expandable-search mdl-cell--hide-phone">
         <i class="material-icons">search</i>
         <!--         <form action="#"> -->
-        <input type="text" placeholder="Pencarian" size="1" ng-model="cari">
+        <input type="text" placeholder="Pencarian" size="1" ng-model="cari.nama_barang">
         <!-- </form> -->
       </div>
     </div>
-
-    <div ng-repeat="li in items | filter:cari " class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--4dp">
+    
+    <div ng-show="loading" class="mdl-spinner mdl-spinner--single-color mdl-js-spinner is-active"></div>
+    
+    <div ng-repeat="li in filtered = items | filter:cari | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit" class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--4dp">
       <div class="mdl-card__media">
         <img src="products/{{ li.foto }}">
       </div>
@@ -69,6 +73,8 @@
        </a>
      </div>
    </div>
+
+   <pagination page="currentPage" max-size="noOfPages" total-items="totalItems" items-per-page="entryLimit"></pagination>
 
  </div>
 </div>
