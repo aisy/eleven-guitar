@@ -20,7 +20,7 @@
 
   </div>
 
-  <div class="android-customized-section">
+  <!-- <div class="android-customized-section">
     <div class="android-customized-section-text">
       <a name="screens" class="screens"></a>
       <div class="mdl-typography--font-light mdl-typography--display-1-color-contrast">Customised by you, for you</div>
@@ -31,10 +31,13 @@
       </p>
     </div>
     <div class="android-customized-section-image"></div>
-  </div>
+  </div> -->
 
   <div class="android-more-section">
     <div class="android-section-title mdl-typography--display-1-color-contrast"><i class="material-icons">shopping_cart</i> Our Products</div>
+
+    
+
     <div class="android-card-container mdl-grid">
       <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
         <div class="mdl-card__media">

@@ -3,14 +3,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Model_Barang extends CI_Model {
 
-	public function view(){
+	public function get(){
 		$data = $this->db->get('barang');
 		return $data->result();
 	}
 
 	public function tambah(){
 		$object = array(
-			'id_barang' 	=> ,
+			'id_barang' 	=> NULL,
 			'nama_barang' 	=> $this->input->post('nama_barang'), 
 			'id_kategori' 	=> $this->input->post('kategori'),
 			'harga' 		=> $this->input->post('harga'),

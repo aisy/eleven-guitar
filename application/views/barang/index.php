@@ -32,21 +32,6 @@
         <div class="demo-avatar-dropdown">
           <span><?= $this->session->userdata('username'); ?></span>
           <div class="mdl-layout-spacer"></div>
-          
-          <!-- <button id="accbtn" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-            <i class="material-icons" role="presentation">arrow_drop_down</i>
-            <span class="visuallyhidden">Accounts</span>
-          </button>
-
-          <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="accbtn">
-            <li class="mdl-menu__item"><i class="material-icons">account_circle</i>Profil</li>
-            <li class="mdl-menu__item">info@example.com</li>
-            <li class="mdl-menu__item">
-              <a href="">
-                <i class="material-icons">exit_to_app</i>Logout
-              </a>
-            </li>
-          </ul> -->
 
         </div>
       </header>
@@ -97,14 +82,16 @@
               </tr>
             </thead>
             <tbody>
+              <?php foreach ($barang as $key) { ?>
               <tr>
-                <td class="mdl-data-table__cell--non-numeric">Acrylic (Transparent)</td>
-                <td>25</td>
+                <td class="mdl-data-table__cell--non-numeric"><?= $key->nama_barang ?></td>
+                <td></td>
                 <td>$2.90</td>
                 <td>
 
                 </td>
               </tr>
+              <?php } ?>
             </tbody>
           </table>
         </div>
@@ -147,6 +134,9 @@
                   <label class="mdl-textfield__label" for="keterangan">Keterangan...</label>
                 </div>
 
+                <button type="submit" name="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+                  Masukkan Data
+                </button>
 
               </form>
 

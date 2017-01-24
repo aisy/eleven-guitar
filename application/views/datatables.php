@@ -7,13 +7,6 @@
 
 <script type="text/javascript">
 	$(document).ready(function() {
-		$('#data_barang').DataTable( {
-			columnDefs: [
-			{
-				targets: [ 0, 1, 2 ],
-				className: 'mdl-data-table__cell--non-numeric'
-			}
-			]
-		} );
+		$('#data_barang').DataTable();
 	} );
 </script>
