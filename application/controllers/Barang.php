@@ -63,7 +63,15 @@ class Barang extends CI_Controller {
 	}
 
 	public function hapus($id){
-		
+		// delete image
+		$path = "products/";
+		$record = $this->Model_barang->select_byid($id);
+		$filename = $record[0]->foto;
+		unlink($path . $filename);
+
+		// delete record
+		$this->Model_barang->hapus($id);
+		redirect('admin/barang','refresh');
 	}
 
 }

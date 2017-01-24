@@ -19,7 +19,7 @@ class Model_Barang extends CI_Model {
 			'foto' 			=> $nama_file,
 			'harga' 		=> $this->input->post('harga'),
 			'keterangan' 	=> $this->input->post('keterangan')
-		);
+			);
 
 		$this->db->insert('barang', $object);
 	}
@@ -48,6 +48,16 @@ class Model_Barang extends CI_Model {
 		$this->db->delete('barang');
 	}
 
+	public function select_byid($id){
+		$this->db->where('id_barang', $id);
+		$query = $this->db->get('barang');
+
+		if ($query->num_rows()== 1) {
+			return $query->result();
+		}else{
+			return false;
+		}
+	}
 }
 
 /* End of file model_Barang.php */

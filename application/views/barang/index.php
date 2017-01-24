@@ -92,14 +92,14 @@
                   </div>
                 </td>
                 <td><?= $key->nama_kategori ?></td>
-                <td>$2.90</td>
+                <td>Rp.<?= $key->harga ?></td>
                 <td>
                   <button class="mdl-button mdl-js-button mdl-button--raised edit mdl-button--accent">
                   Edit
                   </button>
-                  <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent">
+                  <a href="<?= base_url().'barang/hapus/'.$key->id_barang ?>" class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent" onclick="return confirm('Hapus barang ini ?')">
                     Hapus
-                  </button>
+                  </a>
                 </td>
               </tr>
               <?php } ?>
