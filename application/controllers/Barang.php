@@ -16,7 +16,7 @@ class Barang extends CI_Controller {
 		$this->load->view('admin/head');
 		$this->load->view('barang/index', $data);
 		$this->load->view('datatables');
-		$this->load->view('javascript');
+		$this->load->view('javascript-admin');
 	}
 
 	public function barang_json_get(){
