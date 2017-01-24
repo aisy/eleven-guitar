@@ -46,4 +46,10 @@ class Welcome extends CI_Controller {
 		$this->load->view('javascript');
 	}
 
+	public function pencarian(){
+		$this->load->view('head');
+		$this->load->view('coba/pencarian');
+		$this->load->view('javascript');
+	}
+
 }

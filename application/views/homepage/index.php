@@ -33,10 +33,20 @@
     <div class="android-customized-section-image"></div>
   </div> -->
 
-  <div class="android-more-section">
-    <div class="android-section-title mdl-typography--display-1-color-contrast"><i class="material-icons">shopping_cart</i> Our Products</div>
+  <div class="android-more-section" ng-app="search">
+    <div class="android-section-title mdl-typography--display-1-color-contrast">
+      <i class="material-icons">shopping_cart</i> Our Products
+    </div>
 
-    
+    <!-- <input type="text" name="" id="input" value="" ng-model="cari"> -->
+
+    <div ng-controller="searchctrl">
+
+    <div ng-repeat="list in items">
+        {{ list.nama_barang }}
+      </div>
+
+    </div>
 
     <div class="android-card-container mdl-grid">
       <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
