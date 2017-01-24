@@ -19,13 +19,22 @@ class Barang extends CI_Controller {
 		$this->load->view('datatables');
 	}
 
+	public function barang_json_get(){
+		$data = $this->Model_barang->get();
+
+		$this->output
+		->set_content_type('application/json')
+		->set_output(json_encode($data))
+		->_display();
+		exit;
+	}
 
 	public function tambah_data(){
 		
 	}
 
 	public function kategori($nama){
-			
+
 	}
 
 	public function hapus($id){
