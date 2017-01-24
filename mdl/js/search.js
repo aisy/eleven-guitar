@@ -4,28 +4,25 @@
 * Description
 */
 
+// buat module
 var app = angular.module('search', []);
 
-// app.controller('searchctrl', function($scope, $http){
-// 	$http.get('http://localhost/eleven-gitar/barang/barang_json_get')
-// 	.success(
-// 		function(data, status, header, config) {
-// 			$scope.items = data;
-// 		})
-// 	.error(
-// 		function(data, status, header, config){
-// 			console.log('Tidak ada Data..');
-// 		});
-// });
-
+// buat controller
 app.controller('searchctrl', function($scope, $http){
+
+	// ambil method get dari web
 	$http.get('http://localhost/eleven-gitar/barang/barang_json_get')
 	.then(
+
+		// jika ada data
 		function success(data, status, header, config){
 			$scope.items = data.data;
-			console.log(data);
+			// console.log(data);
 		},
+
+		// jika tidak ada data
 		function error(data, status, header, config){
 			console.log('Tidak ada Data..');
 	});
+	
 });

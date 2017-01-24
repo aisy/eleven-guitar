@@ -638,38 +638,38 @@ dialog::backdrop {
 }
 
 .mdl-button--raised.mdl-button--twitter {
-    background: #00acee;
-    color: white;
-    min-width: 40px;
-    padding: 0px;
+  background: #00acee;
+  color: white;
+  min-width: 40px;
+  padding: 0px;
 }
 
 .mdl-button--raised.mdl-button--facebook {
-    background: #3b5998;
-    color: white;
-    min-width: 40px;
-    padding: 0px;
+  background: #3b5998;
+  color: white;
+  min-width: 40px;
+  padding: 0px;
 }
 
 .mdl-button--raised.mdl-button--instagram {
-    background: #4c7a9f;
-    color: white;
-    min-width: 40px;
-    padding: 0px;
+  background: #4c7a9f;
+  color: white;
+  min-width: 40px;
+  padding: 0px;
 }
 
 .mdl-button--raised.mdl-button--googleplus {
-    background: #e93f2e;
-    color: white;
-    min-width: 40px;
-    padding: 0px;
+  background: #e93f2e;
+  color: white;
+  min-width: 40px;
+  padding: 0px;
 }
 
 .mdl-button--raised.mdl-button--linkedin {
-    background: #0e76a8;
-    color: white;
-    min-width: 40px;
-    padding: 0px;
+  background: #0e76a8;
+  color: white;
+  min-width: 40px;
+  padding: 0px;
 }
 
 
@@ -767,7 +767,7 @@ dialog::backdrop {
   }
 
 
-.mdl-menu__outline {
+  .mdl-menu__outline {
     display: block;
     background: rgb(255, 193, 7);
     margin: 0;
@@ -789,28 +789,28 @@ dialog::backdrop {
     transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: -1;
-}
+  }
 
-/*------------------barang------------*/
-.mdl-demo section.section--center {
+  /*------------------barang------------*/
+  .mdl-demo section.section--center {
     max-width: 860px;
-}
-.mdl-demo main > .mdl-layout__tab-panel {
+  }
+  .mdl-demo main > .mdl-layout__tab-panel {
     padding: 8px;
     padding-top: 100px;
     padding-bottom: 50px;
-}
-.mdl-demo .mdl-layout__content section:not(:last-of-type) {
+  }
+  .mdl-demo .mdl-layout__content section:not(:last-of-type) {
     position: relative;
     margin-bottom: 48px;
-}
-.mdl-demo section > .section__play-btn {
+  }
+  .mdl-demo section > .section__play-btn {
     min-height: 200px;
-}
-.mdl-demo section > header > .material-icons {
+  }
+  .mdl-demo section > header > .material-icons {
     font-size: 3rem;
-}
-.mdl-demo .mdl-card {
+  }
+  .mdl-demo .mdl-card {
     height: auto;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -818,23 +818,23 @@ dialog::backdrop {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
-}
-.mdl-demo section > button {
+  }
+  .mdl-demo section > button {
     position: absolute;
     z-index: 99;
     top: 8px;
     right: 8px;
-}
-.mdl-demo .mdl-menu__container {
+  }
+  .mdl-demo .mdl-menu__container {
     z-index: 99;
-}
-.mdl-demo .mdl-card__supporting-text + .mdl-card__actions {
+  }
+  .mdl-demo .mdl-card__supporting-text + .mdl-card__actions {
     border-top: 1px solid rgba(0, 0, 0, 0.12);
-}
-.mdl-layout__tab-panel .mdl-card__media img {
+  }
+  .mdl-layout__tab-panel .mdl-card__media img {
     width: 100%;
-}
-.mdl-demo .mdl-card .mdl-card__supporting-text {
+  }
+  .mdl-demo .mdl-card .mdl-card__supporting-text {
     margin: 40px;
     -webkit-flex-grow: 1;
     -ms-flex-positive: 1;
@@ -842,18 +842,18 @@ dialog::backdrop {
     padding: 0;
     color: inherit;
     width: calc(100% - 80px);
-}
-.mdl-demo .mdl-card > * {
+  }
+  .mdl-demo .mdl-card > * {
     height: auto;
-}
-.mdl-demo.mdl-demo .mdl-card__supporting-text h4 {
+  }
+  .mdl-demo.mdl-demo .mdl-card__supporting-text h4 {
     margin-top: 0;
     margin-bottom: 20px;
-}
-.mdl-demo section.section--center .section__text:not(:last-child) {
+  }
+  .mdl-demo section.section--center .section__text:not(:last-child) {
     border-bottom: 1px solid rgba(0,0,0,.13);
-}
-.mdl-demo section .section__text {
+  }
+  .mdl-demo section .section__text {
     -webkit-flex-grow: 1;
     -ms-flex-positive: 1;
     flex-grow: 1;
@@ -861,18 +861,122 @@ dialog::backdrop {
     -ms-flex-negative: 0;
     flex-shrink: 0;
     padding-bottom: 15px;
-}
-.mdl-demo section .section__circle-container > .section__circle-container__circle {
+  }
+  .mdl-demo section .section__circle-container > .section__circle-container__circle {
     width: 64px;
     height: 64px;
     border-radius: 32px;
     margin: 8px 0;
-}
-.mdl-demo .mdl-card__actions a {
+  }
+  .mdl-demo .mdl-card__actions a {
     color: #00BCD4;
     margin: 0;
-}
+  }
 /*.mdl-demo .mdl-layout__content section:not(:last-of-type) {
     position: relative;
     margin-bottom: 48px;
-}*/
+    }*/
+
+/* TODO: Hover and Focus state.
+ *       Fix position of mobile search button.
+ */
+ .mdh-expandable-search {
+  margin: 0 50px;
+  align-items: center;
+  justify-content: center;
+}
+
+.mdh-expandable-search form {
+  max-width: 600px;
+}
+
+.mdh-expandable-search,
+.mdh-expandable-search form,
+.mdh-expandable-search input {
+  /* Cross browser flex-grow */
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.mdh-expandable-search,
+.mdh-expandable-search form {
+  /* Cross browser inline-flex */
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -moz-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+/* Position search icon */
+.mdh-expandable-search .material-icons {
+  position: relative;
+  right: -40px;
+  margin-left: -24px; /* Remove the blank space left behind by the icon being relatively positioned */
+}
+
+.mdh-expandable-search input {
+  outline: none;
+  border: none;
+  font-size: 16px;
+  color: #FFFFFF;
+  background-color: #78909C;
+  padding: 0px 35px 0px 70px;
+  height: 40px;
+  line-height: 40px; /* TODO: This was recommended for cross browser compatability of input height, check if its actually needed in modern browsers */
+  
+  border-radius: 5px 5px 5px 5px;
+  -moz-border-radius: 5px 5px 5px 5px;
+  -webkit-border-radius: 5px 5px 5px 5px;
+}
+
+.mdh-expandable-search input::-webkit-input-placeholder { /* WebKit browsers */
+  color:    #FFFFFF;
+}
+.mdh-expandable-search input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+ color:    #FFFFFF;
+ opacity:  1; /* Firefox gives the placeholder a reduced opacity so we have to increase it */
+}
+.mdh-expandable-search input::-moz-placeholder { /* Mozilla Firefox 19+ */
+ color:    #FFFFFF;
+ opacity:  1; /* Firefox gives the placeholder a reduced opacity so we have to increase it */
+}
+.mdh-expandable-search input:-ms-input-placeholder { /* Internet Explorer 10+ */
+ color:    #FFFFFF;
+}
+
+
+/* Bug fix: https://github.com/google/material-design-lite/issues/1078
+* To much padding on the left of header when the menu button is hidden */
+@media screen and (min-width: 851px) {
+  .mdl-layout__header-row {
+    /*padding: 0 40px 0 40px;*/
+  }
+}
+
+/* Bug fix for badges being in the wrong location */
+.mdl-badge[data-badge]:after {
+  right: -7px;
+  top: -8px;
+}
+
+.mdl-card-search{
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  font-size: 16px;
+  font-weight: 400;
+  overflow: hidden;
+  width: 100%;
+  margin-bottom: 40px;
+  z-index: 1;
+  position: relative;
+  background: rgb(255,255,255);
+  border-radius: 2px;
+  box-sizing: border-box;
+}
