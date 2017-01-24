@@ -4,15 +4,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Model_Barang extends CI_Model {
 
 	public function get(){
-		$data = $this->db->get('barang');
+		$this->db->select('*');
+		$this->db->from('barang');
+		$this->db->join('kategori', 'barang.id_kategori = kategori.id_kategori');
+		$data = $this->db->get();
 		return $data->result();
 	}
 
-	public function tambah(){
+	public function tambah($nama_file){
 		$object = array(
 			'id_barang' 	=> NULL,
 			'nama_barang' 	=> $this->input->post('nama_barang'), 
-			'id_kategori' 	=> $this->input->post('kategori'),
+			'id_kategori' 	=> $this->input->post('kategori_barang'),
+			'foto' 			=> $nama_file,
 			'harga' 		=> $this->input->post('harga'),
 			'keterangan' 	=> $this->input->post('keterangan')
 		);

@@ -13,10 +13,10 @@ class Barang extends CI_Controller {
 	public function index(){
 
 		$data['barang'] = $this->Model_barang->get();
-
 		$this->load->view('admin/head');
 		$this->load->view('barang/index', $data);
 		$this->load->view('datatables');
+		$this->load->view('javascript');
 	}
 
 	public function barang_json_get(){
@@ -30,7 +30,32 @@ class Barang extends CI_Controller {
 	}
 
 	public function tambah_data(){
-		
+
+		if ($_POST) {
+
+			$config['upload_path'] 		= 'products/';
+			$config['allowed_types'] 	= 'gif|jpg|png';
+			$config['max_size']  		= '2000';
+			$config['encript_name']		= TRUE;
+
+			$this->load->library('upload', $config);
+
+			// $path = 'products/';
+
+			if ( ! $this->upload->do_upload('foto')){
+				$error = array('error' => $this->upload->display_errors());
+				print_r($error);
+			}
+			else{
+				$data = array('upload_data' => $this->upload->data());
+				//echo $data;
+
+				$file_name = $this->upload->data('file_name');
+				// echo $file_name;
+				$this->Model_barang->tambah($file_name);
+				redirect('admin/barang','refresh');	
+			}
+		}
 	}
 
 	public function kategori($nama){

@@ -76,6 +76,7 @@
             <thead>
               <tr>
                 <th class="mdl-data-table__cell--non-numeric full-width">Nama Barang</th>
+                <th>Foto</th>
                 <th>Jenis</th>
                 <th>Harga</th>
                 <th>Pilihan</th>
@@ -85,10 +86,20 @@
               <?php foreach ($barang as $key) { ?>
               <tr>
                 <td class="mdl-data-table__cell--non-numeric"><?= $key->nama_barang ?></td>
-                <td></td>
+                <td>
+                  <div class="image-container">
+                    <img src="<?= base_url().'products/'.$key->foto ?>" alt="">
+                  </div>
+                </td>
+                <td><?= $key->nama_kategori ?></td>
                 <td>$2.90</td>
                 <td>
-
+                  <button class="mdl-button mdl-js-button mdl-button--raised edit mdl-button--accent">
+                  Edit
+                  </button>
+                  <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent">
+                    Hapus
+                  </button>
                 </td>
               </tr>
               <?php } ?>
@@ -104,7 +115,7 @@
             </div>
             <div class="mdl-card__actions mdl-card--border">
 
-              <form action="#">
+              <form action="<?= base_url() ?>barang/tambah_data" method="POST" enctype="multipart/form-data">
 
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label full-width">
                   <input class="mdl-textfield__input" type="text" id="nama_barang" name="nama_barang">
@@ -114,14 +125,27 @@
                 <div class="mdl-selectfield mdl-js-selectfield mdl-selectfield--floating-label full-width">
                   <select class="mdl-selectfield__select" name="kategori_barang" id="kategori_barang">
                     <option value=""></option>
-                    <option value="2">Gitar</option>
-                    <option value="3">Bass</option>
+                    <option value="1">Gitar</option>
+                    <option value="2">Bass</option>
                     <option value="3">Ampli</option>
-                    <option value="3">Effect</option>
-                    <option value="3">Pickup</option>
+                    <option value="4">Effect</option>
+                    <option value="5">Pickup</option>
                   </select>
                   <div class="mdl-selectfield__icon"><i class="material-icons">arrow_drop_down</i></div>
                   <label class="mdl-selectfield__label" for="kategori_barang">Pilih kategori barang</label>
+                </div>
+
+                <div class="file_input_div full-width">
+                  <div class="file_input">
+                    <label class="image_input_button mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-js-ripple-effect mdl-button--colored">
+                      <i class="material-icons">file_upload</i>
+                      <input id="file_input_file" class="none" type="file" name="foto" />
+                    </label>
+                  </div>
+                  <div id="file_input_text_div" class="mdl-textfield mdl-js-textfield textfield-demo full-width">
+                    <input class="file_input_text mdl-textfield__input" type="text" disabled readonly id="file_input_text" />
+                    <label class="mdl-textfield__label" for="file_input_text"></label>
+                  </div>
                 </div>
 
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label full-width">
@@ -130,11 +154,11 @@
                 </div>
 
                 <div class="mdl-textfield mdl-js-textfield full-width">
-                <textarea name="keterangan" class="mdl-textfield__input" rows= "3" id="keterangan" ></textarea>
+                  <textarea name="keterangan" class="mdl-textfield__input" rows= "3" id="keterangan" ></textarea>
                   <label class="mdl-textfield__label" for="keterangan">Keterangan...</label>
                 </div>
 
-                <button type="submit" name="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+                <button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
                   Masukkan Data
                 </button>
 
