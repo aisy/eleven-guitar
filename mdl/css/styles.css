@@ -239,6 +239,7 @@ img.article-image {
 
 .android-logo{
   padding-top: 70px;
+  margin: auto;
 }
 
 .android-slogan {
@@ -926,7 +927,7 @@ dialog::backdrop {
   padding: 0px 35px 0px 70px;
   height: 40px;
   line-height: 40px; /* TODO: This was recommended for cross browser compatability of input height, check if its actually needed in modern browsers */
-  
+
   border-radius: 5px 5px 5px 5px;
   -moz-border-radius: 5px 5px 5px 5px;
   -webkit-border-radius: 5px 5px 5px 5px;
