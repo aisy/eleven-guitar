@@ -75,8 +75,12 @@
           </div>
         </div>
       </div>
-      <pagination page="currentPage" max-size="noOfPages" total-items="totalItems" items-per-page="entryLimit"></pagination>
 
+      <div class="mdl-grid">
+        <div class="mdl-cell mdl-cell--12-col">
+          <pagination page="currentPage" max-size="noOfPages" total-items="totalItems" items-per-page="entryLimit"></pagination>
+        </div>
+      </div>
     </div>
   </div>
 </div>
