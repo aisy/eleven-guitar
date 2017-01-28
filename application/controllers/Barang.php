@@ -13,6 +13,7 @@ class Barang extends CI_Controller {
 	public function index(){
 
 		$data['barang'] = $this->Model_barang->get();
+		
 		$this->load->view('admin/head');
 		$this->load->view('barang/index', $data);
 		$this->load->view('datatables');
@@ -21,7 +22,7 @@ class Barang extends CI_Controller {
 
 	public function barang_json_get(){
 		$data = $this->Model_barang->get();
-
+// mengambil data dari json, (cocok untuk web service)
 		$this->output
 		->set_content_type('application/json')
 		->set_output(json_encode($data))
@@ -40,8 +41,6 @@ class Barang extends CI_Controller {
 
 			$this->load->library('upload', $config);
 
-			// $path = 'products/';
-
 			if ( ! $this->upload->do_upload('foto')){
 				$error = array('error' => $this->upload->display_errors());
 				print_r($error);
@@ -53,12 +52,55 @@ class Barang extends CI_Controller {
 				$file_name = $this->upload->data('file_name');
 				// echo $file_name;
 				$this->Model_barang->tambah($file_name);
-				redirect('admin/barang','refresh');	
+				redirect('admin/barang','refresh');
 			}
 		}
 	}
 
-	public function kategori($nama){
+	public function edit($id){
+
+		if ($this->input->server('REQUEST_METHOD') == 'POST') {
+			$data['nama_barang']	= $this->input->post('nama_barang');
+			$data['id_kategori']	= $this->input->post('id_kategori');
+			$data['harga']			= $this->input->post('harga');
+			$data['keterangan']		= $this->input->post('keterangan');
+
+			if(!$_FILES['foto']['name'] == '')
+			{
+          //upload file config
+				$config['upload_path'] = 'products';
+				$config['allowed_types'] = 'jpg|png';
+				$config['max_size'] = 5000;
+				$config['encrypt_name'] = TRUE;
+
+				$this->load->library('upload', $config);
+
+          //uploading File
+				if(!$this->upload->do_upload('foto'))
+				{
+					$this->session->set_flashdata('error', $this->upload->display_errors());
+					redirect('admin/barang/' . $id, 'refresh');
+				}
+				else
+				{
+            // delete image File
+					$path = "products/";
+					$record = $this->Model_barang->select_byid($id);
+					$filename = $record[0]->foto;
+					unlink($path . $filename);
+
+					$data['foto'] = $this->upload->data()['file_name'];
+				}
+			}
+
+			$this->Model_barang->edit($data, $id);
+			redirect('admin/barang','refresh');
+		}
+
+		$data['barang'] = $this->Model_barang->select_byid($id);
+
+		$this->load->view('admin/head');
+		$this->load->view('barang/barang_edit', $data);
 
 	}
 
@@ -73,6 +115,11 @@ class Barang extends CI_Controller {
 		$this->Model_barang->hapus($id);
 		redirect('admin/barang','refresh');
 	}
+
+	public function kategori($nama){
+
+	}
+
 
 }
 

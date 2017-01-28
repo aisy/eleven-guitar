@@ -71,60 +71,23 @@
     <main class="mdl-layout__content mdl-color--grey-100">
       <div class="mdl-grid demo-content">
 
-        <div class="demo-cards mdl-cell mdl-cell--8-col mdl-cell--8-col-tablet mdl-grid mdl-grid--no-spacing">
-          <table id="data_barang" cellspacing="0" width="100%" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp full-width">
-            <thead>
-              <tr>
-                <th class="mdl-data-table__cell--non-numeric full-width">Nama Barang</th>
-                <th>Foto</th>
-                <th>Jenis</th>
-                <th>Harga</th>
-                <th>Pilihan</th>
-              </tr>
-            </thead>
-            <tbody>
-              <?php foreach ($barang as $key) { ?>
-              <tr>
-                <td class="mdl-data-table__cell--non-numeric"><?= $key->nama_barang ?></td>
-                <td>
-                  <div class="image-container">
-                    <img src="<?= base_url().'products/'.$key->foto ?>" alt="">
-                  </div>
-                </td>
-                <td><?= $key->nama_kategori ?></td>
-                <td>Rp.<?= $key->harga ?></td>
-                <td>
-                  <a href="<?= base_url().'barang/edit/'.$key->id_barang ?>" class="mdl-button mdl-js-button mdl-button--raised edit mdl-button--accent">
-                  Edit
-                  </a>
-                  <a href="<?= base_url().'barang/hapus/'.$key->id_barang ?>" class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent" onclick="return confirm('Hapus barang ini ?')">
-                    Hapus
-                  </a>
-                </td>
-              </tr>
-              <?php } ?>
-            </tbody>
-          </table>
-        </div>
-
         <div class="demo-cards mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet mdl-grid mdl-grid--no-spacing">
           <div class="demo-updates mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--12-col-desktop">
 
             <div class="mdl-card__supporting-text mdl-color-text--grey-600">
-              <i class="material-icons">note_add</i> <span>Form Penambahan Data Barang</span>
+              <i class="material-icons">note_add</i> <span>Form Edit Data Barang</span>
             </div>
             <div class="mdl-card__actions mdl-card--border">
 
-              <form action="<?= base_url() ?>barang/tambah_data" method="POST" enctype="multipart/form-data">
+              <form action="<?= base_url().'barang/edit/'.$barang[0]->id_barang ?>" method="POST" enctype="multipart/form-data">
 
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label full-width">
-                  <input class="mdl-textfield__input" type="text" id="nama_barang" name="nama_barang">
-                  <label class="mdl-textfield__label" for="nama_barang">Nama Barang...</label>
+                  <input class="mdl-textfield__input" type="text" id="nama_barang" name="nama_barang" value="<?= $barang[0]->nama_barang ?>">
                 </div>
 
                 <div class="mdl-selectfield mdl-js-selectfield mdl-selectfield--floating-label full-width">
-                  <select class="mdl-selectfield__select" name="kategori_barang" id="kategori_barang">
-                    <option value=""></option>
+                  <select class="mdl-selectfield__select" name="id_kategori" id="kategori_barang">
+                    <option value="<?= $barang[0]->id_kategori ?>"><?= $barang[0]->nama_kategori ?></option>
                     <option value="1">Gitar</option>
                     <option value="2">Bass</option>
                     <option value="3">Ampli</option>
@@ -149,18 +112,17 @@
                 </div>
 
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label full-width">
-                  <input class="mdl-textfield__input" type="text" id="harga" name="harga">
-                  <label class="mdl-textfield__label" for="harga">Harga Barang...</label>
+                  <input class="mdl-textfield__input" type="text" id="harga" name="harga" value="<?= $barang[0]->harga ?>" >
                 </div>
 
                 <div class="mdl-textfield mdl-js-textfield full-width">
-                  <textarea name="keterangan" class="mdl-textfield__input" rows= "3" id="keterangan" ></textarea>
-                  <label class="mdl-textfield__label" for="keterangan">Keterangan...</label>
+                  <textarea name="keterangan" class="mdl-textfield__input" rows= "3" id="keterangan" ><?= $barang[0]->keterangan ?> </textarea>
                 </div>
 
                 <button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
-                  Masukkan Data
+                  SIMPAN
                 </button>
+
 
               </form>
 

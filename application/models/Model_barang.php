@@ -14,12 +14,12 @@ class Model_Barang extends CI_Model {
 	public function tambah($nama_file){
 		$object = array(
 			'id_barang' 	=> NULL,
-			'nama_barang' 	=> $this->input->post('nama_barang'), 
+			'nama_barang' 	=> $this->input->post('nama_barang'),
 			'id_kategori' 	=> $this->input->post('kategori_barang'),
 			'foto' 			=> $nama_file,
 			'harga' 		=> $this->input->post('harga'),
 			'keterangan' 	=> $this->input->post('keterangan')
-			);
+		);
 
 		$this->db->insert('barang', $object);
 	}
@@ -31,16 +31,9 @@ class Model_Barang extends CI_Model {
 		return $data->first_row();
 	}
 
-	public function edit($id){
-		$object = array(
-			'nama_barang' 	=> $this->input->post('nama_barang'), 
-			'id_kategori' 	=> $this->input->post('kategori'),
-			'harga' 		=> $this->input->post('harga'),
-			'keterangan' 	=> $this->input->post('keterangan') 
-			);
-
+	public function edit($data, $id){
 		$this->db->where('id_barang', $id);
-		$this->db->update('barang', $object);
+		$this->db->update('barang',$data);
 	}
 
 	public function hapus($id){
@@ -49,16 +42,20 @@ class Model_Barang extends CI_Model {
 	}
 
 	public function select_byid($id){
-		$this->db->where('id_barang', $id);
-		$query = $this->db->get('barang');
+		$this->db->from('barang');
+		$this->db->join('kategori', 'barang.id_kategori = kategori.id_kategori');
+		$this->db->where('barang.id_barang', $id);
+		$query = $this->db->get();
 
-		if ($query->num_rows()== 1) {
+		if ($query->num_rows() == 1)
+		{
 			return $query->result();
-		}else{
+		}
+		else
+		{
 			return false;
 		}
 	}
 }
-
-/* End of file model_Barang.php */
-/* Location: ./application/models/model_Barang.php */
+	/* End of file model_Barang.php */
+	/* Location: ./application/models/model_Barang.php */
