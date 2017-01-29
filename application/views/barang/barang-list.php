@@ -1,5 +1,5 @@
-<link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />  
-  
+<link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+
 <div class="android-more-section" ng-app="search">
   <div class="android-section-title mdl-typography--display-1-color-contrast">
     <?= strtoupper($nama_kategori); ?>
@@ -18,32 +18,72 @@
       </div>
 
       <div ng-show="loading" class="mdl-spinner mdl-spinner--single-color mdl-js-spinner is-active"></div>
-      <div class="mdl-grid">
-        <div ng-repeat="li in filtered = items | filter:cari | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit" class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--4dp">
-          <div class="mdl-card__media">
-            <img src="products/{{ li.foto }}">
-          </div>
-          <div class="mdl-card__title">
-            <h4 class="mdl-card__title-text">{{ li.nama_barang }}</h4>
-          </div>
-          <div class="mdl-card__supporting-text">
-            <p>Rp. {{ li.harga }}</p>
-            <span class="mdl-typography--font-light mdl-typography--subhead">
-              {{ li.keterangan | limitTo:100 }}
-            </span>
-          </div>
-          <div class="mdl-card__actions">
-            <a class="android-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="">
-              Lihat Detail
-              <i class="material-icons">chevron_right</i>
-            </a>
-          </div>
-        </div>
-      </div>
 
       <div class="mdl-grid">
-        <div class="mdl-cell mdl-cell--12-col">
-          <pagination page="currentPage" max-size="noOfPages" total-items="totalItems" items-per-page="entryLimit"></pagination>
+        <div class="mdl-cell mdl-cell--4-col">
+          <div class="mdl-card mdl-shadow--2dp">
+            <div class="mdl-card__title">
+              <h2 class="mdl-card__title-text">Urutkan berdasarkan</h2>
+            </div>
+            <div class="mdl-card__supporting-text">
+              <ul class="mdl-list">
+                <li class="mdl-list__item">
+                  <span class="mdl-list__item-primary-content">
+                    <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--raised">Nama</button>
+                  </span>
+                </li>
+                <li class="mdl-list__item">
+                  <span class="mdl-list__item-primary-content">
+                    <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--raised">Kategori</button>
+                  </span>
+                </li>
+                <li class="mdl-list__item">
+                  <span class="mdl-list__item-primary-content">
+                    <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--raised mdl-button--colored">Tanggal</button>
+                  </span>
+                </li>
+
+                <li class="mdl-list__item">
+                  <span class="mdl-list__item-primary-content">
+                    <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-1">
+                      <input type="checkbox" id="switch-1" class="mdl-switch__input" checked>
+                      <span class="mdl-switch__label">Descending</span>
+                    </label>
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="mdl-cell mdl-cell--8-col">
+          <div class="mdl-grid">
+            <div ng-repeat="li in filtered = items | filter:cari | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit" class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--4dp">
+              <div class="mdl-card__media">
+                <img src="products/{{ li.foto }}">
+              </div>
+              <div class="mdl-card__title">
+                <h4 class="mdl-card__title-text">{{ li.nama_barang }}</h4>
+              </div>
+              <div class="mdl-card__supporting-text">
+                <p>Rp. {{ li.harga }}</p>
+                <span class="mdl-typography--font-light mdl-typography--subhead">
+                  {{ li.keterangan | limitTo:100 }}
+                </span>
+              </div>
+              <div class="mdl-card__actions">
+                <a class="android-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="">
+                  Lihat Detail
+                  <i class="material-icons">chevron_right</i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="mdl-grid">
+            <div class="mdl-cell mdl-cell--12-col">
+              <pagination page="currentPage" max-size="noOfPages" total-items="totalItems" items-per-page="entryLimit"></pagination>
+            </div>
+          </div>
         </div>
       </div>
     </div>
