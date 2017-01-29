@@ -21,6 +21,15 @@ class Welcome extends CI_Controller {
 		// $this->load->view('home');
 	}
 
+	public function produk(){
+		$data['nama_kategori'] = "Semua Items";
+
+		$this->load->view('head');
+		$this->load->view('homepage/navbar');
+		$this->load->view('barang/barang-list', $data);
+		$this->load->view('javascript');
+	}
+
 	public function detail_barang($id){
 		$this->load->view('head');
 		$this->load->view('homepage/navbar');

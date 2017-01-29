@@ -1,3 +1,54 @@
+<link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />  
+  
+<div class="android-more-section" ng-app="search">
+  <div class="android-section-title mdl-typography--display-1-color-contrast">
+    <?= strtoupper($nama_kategori); ?>
+    </div>
+
+  <div ng-controller="loadctrl">
+    <div class="android-card-container mdl-grid" ng-controller="searchctrl">
+
+      <div class="mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-cell--12-col-phone mdl-card-search mdl-shadow--12dp">
+        <div class="mdh-expandable-search mdl-cell--hide-phone">
+          <i class="material-icons">search</i>
+          <!--         <form action="#"> -->
+          <input type="text" placeholder="Pencarian" size="1" ng-model="cari.nama_barang">
+          <!-- </form> -->
+        </div>
+      </div>
+
+      <div ng-show="loading" class="mdl-spinner mdl-spinner--single-color mdl-js-spinner is-active"></div>
+      <div class="mdl-grid">
+        <div ng-repeat="li in filtered = items | filter:cari | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit" class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--4dp">
+          <div class="mdl-card__media">
+            <img src="products/{{ li.foto }}">
+          </div>
+          <div class="mdl-card__title">
+            <h4 class="mdl-card__title-text">{{ li.nama_barang }}</h4>
+          </div>
+          <div class="mdl-card__supporting-text">
+            <p>Rp. {{ li.harga }}</p>
+            <span class="mdl-typography--font-light mdl-typography--subhead">
+              {{ li.keterangan | limitTo:100 }}
+            </span>
+          </div>
+          <div class="mdl-card__actions">
+            <a class="android-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="">
+              Lihat Detail
+              <i class="material-icons">chevron_right</i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mdl-grid">
+        <div class="mdl-cell mdl-cell--12-col">
+          <pagination page="currentPage" max-size="noOfPages" total-items="totalItems" items-per-page="entryLimit"></pagination>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <div class="android-more-section">
     <div class="android-section-title mdl-typography--display-1-color-contrast">
