@@ -59,6 +59,8 @@ $route['admin'] 			 	   	= 'Administrator/index';
 $route['admin/halaman-utama'] 	   	= 'Administrator/halaman_utama';
 $route['admin/logout']				= 'Administrator/logout';
 
+$route['admin/user']        = 'User';
+
 $route['admin/barang'] 			   	= 'Barang/index';
 $route['admin/barang/tambah']		= 'Barang/tambah';
 $route['admin/barang/edit/(:num)'] 	= 'Barang/edit/$1';
