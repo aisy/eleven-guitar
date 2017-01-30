@@ -53,7 +53,7 @@
           <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">forum</i>
           Testimoni
         </a>
-        <a class="mdl-navigation__link" href="">
+        <a class="mdl-navigation__link" href="<?= base_url().'admin/user' ?>">
           <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">group</i>
           Admin
         </a>
