@@ -26,7 +26,8 @@ class Administrator extends CI_Controller {
 				if(count($log)>=1){
 					$data_log = array(
 						'id_user'	=> $log->id_admin,
-						'username' 	=> $log->username
+						'username' 	=> $log->username,
+						'admin'		=> $log->admin
 						);
 
 					$this->session->set_userdata($data_log);
@@ -43,15 +44,15 @@ class Administrator extends CI_Controller {
 
 		// print_r($this->session->userdata());
 
-		if($cek_login>1){
+		if($this->session->userdata('admin') == 1){
 			$this->load->view('admin/head');
-			$this->load->view('admin/index');	
+			$this->load->view('admin/index');
 		}else{
-			$data['heading'] = "LOL";
-			$data['message'] = "<p>LOL</p>";
+			$data['heading'] = "<center><h1>404</h1></center>";
+			$data['message'] = "<center><p>Page Not Found</p></center>";
 			$this->load->view('errors/html/error_404', $data);
 		}
-		
+
 	}
 
 	public function logout(){
