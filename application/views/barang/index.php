@@ -53,7 +53,7 @@
           <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">forum</i>
           Testimoni
         </a>
-        <a class="mdl-navigation__link" href="">
+        <a class="mdl-navigation__link" href="<?= base_url('admin/user') ?>">
           <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">group</i>
           Admin
         </a>
@@ -97,7 +97,7 @@
                   <a href="<?= base_url().'barang/edit/'.$key->id_barang ?>" class="mdl-button mdl-js-button mdl-button--raised edit mdl-button--accent">
                   Edit
                   </a>
-                  <a href="<?= base_url().'barang/hapus/'.$key->id_barang ?>" class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent" onclick="return confirm('Hapus barang ini ?')">
+                  <a href="<?= base_url().'barang/hapus/'.$key->id_barang ?>" class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent" onclick="return confirm('Yakin..!!, Akan hapus barang ini ?')">
                     Hapus
                   </a>
                 </td>

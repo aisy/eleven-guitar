@@ -8,11 +8,27 @@ class Model_admin extends CI_Model {
 		return $data->result();
 	}
 
+	public function select_byid($id){
+		$this->db->from('admin');
+		$this->db->where('id_admin', $id);
+		$query = $this->db->get();
+
+		if ($query->num_rows() == 1)
+		{
+			return $query->result();
+		}
+		else
+		{
+			return false;
+		}
+	}
+
 	public function tambah(){
 		$object = array(
-			// 'id_admin' 	=> ,
-			'username' 	=> $this->input->post('username'), 
-			'password' 	=> $this->input->post('password')
+			'id_admin' 	=> null,
+			'username' 	=> $this->input->post('username'),
+			'password' 	=> $this->input->post('password'),
+			'admin'			=> 1
 		);
 
 		$this->db->insert('admin', $object);
@@ -27,8 +43,8 @@ class Model_admin extends CI_Model {
 
 	public function edit($id){
 		$object = array(
-			'username' 	=> $this->input->post('username'), 
-			'password' 		=> $this->input->post('password') 
+			'username' 	=> $this->input->post('username'),
+			'password' 		=> $this->input->post('password')
 			);
 
 		$this->db->where('id_admin', $id);

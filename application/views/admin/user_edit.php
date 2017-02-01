@@ -71,63 +71,27 @@
     <main class="mdl-layout__content mdl-color--grey-100">
       <div class="mdl-grid demo-content">
 
-        <div class="demo-cards mdl-cell mdl-cell--8-col mdl-cell--8-col-tablet mdl-grid mdl-grid--no-spacing">
-          <table id="data_barang" cellspacing="0" width="100%" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp full-width">
-            <thead>
-              <tr>
-                <th>No.</th>
-                <th class="mdl-data-table__cell--non-numeric full-width">Username</th>
-                <th>Status</th>
-                <th>Pilihan</th>
-              </tr>
-            </thead>
-            <tbody>
-              <?php
-              $i = 1;
-               foreach ($admin as $key) { ?>
-              <tr>
-                <td><?= $i++ ?></td>
-                <td class="mdl-data-table__cell--non-numeric"><?= $key->username ?></td>
-                <td><?php
-                if ($key->admin == 1) {
-                  echo "admin";
-                }
-                ?></td>
-                <td>
-                  <a href="<?= base_url().'user/edit/'.$key->id_admin ?>" class="mdl-button mdl-js-button mdl-button--raised edit mdl-button--accent">
-                  Edit
-                  </a>
-                  <a href="<?= base_url().'user/hapus/'.$key->id_admin ?>" class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent" onclick="return confirm('Yahin..!!, Akan hapus admin ini ?')">
-                    Hapus
-                  </a>
-                </td>
-              </tr>
-              <?php } ?>
-            </tbody>
-          </table>
-        </div>
-
         <div class="demo-cards mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet mdl-grid mdl-grid--no-spacing">
           <div class="demo-updates mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--12-col-desktop">
 
             <div class="mdl-card__supporting-text mdl-color-text--grey-600">
-              <i class="material-icons">note_add</i> <span>Form Penambahan Data User</span>
+              <i class="material-icons">note_add</i> <span>Form Edit Data Barang</span>
             </div>
             <div class="mdl-card__actions mdl-card--border">
 
-              <form action="<?= base_url() ?>user/tambah" method="POST" enctype="multipart/form-data">
+              <form action="<?= base_url().'user/edit/'. $admin[0]->id_admin ?>" method="POST" enctype="multipart/form-data">
 
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label full-width">
-                  <input class="mdl-textfield__input" type="text" id="username" name="username">
+                  <input class="mdl-textfield__input" type="text" id="username" name="username" value="<?= $admin[0]->username ?>">
                   <label class="mdl-textfield__label" for="username">Username...</label>
                 </div>
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label full-width">
                   <input class="mdl-textfield__input" type="password" id="password" name="password">
-                  <label class="mdl-textfield__label" for="password">Password...</label>
+                  <label class="mdl-textfield__label" for="password">Password Baru...</label>
                 </div>
 
                 <button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
-                  Masukkan Data
+                  Simpan
                 </button>
 
               </form>
