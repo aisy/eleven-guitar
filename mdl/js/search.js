@@ -21,7 +21,7 @@ app.filter('startFrom', function () {
 // buat controller
 app.controller('searchctrl', function($scope, $http, filterFilter){
 
-	$scope.$emit("LOAD")
+	// $scope.$emit("LOAD")
 
 	// ambil method get dari web
 	$http.get('http://localhost/eleven-guitar/barang/barang_json_get')
@@ -32,7 +32,7 @@ app.controller('searchctrl', function($scope, $http, filterFilter){
 
 			// mengambil data dari http.get
 			$scope.items = data.data;
-			$scope.$emit('UNLOAD')
+			// $scope.$emit('UNLOAD')
 			// console.log(data);
 
 			// membuat model pencarian kosong untuk memanggil $watch
@@ -46,11 +46,11 @@ app.controller('searchctrl', function($scope, $http, filterFilter){
 			// mengatur pagination
 			$scope.currentPage	= 1;
 			$scope.totalItems	= $scope.items.lenght;
-			$scope.entryLimit	= 2;
+			$scope.entryLimit	= 8;
 			$scope.noOfPages	= Math.ceil($scope.totalItems / $scope.entryLimit);
 
-			// $watch pencarian untuk mengubah pagination
-			$scope.$watch('search', function (newVal, oldVal) {
+			// $watch pencarian untuk mengubah pagination, watch diambil dari model
+			$scope.$watch('cari', function (newVal, oldVal) {
 				$scope.filtered 	= filterFilter($scope.items, newVal);
 				$scope.totalItems 	= $scope.filtered.length;
 				$scope.noOfPages 	= Math.ceil($scope.totalItems / $scope.entryLimit);
@@ -66,7 +66,7 @@ app.controller('searchctrl', function($scope, $http, filterFilter){
 	
 });
 
-app.controller('loadctrl', function($scope){
-	$scope.$on("LOAD", function(){$scope.loading=true});
-	$scope.$on("UNLOAD", function(){$scope.loading=false});
-});
+// app.controller('loadctrl', function($scope){
+// 	$scope.$on("LOAD", function(){$scope.loading=true});
+// 	$scope.$on("UNLOAD", function(){$scope.loading=false});
+// });

@@ -1,99 +1,85 @@
 <link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
 
-<div class="android-more-section" ng-app="search">
-  <div class="android-section-title mdl-typography--display-1-color-contrast">
-    <?= strtoupper($nama_kategori); ?>
-  </div>
+<div class="android-content mdl-layout__content">
+  <div class="android-more-section" ng-app="search">
+    <div class="android-section-title mdl-typography--display-1-color-contrast">
+      <?= strtoupper($nama_kategori); ?>
+    </div>
 
-  <div ng-controller="loadctrl">
-    <div class="android-card-container mdl-grid" ng-controller="searchctrl">
+    <div>
+      <div class="android-card-container mdl-grid" ng-controller="searchctrl">
 
-      <div class="mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-cell--12-col-phone mdl-card-search mdl-shadow--12dp">
+        <div class="mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-cell--12-col-phone mdl-card-search mdl-shadow--12dp">
 
+          <div class="mdl-grid">
+            <div class="mdl-cell mdl-cell--4-col">
+              <div class="mdl-card mdl-shadow--2dp">
+                <div class="mdl-card__supporting-text mdl-color-text--grey-600">
+                  <h4>
+                    <i class="material-icons">sort</i>
+                    <span>Urutkan Berdasarkan Jenis Produk</span>
+                  </h4>
+                  <hr>
 
+                  <ul class="mdl-list">
+                    <li class="mdl-list__item">
+                      <span class="mdl-list__item-primary-content">
+                        <a href="" ng-click="cari.id_kategori='1' ">Gitar</a>
+                      </span>
+                    </li>
 
+                    <li class="mdl-list__item">
+                      <span class="mdl-list__item-primary-content">
+                       <a href="" ng-click="cari.id_kategori='2'">Bass</a>
+                      </span>
+                    </li>
 
-        <div class="mdl-grid">
-          <div class="mdl-cell mdl-cell--4-col">
-            <div class="mdl-card mdl-shadow--2dp">
-              <div class="mdl-card__supporting-text mdl-color-text--grey-600">
-                <h4>
-                  <i class="material-icons">sort</i>
-                  <span>Urutkan Berdasarkan</span>
-                </h4>
-                <hr>
-
-                <ul class="mdl-list">
-                  <li class="mdl-list__item">
-                    <span class="mdl-list__item-primary-content">
-                      <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-1">
-                        <input type="radio" id="option-1" class="mdl-radio__button" name="options" value="1" checked>
-                        <span class="mdl-radio__label">Nama</span>
-                      </label>
-                    </span>
-                  </li>
-
-                  <li class="mdl-list__item">
-                    <span class="mdl-list__item-primary-content">
-                      <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-2">
-                        <input type="radio" id="option-2" class="mdl-radio__button" name="options" value="1" checked>
-                        <span class="mdl-radio__label">Kategori</span>
-                      </label>
-                    </span>
-                  </li>
-
-                  <li class="mdl-list__item">
-                    <span class="mdl-list__item-primary-content">
-                      <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-3">
-                        <input type="radio" id="option-3" class="mdl-radio__button" name="options" value="1" checked>
-                        <span class="mdl-radio__label">Tanggal</span>
-                      </label>
-                    </span>
-                  </li>
-                </ul>
-              </div>
-              <div class="mdl-card__actions mdl-card--border">
-                <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-1">
-                  <input type="checkbox" id="switch-1" class="mdl-switch__input" checked>
-                  <span class="mdl-switch__label">Descending</span>
-                </label>
-              </div>
-            </div>
-          </div>
-
-          <div class="mdl-cell mdl-cell--8-col">
-            <div ng-show="loading" class="mdl-spinner mdl-spinner--single-color mdl-js-spinner is-active"></div>
-            <div class="mdl-grid mdl-cell mdl-cell--12-col mdh-expandable-search mdl-cell--hide-phone" style="margin:0">
-              <i class="material-icons">search</i>
-              <!--         <form action="#"> -->
-              <input type="text" placeholder="Pencarian" size="1" ng-model="cari.nama_barang">
-              <!-- </form> -->
-            </div>
-            <div class="mdl-grid">
-              <div ng-repeat="li in filtered = items | filter:cari | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit" class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--4dp">
-                <div class="mdl-card__media">
-                  <img src="products/{{ li.foto }}">
+                  </ul>
                 </div>
-                <div class="mdl-card__title">
-                  <h4 class="mdl-card__title-text">{{ li.nama_barang }}</h4>
-                </div>
-                <div class="mdl-card__supporting-text">
-                  <p>Rp. {{ li.harga }}</p>
-                  <span class="mdl-typography--font-light mdl-typography--subhead">
-                    {{ li.keterangan | limitTo:100 }}
-                  </span>
-                </div>
-                <div class="mdl-card__actions">
-                  <a class="android-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="">
-                    Lihat Detail
-                    <i class="material-icons">chevron_right</i>
-                  </a>
+
+                <div class="mdl-card__actions mdl-card--border">
+                  <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-1">
+                    <input type="checkbox" id="switch-1" class="mdl-switch__input">
+                    <span class="mdl-switch__label">Descending</span>
+                  </label>
                 </div>
               </div>
             </div>
-            <div class="mdl-grid">
-              <div class="mdl-cell mdl-cell--12-col">
-                <pagination page="currentPage" max-size="noOfPages" total-items="totalItems" items-per-page="entryLimit"></pagination>
+
+            <div class="mdl-cell mdl-cell--8-col">
+              <div ng-show="loading" class="mdl-spinner mdl-spinner--single-color mdl-js-spinner is-active"></div>
+              <div class="mdl-grid mdl-cell mdl-cell--12-col mdh-expandable-search mdl-cell--hide-phone" style="margin:0">
+                <i class="material-icons">search</i>
+                <!--         <form action="#"> -->
+                <input type="text" placeholder="Pencarian" size="1" ng-model="cari.nama_barang">
+                <!-- </form> -->
+              </div>
+              <div class="mdl-grid">
+                <div ng-repeat="li in filtered = items | filter:cari | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit" class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--4dp">
+                  <div class="mdl-card__media">
+                    <img src="products/{{ li.foto }}">
+                  </div>
+                  <div class="mdl-card__title">
+                    <h4 class="mdl-card__title-text">{{ li.nama_barang }}</h4>
+                  </div>
+                  <div class="mdl-card__supporting-text">
+                    <p>Rp. {{ li.harga }}</p>
+                    <span class="mdl-typography--font-light mdl-typography--subhead">
+                      {{ li.keterangan | limitTo:100 }}
+                    </span>
+                  </div>
+                  <div class="mdl-card__actions">
+                    <a class="android-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="">
+                      Lihat Detail
+                      <i class="material-icons">chevron_right</i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="mdl-grid">
+                <div class="mdl-cell mdl-cell--12-col">
+                  <pagination page="currentPage" max-size="noOfPages" total-items="totalItems" items-per-page="entryLimit"></pagination>
+                </div>
               </div>
             </div>
           </div>
@@ -101,37 +87,36 @@
       </div>
     </div>
   </div>
-</div>
 
-<div class="android-more-section">
-  <div class="android-section-title mdl-typography--display-1-color-contrast">
-    <?= strtoupper($nama_kategori); ?>
-  </div>
-  <div class="android-card-container mdl-grid">
-    <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
-      <div class="mdl-card__media">
-        <img src="http://localhost/eleven-gitar/products/1.jpg">
-      </div>
-      <div class="mdl-card__title">
-        <h4 class="mdl-card__title-text">Get going on Android</h4>
-      </div>
-      <!-- <div class="mdl-card__supporting-text"> -->
-      <ul class="demo-list-icon mdl-list">
-        <li class="mdl-list__item">
-          <span class="mdl-list__item-primary-content">
-            <i class="material-icons">attach_money</i>
-            Bryan Cranston
-          </span>
-        </li>
-      </ul>
-      <!-- </div> -->
-      <div class="mdl-card__actions">
-        <button class="mdl-button mdl-js-button mdl-button--icon" data-upgraded=",MaterialButton">
-          <i class="material-icons">add_shopping_cart</i>
-        </button>
-        <button class="mdl-button mdl-js-button mdl-button--icon" data-upgraded=",MaterialButton">
-          <i class="material-icons">list</i>
-        </button>
+  <div class="android-more-section">
+    <div class="android-section-title mdl-typography--display-1-color-contrast">
+      <?= strtoupper($nama_kategori); ?>
+    </div>
+    <div class="android-card-container mdl-grid">
+      <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
+        <div class="mdl-card__media">
+          <img src="http://localhost/eleven-gitar/products/1.jpg">
+        </div>
+        <div class="mdl-card__title">
+          <h4 class="mdl-card__title-text">Get going on Android</h4>
+        </div>
+        <!-- <div class="mdl-card__supporting-text"> -->
+        <ul class="demo-list-icon mdl-list">
+          <li class="mdl-list__item">
+            <span class="mdl-list__item-primary-content">
+              <i class="material-icons">attach_money</i>
+              Bryan Cranston
+            </span>
+          </li>
+        </ul>
+        <!-- </div> -->
+        <div class="mdl-card__actions">
+          <button class="mdl-button mdl-js-button mdl-button--icon" data-upgraded=",MaterialButton">
+            <i class="material-icons">add_shopping_cart</i>
+          </button>
+          <button class="mdl-button mdl-js-button mdl-button--icon" data-upgraded=",MaterialButton">
+            <i class="material-icons">list</i>
+          </button>
         <!-- <a class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect mdl-button--accent" href="">
         <i class="material-icons">add_shopping_cart</i>
       </a>
