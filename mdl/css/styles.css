@@ -981,3 +981,12 @@ dialog::backdrop {
   border-radius: 2px;
   box-sizing: border-box;
 }
+
+.mdl-card__supporting-text {
+    color: rgba(0,0,0, 0.54);
+    font-size: 1rem;
+    line-height: 18px;
+    /* overflow: hidden; */
+    padding: 16px 16px;
+    width: 100%;
+}

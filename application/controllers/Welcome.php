@@ -26,7 +26,7 @@ class Welcome extends CI_Controller {
 
 		$this->load->view('head');
 		$this->load->view('homepage/navbar');
-		$this->load->view('barang/barang-list', $data);
+		$this->load->view('barang/barang-list2', $data);
 		$this->load->view('javascript');
 	}
 

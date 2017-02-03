@@ -35,18 +35,19 @@ app.controller('searchctrl', function($scope, $http, filterFilter){
 			// $scope.$emit('UNLOAD')
 			// console.log(data);
 
-			// membuat model pencarian kosong untuk memanggil $watch
-			$scope.search = {};
+			// membuat model pencarian kosong untuk memanggil $watch dari model cari
+			$scope.cari = {};
 
+			// fungsi reset
 			$scope.resetFilters = function () {
 				// dibutuhkan untuk menjadi fungsi atau tidak akan memanggil $watch
-				$scope.search = {};
+				$scope.cari = {};
 			};
 
 			// mengatur pagination
 			$scope.currentPage	= 1;
 			$scope.totalItems	= $scope.items.lenght;
-			$scope.entryLimit	= 8;
+			$scope.entryLimit	= 10;
 			$scope.noOfPages	= Math.ceil($scope.totalItems / $scope.entryLimit);
 
 			// $watch pencarian untuk mengubah pagination, watch diambil dari model
@@ -61,7 +62,8 @@ app.controller('searchctrl', function($scope, $http, filterFilter){
 
 		// jika tidak ada data
 		function error(data, status, header, config){
-			console.log('Tidak ada Data..');
+			// console.log('Tidak ada Data..');
+			$scope.items="Data Tidak ada";
 		});
 	
 });
