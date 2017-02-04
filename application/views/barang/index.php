@@ -124,6 +124,11 @@
 
                 <div class="mdl-selectfield mdl-js-selectfield mdl-selectfield--floating-label full-width">
                   <select class="mdl-selectfield__select" name="kategori_barang" id="kategori_barang">
+                    <?php
+                    foreach ($variable as $key => $value) {
+                      # code...
+                    }
+                     ?>
                     <option value=""></option>
                     <option value="1">Gitar</option>
                     <option value="2">Bass</option>

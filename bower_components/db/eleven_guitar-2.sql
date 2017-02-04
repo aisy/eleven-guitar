@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 24 Jan 2017 pada 11.12
+-- Generation Time: 04 Feb 2017 pada 10.34
 -- Versi Server: 10.1.19-MariaDB
 -- PHP Version: 7.0.9
 
@@ -29,16 +29,17 @@ SET time_zone = "+00:00";
 CREATE TABLE `admin` (
   `id_admin` int(10) NOT NULL,
   `username` varchar(30) NOT NULL,
-  `password` varchar(100) NOT NULL
+  `password` varchar(100) NOT NULL,
+  `admin` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data untuk tabel `admin`
 --
 
-INSERT INTO `admin` (`id_admin`, `username`, `password`) VALUES
-(1, 'vidi', '123456'),
-(2, 'aisymr', '1241180090');
+INSERT INTO `admin` (`id_admin`, `username`, `password`, `admin`) VALUES
+(1, 'vidi', '123456', 1),
+(2, 'aisymr', '1241180090', 1);
 
 -- --------------------------------------------------------
 
@@ -60,12 +61,8 @@ CREATE TABLE `barang` (
 --
 
 INSERT INTO `barang` (`id_barang`, `nama_barang`, `id_kategori`, `foto`, `harga`, `keterangan`) VALUES
-(1, 'piano', '3', 'c9e53c18122bb3ff7e1fcab1b19ac0bb06499a4d_hq4.jpg', '30', 'dlkwhdlwkd'),
-(2, 'gitar', '2', 'c9e53c18122bb3ff7e1fcab1b19ac0bb06499a4d_hq5.jpg', '35', 'yolyolyo'),
-(3, 'drumb', '2', 'wizard-of-oz-love-quote.jpg', '400', 'd;ljdljd'),
-(4, 'gitar f', '1', '11.jpg', '23', 'lkfhdlkfh'),
-(5, 'bass', '2', '41.jpg', '40', ';LDESPROPE'),
-(6, 'MELODI', '4', '21.jpg', '50', 'SLKDHLFKDFH');
+(7, 'yolo', '1', '411.jpg', '400000', 'skdhsldkhlskhd'),
+(9, 'lol', '2', '957efa250914ccde1f34bd1c7a4936e4.png', '350000', 'dfghjkl yolo   ');
 
 -- --------------------------------------------------------
 
@@ -116,10 +113,15 @@ ALTER TABLE `kategori`
 --
 
 --
+-- AUTO_INCREMENT for table `admin`
+--
+ALTER TABLE `admin`
+  MODIFY `id_admin` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+--
 -- AUTO_INCREMENT for table `barang`
 --
 ALTER TABLE `barang`
-  MODIFY `id_barang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_barang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
