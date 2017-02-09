@@ -45,6 +45,10 @@
           <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">list</i>
           Barang
         </a>
+        <a class="mdl-navigation__link" href="<?= base_url('admin/kategori') ?>">
+          <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">label</i>
+          Kategori
+        </a>
         <a class="mdl-navigation__link" href="">
           <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">featured_play_list</i>
           Konten
