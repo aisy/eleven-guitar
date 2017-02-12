@@ -23,6 +23,8 @@ app.controller('searchctrl', function($scope, $http, filterFilter){
 
 	// $scope.$emit("LOAD")
 
+	$scope.activeMenu = 'Seluruh';
+
 	// ambil method get dari web
 	$http.get('http://localhost/eleven-guitar/barang/barang_json_get')
 	.then(

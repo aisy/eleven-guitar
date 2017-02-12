@@ -27,7 +27,7 @@
                     <a href="<?= base_url() ?>" class="waves-effect"><i class="fa fa-home"></i> Halaman Utama</a>
                 </li>
                 <li>
-                <a href="<?= base_url('produk/') ?>" class="waves-effect"><i class="fa fa-diamond"></i> Produk</a>
+                <a href="<?= base_url('produk/') ?>" class="waves-effect"><i class="fa fa-shopping-bag"></i> Produk</a>
                 </li>
                 <li><a class="collapsible-header waves-effect arrow-r"><i class="fa fa-briefcase"></i> Fall / Winter<i class="fa fa-angle-down rotate-icon"></i></a>
                     <div class="collapsible-body">

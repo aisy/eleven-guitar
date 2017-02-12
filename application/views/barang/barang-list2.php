@@ -8,11 +8,11 @@
             <h4>Kategori:</h4>
             <br>
             <div class="list-group">
-              <a href="#" ng-click="resetFilters()" class="list-group-item">Seluruh Produk</a>
-              <a href="#" ng-click="cari.nama_kategori='Gitar'" class="list-group-item">Gitar</a>
-              <a href="#" ng-click="cari.nama_kategori='Bass'" class="list-group-item">Bass</a>
-              <a href="#" ng-click="cari.nama_kategori='Pick'" class="list-group-item">Pick</a>
-              <a href="#" ng-click="cari.nama_kategori='Ampli'" class="list-group-item">Ampli</a>
+            <a href="#" ng-class="{active : activeMenu === 'Seluruh'}" ng-click="resetFilters(); activeMenu = 'Seluruh';" class="list-group-item">Seluruh Produk</a>
+              <a href="#" ng-class="{active : activeMenu === 'Gitar'}" ng-click="cari.nama_kategori='Gitar'; activeMenu='Gitar';" class="list-group-item">Gitar</a>
+              <a href="#" ng-class="{active : activeMenu === 'Bass'}" ng-click="cari.nama_kategori='Bass'; activeMenu='Bass'" class="list-group-item">Bass</a>
+              <a href="#" ng-class="{active : activeMenu === 'Pick'}" ng-click="cari.nama_kategori='Pick'; activeMenu='Pick'" class="list-group-item">Pick</a>
+              <a href="#" ng-class="{active : activeMenu === 'Ampli'}" ng-click="cari.nama_kategori='Ampli'; activeMenu='Ampli'" class="list-group-item">Ampli</a>
             </div>
           </div>
 
@@ -79,7 +79,7 @@
                     <span class="left">Rp. {{ li.harga }}</span>
                     <span class="right">
                       <a class="" data-toggle="tooltip" data-placement="top" title="Quick Look">
-                      <i class="fa fa-list"></i></i>
+                        <i class="fa fa-list"></i></i>
                       </a>
                     </span>
                   </div>
@@ -103,4 +103,7 @@
   </div>
 </main>
 
+<script>
+  document.write('<base href="' + document.location + '" />');
+</script>
 
