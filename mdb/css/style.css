@@ -1,1 +1,36 @@
 /* YOUR CUSTOM STYLES */
+.side-nav .logo-wrapper, .side-nav .logo-wrapper a {
+	height: 170px;
+}
+
+.collection-card .stripe.yell {
+	background-color: rgba(253, 216, 53, 0.7);
+}
+
+.graphite-skin .side-nav .logo-wrapper {
+	background: url(../img/slide.jpg) center center no-repeat;
+	background-size: cover;
+}
+
+.yellow-text {
+	color: #fdd835!important;
+}
+
+.list-group-item{
+	color:#fdd835;
+}
+
+.widget-wrapper {
+	padding-bottom: 2rem;
+	border-bottom: 1px solid #e0e0e0;
+	margin-bottom: 2rem;
+}
+
+.extra-margins {
+	margin-top: 1rem;
+	margin-bottom: 2.5rem;
+}
+
+.divider-new {
+	margin-top: 0;
+}

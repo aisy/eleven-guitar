@@ -8,11 +8,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <title>Eleven Guitar</title>
 
-  <link rel="shortcut icon" type="image/png" href="<?= base_url().'/mdl/' ?>favicon.ico"/>
+  <link rel="shortcut icon" type="image/png" href="<?= base_url().'/mdb/' ?>favicon.ico"/>
 
-  <link rel="stylesheet" type="text/css" href="<?= base_url().'/mdl/' ?>font-awesome/css/font-awesome.css">
-  <link rel="stylesheet" href="<?= base_url().'/mdl/' ?>css/material.css">
-  <link rel="stylesheet" href="<?= base_url().'/mdl/' ?>css/styles.css">
+  <link rel="stylesheet" href="<?= base_url().'mdb/' ?>font-awesome/css/font-awesome.css">
+
+  <link rel="stylesheet" type="text/css" href="<?= base_url().'mdb/' ?>css/bootstrap.min.css">
+  
+  <link rel="stylesheet" type="text/css" href="<?= base_url().'mdb/' ?>css/mdb.min.css">
+
+  <link rel="stylesheet" type="text/css" href="<?= base_url().'mdb/' ?>css/style.css">
 
 </style>
 </head>
+
+<body class="fixed-sn graphite-skin">

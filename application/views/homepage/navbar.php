@@ -1,77 +1,86 @@
+<!--Double navigation-->
+<header>
+    <!-- Sidebar navigation -->
+    <ul id="slide-out" class="side-nav fixed custom-scrollbar">
 
-<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-  <div class="android-header mdl-layout__header mdl-layout__header--waterfall">
-    <div class="mdl-layout__header-row">
-      <span class="android-title mdl-layout-title">
-        <img class="android-logo-image" src="<?= base_url().'mdl/' ?>images/eleven_title.png">
-      </span>
-      <!-- Add spacer, to align navigation to the right in desktop -->
-      <div class="android-header-spacer mdl-layout-spacer"></div>
-      <div class="android-search-box mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right mdl-textfield--full-width">
+        <!-- Logo -->
+        <li>
+            <div class="logo-wrapper waves-light">
+                <a href="#"><img src="<?= base_url().'mdb/img/' ?>logo2.png" class="img-fluid flex-center"></a>
+            </div>
+        </li>
+        <!--/. Logo -->
 
-        <form action="" method="POST">
-          <label class="mdl-button mdl-js-button mdl-button--icon" for="search-field">
-            <i class="material-icons">search</i>
-          </label>
-          <div class="mdl-textfield__expandable-holder">
-            <input class="mdl-textfield__input" type="text" id="search-field">
-          </div>
-        </form>
-        
-      </div>
-      <!-- Navigation -->
-      <div class="android-navigation-container">
-        <nav class="android-navigation mdl-navigation">
-          <a href="<?= base_url().'kategori/gitar' ?>" class="mdl-navigation__link mdl-typography--text-uppercase" href="">Gitar</a>
-          <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Bass</a>
-          <!-- <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Aksesoris</a> -->
+        <!--Social-->
+        <li>
+            <ul class="social">
+                <li><a href="#" class="icons-sm fb-ic"><i class="fa fa-facebook"> </i></a></li>
+                <li><a href="#" class="icons-sm ins-ic"><i class="fa fa-instagram"> </i></a></li>
+            </ul>
+        </li>
+        <!--/Social-->
 
-          <a href="" id="demo-menu-lower-left" class="mdl-navigation__link mdl-typography--text-uppercase">
-            Aksesoris <i class="material-icons">arrow_drop_down</i>
-          </a>
+        <!-- Side navigation links -->
+        <li>
+            <ul class="collapsible collapsible-accordion">
+                <li>
+                    <a href="<?= base_url() ?>" class="waves-effect"><i class="fa fa-home"></i> Halaman Utama</a>
+                </li>
+                <li>
+                <a href="<?= base_url('produk/') ?>" class="waves-effect"><i class="fa fa-diamond"></i> Produk</a>
+                </li>
+                <li><a class="collapsible-header waves-effect arrow-r"><i class="fa fa-briefcase"></i> Fall / Winter<i class="fa fa-angle-down rotate-icon"></i></a>
+                    <div class="collapsible-body">
+                        <ul>
+                            <li><a href="#" class="waves-effect">Coats</a>
+                            </li>
+                            <li><a href="#" class="waves-effect">Boots</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a class="collapsible-header waves-effect arrow-r"><i class="fa fa-coffee "></i> Spring<i class="fa fa-angle-down rotate-icon"></i></a>
+                    <div class="collapsible-body">
+                        <ul>
+                            <li><a href="#" class="waves-effect">Denim jackets</a>
+                            </li>
+                            <li><a href="#" class="waves-effect">Sneakers</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </li>
+        <!--/. Side navigation links -->
 
-          <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="demo-menu-lower-left">
-            <li class="mdl-menu__item">
-              Ampli
+    </ul>
+    <!--/. Sidebar navigation -->
+
+    <!--Navbar-->
+    <nav class="navbar navbar-fixed-top yellow darken-1 scrolling-navbar double-nav">
+
+        <!-- SideNav slide-out button -->
+        <div class="float-xs-left">
+            <a href="#" data-activates="slide-out" class="button-collapse"><i class="fa fa-bars"></i></a>
+        </div>
+
+        <!-- Breadcrumb-->
+        <div class="breadcrumb-dn">
+            <p>Eleven Guitar</p>
+        </div>
+
+
+        <ul class="nav navbar-nav float-xs-right">
+
+            <li class="nav-item ">
+                <a href="" class="nav-link"><i class="fa fa-envelope"></i> <span class="hidden-sm-down">Kontak</span></a>
             </li>
-            <li class="mdl-menu__item">
-              Efek
+            <li class="nav-item ">
+                <a href="" class="nav-link"><i class="fa fa-comments-o"></i> <span class="hidden-sm-down">Testimoni</span></a>
             </li>
-            <li class="mdl-menu__item">
-              Pickup
-            </li>
-          </ul> 
-          
-        </nav>
-      </div>
-      <span class="android-mobile-title mdl-layout-title">
-        <img class="android-logo-image" src="<?= base_url().'mdl/' ?>images/eleven_title.png">
-      </span>
-
-      <button class="android-more-button mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect show-modal" id="show-modal-example">
-        <i class="material-icons">perm_contact_calendar</i>
-      </button>
-
-    </div>
-  </div>
-
-  <div class="android-drawer mdl-layout__drawer">
-    <span class="mdl-layout-title">
-      <img class="android-logo-image" src="<?= base_url().'mdl/' ?>images/eleven_title_white.png">
-    </span>
-    <nav class="mdl-navigation">
-      <a class="mdl-navigation__link" href="">Guitar</a>
-      <a class="mdl-navigation__link" href="">Ampli</a>
-      <a class="mdl-navigation__link" href="">Efek</a>
-      <a class="mdl-navigation__link" href="">Bass</a>
-      <a class="mdl-navigation__link" href="">Pickup</a>
-
-      <!-- <div class="android-drawer-separator"></div>
-      <span class="mdl-navigation__link" href="">Versions</span>
-      <a class="mdl-navigation__link" href="">Lollipop 5.0</a>
-      <a class="mdl-navigation__link" href="">KitKat 4.4</a>
-      <a class="mdl-navigation__link" href="">Jelly Bean 4.3</a>
-      <a class="mdl-navigation__link" href="">Android history</a> -->
+        </ul>
 
     </nav>
-  </div>
+    <!--/.Navbar-->
+</header>
+    <!--/Double navigation-->
