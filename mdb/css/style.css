@@ -42,3 +42,18 @@
 .divider-new {
 	margin-top: 0;
 }
+
+.graphite-skin input[type="text"]:focus:not([readonly]) {
+    border-color: #fdd835;
+    box-shadow: 0 1px 0 0 #fdd835;
+}
+
+.input-group .input-group-addon,  {
+    background-color: #e0e0e0;
+    border-bottom: 
+}
+
+/*.md-form.input-group .form-control {
+    margin: 0;
+    padding-left: 1rem;
+}*/

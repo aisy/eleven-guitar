@@ -34,7 +34,7 @@ app.controller('searchctrl', function($scope, $http, filterFilter){
 
 			// mengambil data dari http.get
 			$scope.items = data.data;
-			// $scope.$emit('UNLOAD')
+			$scope.$emit('UNLOAD')
 			// console.log(data);
 
 			// membuat model pencarian kosong untuk memanggil $watch dari model cari
@@ -65,12 +65,25 @@ app.controller('searchctrl', function($scope, $http, filterFilter){
 		// jika tidak ada data
 		function error(data, status, header, config){
 			// console.log('Tidak ada Data..');
-			$scope.items="Data Tidak ada";
+			$scope.items=[];
 		});
 	
 });
 
-// app.controller('loadctrl', function($scope){
-// 	$scope.$on("LOAD", function(){$scope.loading=true});
-// 	$scope.$on("UNLOAD", function(){$scope.loading=false});
-// });
+app.controller('loadCtrl', function($scope){
+	$scope.$on("LOAD", function(){$scope.loading=true});
+	$scope.$on("UNLOAD", function(){$scope.loading=false});
+});
+
+
+app.controller('sliderCtrl', function($scope, $http){
+	
+	$http.get('http://localhost/eleven2/Barang/barang_slider').then(
+		function success(data, status, header, config){
+			$scope.slider_item = data.data;
+		},
+
+		function error(data, status, header, config){
+			console.log('Tidak ada data');
+		});
+});

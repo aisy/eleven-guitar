@@ -40,6 +40,24 @@ class Barang extends CI_Controller {
 		exit;
 	}
 
+	public function barang_slider(){
+		$data = $this->Model_barang->get();
+		$convert = json_decode(json_encode($data),true);
+
+		$data_slider = array_chunk($convert, 3);
+
+		// print_r($convert);
+
+		// print_r($data_slider);
+
+		// mengambil data dari json, (cocok untuk web service)
+		$this->output
+		->set_content_type('application/json')
+		->set_output(json_encode($data_slider))
+		->_display();
+		exit;
+	}
+
 	public function tambah_data(){
 
 		if ($_POST) {

@@ -5,10 +5,10 @@
         <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
 
           <div class="widget-wrapper">
-            <h4>Kategori:</h4>
+            <h4><i class="fa fa-shopping-bag"></i> Produk :</h4>
             <br>
             <div class="list-group">
-            <a href="#" ng-class="{active : activeMenu === 'Seluruh'}" ng-click="resetFilters(); activeMenu = 'Seluruh';" class="list-group-item">Seluruh Produk</a>
+              <a href="#" ng-class="{active : activeMenu === 'Seluruh'}" ng-click="resetFilters(); activeMenu = 'Seluruh';" class="list-group-item">Seluruh Produk</a>
               <a href="#" ng-class="{active : activeMenu === 'Gitar'}" ng-click="cari.nama_kategori='Gitar'; activeMenu='Gitar';" class="list-group-item">Gitar</a>
               <a href="#" ng-class="{active : activeMenu === 'Bass'}" ng-click="cari.nama_kategori='Bass'; activeMenu='Bass'" class="list-group-item">Bass</a>
               <a href="#" ng-class="{active : activeMenu === 'Pick'}" ng-click="cari.nama_kategori='Pick'; activeMenu='Pick'" class="list-group-item">Pick</a>
@@ -43,9 +43,11 @@
 
         <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
 
-          <div class="md-form input-group">
-            <span class="input-group-addon" id="basic-addon1"><i class="fa fa-search"></i></span>
-            <input type="text" class="form-control" placeholder="Cari Nama Produk..." ng-model="cari.nama_barang">
+          <div class="md-form input-group grey lighten-5 z-depth-1">
+            <span class="input-group-addon grey lighten-5" id="basic-addon1">
+              <i class="fa fa-search"></i>
+            </span>
+            <input type="text" class="form-control grey lighten-5" placeholder="Cari Nama Produk..." ng-model="cari.nama_barang">
           </div>
 
           <!-- List item -->
@@ -92,18 +94,27 @@
 
             </div>
 
-          </div>
-          <!-- List item -->
+            <div ng-hide="totalItems" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+              <div class="jumbotron text-xs-center">
+                <div class="container">
+                 <i class="fa fa-frown-o fa-4x yellow-text"></i>
+                 <h1>Maaf Produk yang anda cari tidak di temukan atau tidak tersedia</h1>
+               </div>
+             </div>
+           </div>
 
-        </div>
+         </div>
+         <!-- List item -->
 
-      </div>
-    </section>
+         <pagination page="currentPage" max-size="noOfPages" total-items="totalItems" items-per-page="entryLimit"></pagination>
 
-  </div>
+       </div>
+
+     </div>
+   </section>
+
+ </div>
 </main>
 
-<script>
-  document.write('<base href="' + document.location + '" />');
-</script>
+
 

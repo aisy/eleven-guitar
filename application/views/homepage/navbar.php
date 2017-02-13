@@ -24,10 +24,19 @@
         <li>
             <ul class="collapsible collapsible-accordion">
                 <li>
-                    <a href="<?= base_url() ?>" class="waves-effect"><i class="fa fa-home"></i> Halaman Utama</a>
+                    <a href="<?= base_url() ?>" class="waves-effect">
+                        <i class="fa fa-home"></i> Halaman Utama
+                    </a>
                 </li>
                 <li>
-                <a href="<?= base_url('produk/') ?>" class="waves-effect"><i class="fa fa-shopping-bag"></i> Produk</a>
+                    <a href="<?= base_url('produk/') ?>" class="waves-effect">
+                        <i class="fa fa-shopping-bag"></i> Produk
+                    </a>
+                </li>
+                <li>
+                    <a href="<?= base_url('pembayaran/') ?>" class="waves-effect">
+                        <i class="fa fa-money"></i></i> Cara pembayaran
+                    </a>
                 </li>
                 <li><a class="collapsible-header waves-effect arrow-r"><i class="fa fa-briefcase"></i> Fall / Winter<i class="fa fa-angle-down rotate-icon"></i></a>
                     <div class="collapsible-body">
@@ -57,7 +66,7 @@
     <!--/. Sidebar navigation -->
 
     <!--Navbar-->
-    <nav class="navbar navbar-fixed-top yellow darken-1 scrolling-navbar double-nav">
+    <nav class="navbar navbar-fixed-top yellow darken-1 scrolling-navbar double-nav ">
 
         <!-- SideNav slide-out button -->
         <div class="float-xs-left">
@@ -71,12 +80,23 @@
 
 
         <ul class="nav navbar-nav float-xs-right">
-
             <li class="nav-item ">
-                <a href="" class="nav-link"><i class="fa fa-envelope"></i> <span class="hidden-sm-down">Kontak</span></a>
+                <a href="" class="nav-link">
+                    <i class="fa fa-envelope"></i> 
+                    <span class="hidden-sm-down">Kontak</span>
+                </a>
             </li>
             <li class="nav-item ">
-                <a href="" class="nav-link"><i class="fa fa-comments-o"></i> <span class="hidden-sm-down">Testimoni</span></a>
+                <a href="" class="nav-link">
+                    <i class="fa fa-comments-o"></i> 
+                    <span class="hidden-sm-down">Testimoni</span>
+                </a>
+            </li>
+            <li class="nav-item ">
+                <a href="" class="nav-link">
+                    <i class="fa fa-info"></i>
+                    <span class="hidden-sm-down">tentang kami</span>
+                </a>
             </li>
         </ul>
 
