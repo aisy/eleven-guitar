@@ -67,6 +67,10 @@
 	border-bottom: none !important;
 }
 
+.card .activator {
+	padding: 0;
+}
+
 /*.md-form.input-group .form-control {
 margin: 0;
 padding-left: 1rem;
