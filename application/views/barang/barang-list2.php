@@ -68,7 +68,7 @@
                 <!--/.Card image-->
 
                 <!--Button-->
-                <a class="btn-floating btn-action activator"><i class="fa fa-chevron-right"></i></a>
+                <a class="btn-floating btn-action"><i class="fa fa-chevron-right"></i></a>
 
                 <!--Card content-->
                 <div class="card-block text-xs-center">
