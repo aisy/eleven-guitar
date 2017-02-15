@@ -12,8 +12,8 @@
 
   <link rel="stylesheet" href="<?= base_url().'mdb/' ?>font-awesome/css/font-awesome.css">
 
-  <link rel="stylesheet" type="text/css" href="<?= base_url().'mdb/' ?>css/bootstrap.min.css">
-  
+  <link rel="stylesheet" type="text/css" href="<?= base_url().'mdb/' ?>css/bootstrap.css">
+
   <link rel="stylesheet" type="text/css" href="<?= base_url().'mdb/' ?>css/mdb.min.css">
 
   <link rel="stylesheet" type="text/css" href="<?= base_url().'mdb/' ?>css/style.css">
