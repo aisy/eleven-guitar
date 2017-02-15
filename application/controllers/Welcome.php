@@ -15,7 +15,7 @@ class Welcome extends CI_Controller {
 		$this->load->view('head');
 		$this->load->view('homepage/navbar');
 		$this->load->view('homepage/index');
-		$this->load->view('homepage/profile');
+		// $this->load->view('homepage/profile');
 		$this->load->view('javascript');
 
 		// $this->load->view('home');
@@ -51,7 +51,7 @@ class Welcome extends CI_Controller {
 	public function cari_barang($id){
 		$this->load->view('head');
 		$this->load->view('homepage/navbar');
-		
+
 		$this->load->view('javascript');
 	}
 

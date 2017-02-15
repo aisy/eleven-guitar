@@ -26,7 +26,7 @@ class Barang extends CI_Controller {
 			$data['heading'] = "<center><h1>404</h1></center>";
 			$data['message'] = "<center><p>Page Not Found</p></center>";
 			$this->load->view('errors/html/error_404', $data);
-			
+
 		}
 	}
 

@@ -25,6 +25,6 @@
 
 <!-- ANGULAR -->
 <script src="<?= base_url('mdb/js/angular.min.js') ?>"></script>
+<script src="<?= base_url('mdb/js/pagination.js') ?>"></script>
 <script src="<?= base_url('mdb/js/search.js') ?>"></script>
-<script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.10.0.js" type="text/javascript"></script>
-
+<script src="<?= base_url('mdb/js/ui-bootstrap-tpls-0.10.0.js') ?>" type="text/javascript"></script>

@@ -56,7 +56,7 @@
             <div class="col-md-6" ng-repeat="li in filtered = items | filter:cari | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit" class="mdl-card mdl-cell mdl-cell--4-col mdl-shadow--3dp">
 
               <!--Card-->
-              <div class="card card-cascade narrower">
+              <div class="card ovf-hidden">
 
                 <!--Card image-->
                 <div class="view overlay hm-white-slight">
@@ -67,27 +67,45 @@
                 </div>
                 <!--/.Card image-->
 
+                <!--Button-->
+                <a class="btn-floating btn-action activator"><i class="fa fa-chevron-right"></i></a>
+
                 <!--Card content-->
                 <div class="card-block text-xs-center">
                   <!--Category & Title-->
                   <h5>{{ li.nama_kategori }}</h5>
                   <h4 class="card-title"><strong><a href="">{{ li.nama_barang }}</a></strong></h4>
 
-                  <!--Description-->
-                  <p class="card-text">{{ li.keterangan | limitTo:100 }}</p>
-
                   <!--Card footer-->
                   <div class="card-footer">
-                    <span class="left">Rp. {{ li.harga }}</span>
-                    <span class="right">
-                      <a class="" data-toggle="tooltip" data-placement="top" title="Quick Look">
-                        <i class="fa fa-list"></i></i>
-                      </a>
-                    </span>
+                    <span class="center">Rp. {{ li.harga }}</span>
                   </div>
 
                 </div>
                 <!--/.Card content-->
+
+                <!--Card reveal-->
+                <div class="card-reveal">
+                  <!--Content-->
+                  <div class="content text-xs-center">
+
+                    <h4 class="card-title">Detail Produk <i class="fa fa-close"></i></h4>
+                    <hr>
+
+                    <!--Description-->
+                    <p class="card-text">{{ li.keterangan | limitTo:100 }}</p>
+                    <hr>
+
+                    <!--Social Icons-->
+                    <button type="button" class="btn btn-default">
+                      Lihat Selengkapnya
+                    </button>
+
+                  </div>
+                  <!--/.Content-->
+
+                </div>
+                <!--/.Card reveal-->
 
               </div>
               <!--/.Card-->
@@ -97,24 +115,31 @@
             <div ng-hide="totalItems" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
               <div class="jumbotron text-xs-center">
                 <div class="container">
-                 <i class="fa fa-frown-o fa-4x yellow-text"></i>
-                 <h1>Maaf Produk yang anda cari tidak di temukan atau tidak tersedia</h1>
-               </div>
-             </div>
-           </div>
+                  <i class="fa fa-frown-o fa-4x yellow-text"></i>
+                  <h1>Maaf Produk yang anda cari tidak di temukan atau tidak tersedia</h1>
+                </div>
+              </div>
+            </div>
 
-         </div>
-         <!-- List item -->
+          </div>
+          <!-- List item -->
 
-         <pagination page="currentPage" max-size="noOfPages" total-items="totalItems" items-per-page="entryLimit"></pagination>
+          <!-- Pagination  -->
+          <nav class="text-xs-center">
+            <pagination
+            page="currentPage"
+            max-size="noOfPages"
+            total-items="totalItems"
+            class="pagination"
+            items-per-page="entryLimit" >
+          </pagination>
+        </nav>
+          <!-- Pagination  -->
 
-       </div>
+        </div>
 
-     </div>
-   </section>
+      </div>
+    </section>
 
- </div>
+  </div>
 </main>
-
-
-

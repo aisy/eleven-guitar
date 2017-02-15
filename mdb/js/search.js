@@ -22,7 +22,6 @@ app.filter('startFrom', function () {
 app.controller('searchctrl', function($scope, $http, filterFilter){
 
 	// $scope.$emit("LOAD")
-
 	$scope.activeMenu = 'Seluruh';
 
 	// ambil method get dari web
@@ -32,10 +31,8 @@ app.controller('searchctrl', function($scope, $http, filterFilter){
 		// jika ada data
 		function success(data, status, header, config){
 
-			// mengambil data dari http.get
-			$scope.items = data.data;
+			$scope.items = data.data; // mengambil data dari http.get
 			$scope.$emit('UNLOAD')
-			// console.log(data);
 
 			// membuat model pencarian kosong untuk memanggil $watch dari model cari
 			$scope.cari = {};
@@ -49,7 +46,7 @@ app.controller('searchctrl', function($scope, $http, filterFilter){
 			// mengatur pagination
 			$scope.currentPage	= 1;
 			$scope.totalItems	= $scope.items.lenght;
-			$scope.entryLimit	= 10;
+			$scope.entryLimit	= 2;
 			$scope.noOfPages	= Math.ceil($scope.totalItems / $scope.entryLimit);
 
 			// $watch pencarian untuk mengubah pagination, watch diambil dari model
@@ -67,7 +64,7 @@ app.controller('searchctrl', function($scope, $http, filterFilter){
 			// console.log('Tidak ada Data..');
 			$scope.items=[];
 		});
-	
+
 });
 
 app.controller('loadCtrl', function($scope){
@@ -77,7 +74,7 @@ app.controller('loadCtrl', function($scope){
 
 
 app.controller('sliderCtrl', function($scope, $http){
-	
+
 	$http.get('http://localhost/eleven2/Barang/barang_slider').then(
 		function success(data, status, header, config){
 			$scope.slider_item = data.data;

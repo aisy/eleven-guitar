@@ -21,11 +21,11 @@
 }
 
 .list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover {
-    z-index: 2;
-    color: #fff;
-    text-decoration: none;
-    background-color: #fdd835;
-    border-color: #fdd835;
+	z-index: 2;
+	color: #fff;
+	text-decoration: none;
+	background-color: #fdd835;
+	border-color: #fdd835;
 }
 
 .widget-wrapper {
@@ -44,16 +44,26 @@
 }
 
 .graphite-skin input[type="text"]:focus:not([readonly]) {
-    border-color: #fdd835;
-    box-shadow: 0 1px 0 0 #fdd835;
+	border-color: #fdd835;
+	box-shadow: 0 1px 0 0 #fdd835;
 }
 
 .input-group .input-group-addon,  {
-    background-color: #e0e0e0;
-    border-bottom: 
+	background-color: #e0e0e0;
+	border-bottom:
+}
+
+
+.pagination{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	padding-left: 0;
+	border-radius: .25rem;
 }
 
 /*.md-form.input-group .form-control {
-    margin: 0;
-    padding-left: 1rem;
+margin: 0;
+padding-left: 1rem;
 }*/
