@@ -63,6 +63,10 @@
 	border-radius: .25rem;
 }
 
+.search {
+	border-bottom: none !important;
+}
+
 /*.md-form.input-group .form-control {
 margin: 0;
 padding-left: 1rem;

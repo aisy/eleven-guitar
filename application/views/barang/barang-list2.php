@@ -47,7 +47,7 @@
             <span class="input-group-addon grey lighten-5" id="basic-addon1">
               <i class="fa fa-search"></i>
             </span>
-            <input type="text" class="form-control grey lighten-5" placeholder="Cari Nama Produk..." ng-model="cari.nama_barang">
+            <input type="text" class="form-control grey lighten-5 search" placeholder="Cari Nama Produk..." ng-model="cari.nama_barang">
           </div>
 
           <!-- List item -->
