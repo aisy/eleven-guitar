@@ -53,22 +53,20 @@
 	border-bottom:
 }
 
-
-.pagination{
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -ms-flexbox;
-	display: flex;
-	padding-left: 0;
-	border-radius: .25rem;
-}
-
 .search {
 	border-bottom: none !important;
 }
 
 .card .activator {
 	padding: 0;
+}
+
+.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus {
+    z-index: 3;
+    color: #fff;
+    cursor: default;
+    background-color: #fdd835;
+    border-color: #fdd835;
 }
 
 /*.md-form.input-group .form-control {

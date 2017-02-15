@@ -46,7 +46,8 @@ app.controller('searchctrl', function($scope, $http, filterFilter){
 			// mengatur pagination
 			$scope.currentPage	= 1;
 			$scope.totalItems	= $scope.items.lenght;
-			$scope.entryLimit	= 2;
+			$scope.entryLimit	= 9;
+			$scope.maxSize = 5;
 			$scope.noOfPages	= Math.ceil($scope.totalItems / $scope.entryLimit);
 
 			// $watch pencarian untuk mengubah pagination, watch diambil dari model
@@ -57,6 +58,7 @@ app.controller('searchctrl', function($scope, $http, filterFilter){
 				$scope.currentPage 	= 1;
 			}, true);
 
+
 		},
 
 		// jika tidak ada data
@@ -65,22 +67,22 @@ app.controller('searchctrl', function($scope, $http, filterFilter){
 			$scope.items=[];
 		});
 
-});
+	});
 
-app.controller('loadCtrl', function($scope){
-	$scope.$on("LOAD", function(){$scope.loading=true});
-	$scope.$on("UNLOAD", function(){$scope.loading=false});
-});
+	app.controller('loadCtrl', function($scope){
+		$scope.$on("LOAD", function(){$scope.loading=true});
+		$scope.$on("UNLOAD", function(){$scope.loading=false});
+	});
 
 
-app.controller('sliderCtrl', function($scope, $http){
+	app.controller('sliderCtrl', function($scope, $http){
 
-	$http.get('http://localhost/eleven2/Barang/barang_slider').then(
-		function success(data, status, header, config){
-			$scope.slider_item = data.data;
-		},
+		$http.get('http://localhost/eleven2/Barang/barang_slider').then(
+			function success(data, status, header, config){
+				$scope.slider_item = data.data;
+			},
 
-		function error(data, status, header, config){
-			console.log('Tidak ada data');
+			function error(data, status, header, config){
+				console.log('Tidak ada data');
+			});
 		});
-});

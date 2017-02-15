@@ -69,7 +69,9 @@ $route['admin/barang/hapus/(:num)'] = 'Barang/hapus/$1';
 // $route['Admin/']					= '';
 
 // ======================== HALAMAN UTAMA ==========================
-$route['kategori/(:any)']	= 'Welcome/kategori/$1';
-$route['produk']			= 'Welcome/produk';
+$route['kategori/(:any)']	  = 'Welcome/kategori/$1';
+$route['produk']			      = 'Welcome/produk';
 $route['produk/(:any)']     = 'Welcome/detail_barang/$1';
+$route['about']             = 'Welcome/about';
+$route['pembayaran']        = 'Welcome/pembayaran';
 // $route['']

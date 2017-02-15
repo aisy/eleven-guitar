@@ -8,6 +8,10 @@
 <!-- Custom JS -->
 <script>
     // SideNav init
+    $(document).ready(function() {
+   $('.mdb-select').material_select();
+ });
+
     $(".button-collapse").sideNav();
     var el = document.querySelector('.custom-scrollbar');
     Ps.initialize(el);

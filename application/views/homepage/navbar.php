@@ -81,19 +81,19 @@
 
     <ul class="nav navbar-nav float-xs-right">
       <li class="nav-item ">
-        <a href="" class="nav-link">
+        <a href="<?= base_url('produk') ?>" class="nav-link">
           <i class="fa fa-shopping-bag"></i>
           <span class="hidden-sm-down">Produk</span>
         </a>
       </li>
       <li class="nav-item ">
-        <a href="" class="nav-link">
+        <a href="<?= base_url('testimoni') ?>" class="nav-link">
           <i class="fa fa-comments-o"></i>
           <span class="hidden-sm-down">Testimoni</span>
         </a>
       </li>
       <li class="nav-item ">
-        <a href="" class="nav-link">
+        <a href="<?= base_url('about') ?>" class="nav-link">
           <i class="fa fa-info"></i>
           <span class="hidden-sm-down">tentang kami</span>
         </a>

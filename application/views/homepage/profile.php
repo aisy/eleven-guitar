@@ -1,58 +1,99 @@
-<dialog class="mdl-dialog" id="modal-example">
-  <div class="mdl-dialog__content">
+<main class="pt-6">
+        <div class="container">
 
-    <div class="mdl-grid">
-      <div class="mdl-cell mdl-cell--6-col">
-        <img class="article-image" src="<?= base_url() ?>users/vidi.jpg" border="0" alt="">
-      </div>
+            <!--Section: Product intro-->
+            <section class="section section-blog-fw">
 
-      <div class="mdl-cell mdl-cell--6-col">
-        <div class="android-section-title mdl-typography--display-1-color-contrast">Owner</div>
+                <!--First row-->
+                <div class="row">
+                    <div class="col-md-12 wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+                        <!--Featured image-->
+                        <img src="http://mdbootstrap.com/wp-content/uploads/2016/05/updatepro-min-1.jpg">
 
-        <div class="demo-list-action mdl-list">
-          <div class="mdl-list__item">
-            <span class="mdl-list__item-primary-content">
-              <i class="material-icons mdl-list__item-avatar">person</i>
-              <span>Vidi Juniarto</span>
-            </span>
-          </div>
-          <div class="mdl-list__item">
-            <span class="mdl-list__item-primary-content">
-              <i class="material-icons mdl-list__item-avatar">phone</i>
-              <span>Bryan Cranston</span>
-            </span>
-          </div>
+                        <!--Post data-->
+                        <div class="jumbotron wow fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+                            <h1 class="h1-responsive">Eleven guitar</h1>
+                            <hr class="m-b-1">
+                            <p>Tentang Kami</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat maiores dicta, illo ullam reiciendis sed, ab recusandae et perferendis in, distinctio, harum molestias eum quasi totam enim! Quibusdam, iure ipsa.</p>
+                        </div>
+                        <!--/Post data-->
+
+                    </div>
+                </div>
+                <!--/First row-->
+
+            </section>
+            <!--/Section: Product intro-->
+
+            <hr class="between-sections">
+
+            <!--Section: Features v.3-->
+            <section class="section feature-box">
+
+                <!--Section heading-->
+                <h1 class="section-heading">Pemilik</h1>
+                <!--Section sescription-->
+                <!-- <p class="section-description lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, error amet numquam iure provident voluptate esse quasi, veritatis totam voluptas nostrum quisquam eum porro a pariatur accusamus veniam. Quia, minima?</p> -->
+
+                <!--First row-->
+                <div class="row features-small">
+
+                    <!--First column-->
+                    <div class="col-md-5 mb-r center-on-small-only">
+                        <img src="http://mdbootstrap.com/wp-content/uploads/2016/07/img-2-min.jpg" alt="" class="z-depth-0">
+                    </div>
+                    <!--/First column-->
+
+                    <!--Second column-->
+                    <div class="col-md-7 center-on-small">
+                        <!--First row-->
+                        <div class="row">
+                            <div class="col-xs-1">
+                                <i class="fa fa-user"></i>
+                            </div>
+                            <div class="col-xs-10">
+                                <h4 class="feature-title">Safety</h4>
+                                <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores nam, aperiam minima assumenda deleniti hic.</p>
+                            </div>
+                        </div>
+                        <!--/First row-->
+
+                        <div style="height:50px"></div>
+
+                        <!--Second row-->
+                        <div class="row">
+                            <div class="col-xs-1">
+                                <i class="fa fa-code indigo-text"></i>
+                            </div>
+                            <div class="col-xs-10">
+                                <h4 class="feature-title">Technology</h4>
+                                <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores nam, aperiam minima assumenda deleniti hic.</p>
+                            </div>
+                        </div>
+                        <!--/Second row-->
+
+                        <div style="height:50px"></div>
+
+                        <!--Third row-->
+                        <div class="row">
+                            <div class="col-xs-1">
+                                <i class="fa fa-money indigo-text"></i>
+                            </div>
+                            <div class="col-xs-10">
+                                <h4 class="feature-title">Finance</h4>
+                                <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores nam, aperiam minima assumenda deleniti hic.</p>
+                            </div>
+                        </div>
+                        <!--/Third row-->
+                    </div>
+                    <!--/Second column-->
+                </div>
+                <!--/First row-->
+
+            </section>
+            <!--/Section: Features v.3-->
+
+
         </div>
-      </div>
-    </div>
-
-
-
-
-
-  </div>
-  <div class="mdl-dialog__actions mdl-dialog__actions--full-width">
-    <button type="button" class="mdl-button">Close</button>
-  </div>
-</dialog>
-
-
-<script>
-  (function() {
-    'use strict';
-    var dialog = document.querySelector('#modal-example');
-    var closeButton = dialog.querySelector('button');
-    var showButton = document.querySelector('#show-modal-example');
-    if (! dialog.showModal) {
-      dialogPolyfill.registerDialog(dialog);
-    }
-    var closeClickHandler = function(event) {
-      dialog.close();
-    };
-    var showClickHandler = function(event) {
-      dialog.showModal();
-    };
-    showButton.addEventListener('click', showClickHandler);
-    closeButton.addEventListener('click', closeClickHandler);
-  }());
-</script>
+    </main>

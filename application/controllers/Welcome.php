@@ -37,27 +37,10 @@ class Welcome extends CI_Controller {
 		$this->load->view('javascript');
 	}
 
-	public function kategori($nama_kategori){
-
-		// $data['kategori'] = $this->Model_barang->kategori($nama_kategori);
-		$data['nama_kategori'] = $nama_kategori;
-
+	public function about(){
 		$this->load->view('head');
 		$this->load->view('homepage/navbar');
-		$this->load->view('barang/barang-list', $data);
-		$this->load->view('javascript');
-	}
-
-	public function cari_barang($id){
-		$this->load->view('head');
-		$this->load->view('homepage/navbar');
-
-		$this->load->view('javascript');
-	}
-
-	public function pencarian(){
-		$this->load->view('head');
-		$this->load->view('coba/pencarian');
+		$this->load->view('homepage/profile');
 		$this->load->view('javascript');
 	}
 

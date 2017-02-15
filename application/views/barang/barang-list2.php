@@ -5,7 +5,7 @@
         <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
 
           <div class="widget-wrapper">
-            <h4><i class="fa fa-shopping-bag"></i> Produk :</h4>
+            <h4><i class="fa fa-shopping-bag"></i> Kategori Produk :</h4>
             <br>
             <div class="list-group">
               <a href="#" ng-class="{active : activeMenu === 'Seluruh'}" ng-click="resetFilters(); activeMenu = 'Seluruh';" class="list-group-item">Seluruh Produk</a>
@@ -17,23 +17,23 @@
           </div>
 
           <div class="widget-wrapper">
-            <h4>Subscription form:</h4>
+            <h4><i class="fa fa-list-alt"></i> Filter Item</h4>
             <br>
             <div class="card">
               <div class="card-block">
-                <p><strong>Subscribe to our newsletter</strong></p>
-                <p>Once a week we will send you a summary of the most useful news</p>
-                <div class="md-form">
-                  <i class="fa fa-user prefix"></i>
-                  <input type="text" id="form1" class="form-control">
-                  <label for="form1">Your name</label>
+
+                <!-- <div class="md-form">
+                  <select class="mdb-select" ng-model="viewby" ng-change="setItemsPerPage(viewby)">
+                    <option value="" disabled selected>Choose your option</option>
+                    <option value="3">3</option>
+                    <option value="9"> 9</option>
+                    <option value="27"> 27</option>
+                    <option value="45"> 45</option>
+                    <option value="90"> 90</option>
+                  </select>
+                  <label>Banyak item yang ditampilkan</label>
                 </div>
-                <div class="md-form">
-                  <i class="fa fa-envelope prefix"></i>
-                  <input type="text" id="form2" class="form-control">
-                  <label for="form2">Your email</label>
-                </div>
-                <button class="btn btn-primary">Submit</button>
+                <p>{{itemsPerPage}}</p> -->
 
               </div>
             </div>
@@ -53,7 +53,7 @@
           <!-- List item -->
           <div class="row">
 
-            <div class="col-md-6" ng-repeat="li in filtered = items | filter:cari | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit" class="mdl-card mdl-cell mdl-cell--4-col mdl-shadow--3dp">
+            <div class="col-md-6" ng-repeat="li in filtered = items | filter:cari | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit">
 
               <!--Card-->
               <div class="card ovf-hidden">
@@ -68,7 +68,7 @@
                 <!--/.Card image-->
 
                 <!--Button-->
-                <a class="btn-floating btn-action activator"><i class="fa fa-chevron-right"></i></a>
+                <a class="btn-floating btn-action activator yellow darken-1"><i class="fa fa-chevron-right"></i></a>
 
                 <!--Card content-->
                 <div class="card-block text-xs-center">
@@ -125,21 +125,22 @@
           <!-- List item -->
 
           <!-- Pagination  -->
-          <nav class="text-xs-center">
+          <div class="text-xs-center">
             <pagination
+            class="z-depth-1"
             page="currentPage"
-            max-size="noOfPages"
+            max-size="maxSize"
             total-items="totalItems"
-            class="pagination"
-            items-per-page="entryLimit" >
+            boundary-links="true" rotate="false"
+            items-per-page="entryLimit"
+            >
           </pagination>
-        </nav>
-          <!-- Pagination  -->
-
         </div>
 
       </div>
-    </section>
 
-  </div>
+    </div>
+  </section>
+
+</div>
 </main>
