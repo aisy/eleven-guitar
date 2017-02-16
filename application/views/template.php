@@ -116,7 +116,11 @@
         <!--/. Sidebar navigation -->
 
         <!--Navbar-->
+<<<<<<< HEAD
         <nav class="navbar navbar-fixed-top scrolling-navbar double-nav yellow darken-1">
+=======
+        <nav class="navbar navbar-fixed-top scrolling-navbar double-nav">
+>>>>>>> 97f3bb52d279b2bb3a8ff7f61f758690aa693977
 
             <!-- SideNav slide-out button -->
             <div class="float-xs-left">
@@ -146,7 +150,11 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user"></i> <span class="hidden-sm-down">Profile</span></a>
                     <div class="dropdown-menu dropdown-primary dd-right" aria-labelledby="dropdownMenu1" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+<<<<<<< HEAD
                         <a class="dropdown-item" href="<?= base_url() ?>Login/process_logout">Logout</a>
+=======
+                        <a class="dropdown-item" href="#">Logout</a>
+>>>>>>> 97f3bb52d279b2bb3a8ff7f61f758690aa693977
                         <a class="dropdown-item" href="#">My account</a>
                     </div>
                 </li>

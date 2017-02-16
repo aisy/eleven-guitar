@@ -3,7 +3,9 @@
 
 
         <!-- Nav tabs -->
+
         <ul class="nav nav-tabs tabs-3 yellow darken-2" role="tablist">
+
             <li class="nav-item">
                 <a class="nav-link active" data-toggle="tab" href="#panel5" role="tab"> Day</a>
             </li>
