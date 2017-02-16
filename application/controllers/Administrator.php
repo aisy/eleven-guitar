@@ -44,21 +44,12 @@ class Administrator extends CI_Controller {
 
 		// print_r($this->session->userdata());
 
-		if($this->session->userdata('admin') == 1){
-			$this->load->view('admin/head');
-			$this->load->view('admin/index');
-		}else{
-			$data['heading'] = "<center><h1>404</h1></center>";
-			$data['message'] = "<center><p>Page Not Found</p></center>";
-			$this->load->view('errors/html/error_404', $data);
-		}
+		$data['content'] = $this->load->view('index', array(), TRUE);
+
+		$this->load->view('template', $data);
 
 	}
 
-	public function logout(){
-		$this->session->sess_destroy();
-		redirect(base_url('admin/'),'refresh');
-	}
 }
 
 /* End of file controllername.php */
