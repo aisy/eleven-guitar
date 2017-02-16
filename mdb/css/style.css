@@ -3,73 +3,12 @@
 	height: 170px;
 }
 
-.collection-card .stripe.yell {
-	background-color: rgba(253, 216, 53, 0.7);
-}
-
-.graphite-skin .side-nav .logo-wrapper {
-	background: url(../img/slide.jpg) center center no-repeat;
-	background-size: cover;
-}
-
 .yellow-text {
 	color: #fdd835!important;
 }
 
-.list-group-item{
-	color:black;
+.card{
+	width: 40%;
+	margin-top: 8%;
+	margin-left: 30%;
 }
-
-.list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover {
-	z-index: 2;
-	color: #fff;
-	text-decoration: none;
-	background-color: #fdd835;
-	border-color: #fdd835;
-}
-
-.widget-wrapper {
-	padding-bottom: 2rem;
-	border-bottom: 1px solid #e0e0e0;
-	margin-bottom: 2rem;
-}
-
-.extra-margins {
-	margin-top: 1rem;
-	margin-bottom: 2.5rem;
-}
-
-.divider-new {
-	margin-top: 0;
-}
-
-.graphite-skin input[type="text"]:focus:not([readonly]) {
-	border-color: #fdd835;
-	box-shadow: 0 1px 0 0 #fdd835;
-}
-
-.input-group .input-group-addon,  {
-	background-color: #e0e0e0;
-	border-bottom:
-}
-
-.search {
-	border-bottom: none !important;
-}
-
-.card .activator {
-	padding: 0;
-}
-
-.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus {
-    z-index: 3;
-    color: #fff;
-    cursor: default;
-    background-color: #fdd835;
-    border-color: #fdd835;
-}
-
-/*.md-form.input-group .form-control {
-margin: 0;
-padding-left: 1rem;
-}*/
