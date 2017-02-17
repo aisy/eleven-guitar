@@ -12,7 +12,7 @@
 <body>
   <div class="container-fluid">
 
-    <div class="card">
+    <div class="card card-login">
       <div class="card-block">
 
         <!--Header-->

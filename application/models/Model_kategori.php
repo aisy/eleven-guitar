@@ -10,11 +10,8 @@ class Model_kategori extends CI_Model {
 
 	public function tambah(){
 		$object = array(
-			'' => ,
-			'' => , 
-			'' => ,
-			'' => ,
-			'' => 
+			'id_kategori' 		=> NULL,
+			'nama_kategori' 	=> $this->input->post('nama_kategori')
 		);
 
 		$this->db->insert('kategori', $object);
@@ -27,11 +24,9 @@ class Model_kategori extends CI_Model {
 		return $data->first_row();
 	}
 
-	public function edit($id){
-		$object = array('' => , );
-
+	public function edit($data, $id){
 		$this->db->where('id_kategori', $id);
-		$this->db->update('kategori', $object);
+		$this->db->update('kategori', $data);
 	}
 
 	public function hapus($id){

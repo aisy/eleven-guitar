@@ -7,8 +7,35 @@
 	color: #fdd835!important;
 }
 
-.card{
+.card-login{
 	width: 40%;
 	margin-top: 8%;
 	margin-left: 30%;
+}
+
+.side-nav .sn-ad-avatar-wrapper p {
+	padding-left: 30px;
+}
+
+.image-container {
+    position: relative;
+    border: solid 2px #f5f5f5;
+    padding: 10px;
+    padding-bottom: 70%;
+    overflow: hidden;
+}
+
+.image-container img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    width: 100%;
+    z-index: 1;
+}
+
+.text-center {
+    text-align: center;
 }
