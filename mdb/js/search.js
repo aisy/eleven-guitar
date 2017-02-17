@@ -32,31 +32,49 @@ app.controller('searchctrl', function($scope, $http, filterFilter){
 		function success(data, status, header, config){
 
 			$scope.items = data.data; // mengambil data dari http.get
-			$scope.$emit('UNLOAD')
+			// $scope.$emit('UNLOAD');
 
 			// membuat model pencarian kosong untuk memanggil $watch dari model cari
 			$scope.cari = {};
 
 			// fungsi reset
-			$scope.resetFilters = function () {
-				// dibutuhkan untuk menjadi fungsi atau tidak akan memanggil $watch
+			$scope.resetFilters = function (){
 				$scope.cari = {};
 			};
 
 			// mengatur pagination
 			$scope.currentPage	= 1;
-			$scope.totalItems	= $scope.items.lenght;
-			$scope.entryLimit	= 9;
-			$scope.maxSize = 5;
-			$scope.noOfPages	= Math.ceil($scope.totalItems / $scope.entryLimit);
+			$scope.totalItems		= $scope.items.lenght;
+			$scope.entryLimit		= 9;
+			$scope.maxSize			= 5;
+			$scope.noOfPages		= Math.ceil($scope.totalItems / $scope.entryLimit);
 
 			// $watch pencarian untuk mengubah pagination, watch diambil dari model
 			$scope.$watch('cari', function (newVal, oldVal) {
-				$scope.filtered 	= filterFilter($scope.items, newVal);
+
+				$scope.filtered 		= filterFilter($scope.items, newVal);
 				$scope.totalItems 	= $scope.filtered.length;
-				$scope.noOfPages 	= Math.ceil($scope.totalItems / $scope.entryLimit);
+				$scope.noOfPages 		= Math.ceil($scope.totalItems / $scope.entryLimit);
 				$scope.currentPage 	= 1;
 			}, true);
+
+			$scope.rangePrice = function(li){
+				var harga  = parseFloat(li.harga);
+				var minVal = parseFloat($scope.priceMin);
+				var maxVal = parseFloat($scope.priceMax);
+
+				if(!harga){ return false; }
+
+				if(minVal && harga < minVal){ return false; }
+
+				if(maxVal && harga > maxVal){ return false; };
+
+				// $scope.totalItems 	= $scope.filtered.length;
+				// $scope.noOfPages 		= Math.ceil($scope.totalItems / $scope.entryLimit);
+				// $scope.currentPage 	= 1;
+
+				return true;
+			};
 
 
 		},

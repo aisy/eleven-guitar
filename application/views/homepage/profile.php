@@ -12,7 +12,7 @@
 
                         <!--Post data-->
                         <div class="jumbotron wow fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
-                            <h1 class="h1-responsive">Eleven guitar</h1>
+                            <h1 class="h1-responsive yellow-text">Eleven guitar</h1>
                             <hr class="m-b-1">
                             <p>Tentang Kami</p>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat maiores dicta, illo ullam reiciendis sed, ab recusandae et perferendis in, distinctio, harum molestias eum quasi totam enim! Quibusdam, iure ipsa.</p>

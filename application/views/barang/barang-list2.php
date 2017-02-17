@@ -1,6 +1,6 @@
 <main ng-app="search">
-  <div class="container" ng-controller="searchctrl">
-    <section>
+  <div class="container" ng-controller="loadCtrl">
+    <section ng-controller="searchctrl">
       <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
 
@@ -22,18 +22,29 @@
             <div class="card">
               <div class="card-block">
 
-                <!-- <div class="md-form">
-                  <select class="mdb-select" ng-model="viewby" ng-change="setItemsPerPage(viewby)">
-                    <option value="" disabled selected>Choose your option</option>
-                    <option value="3">3</option>
-                    <option value="9"> 9</option>
-                    <option value="27"> 27</option>
-                    <option value="45"> 45</option>
-                    <option value="90"> 90</option>
-                  </select>
-                  <label>Banyak item yang ditampilkan</label>
+                <!-- form range harga -->
+                <div class="md-form">
+                  <div class="row">
+                    <!--First column-->
+                    <div class="col-md-6">
+                      <div class="md-form">
+                        <input ng-model="priceMin" type="number" id="form81" class="form-control validate">
+                        <label for="form81">Harga Min</label>
+                      </div>
+                    </div>
+
+                    <!--Second column-->
+                    <div class="col-md-6">
+                      <div class="md-form">
+                        <input ng-model="priceMax" type="number" id="form82" class="form-control validate">
+                        <label for="form82">Harga Max</label>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <p>{{itemsPerPage}}</p> -->
+                <!-- form range harga -->
+                <!-- {{ totalItems }} -->
+                {{totalItems}}
 
               </div>
             </div>
@@ -50,10 +61,11 @@
             <input type="text" class="form-control grey lighten-5 search" placeholder="Cari Nama Produk..." ng-model="cari.nama_barang">
           </div>
 
+
           <!-- List item -->
           <div class="row">
 
-            <div class="col-md-6" ng-repeat="li in filtered = items | filter:cari | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit">
+            <div class="col-md-6" ng-repeat="li in filtered = items | filter:cari | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit | filter:rangePrice">
 
               <!--Card-->
               <div class="card ovf-hidden">
@@ -74,10 +86,10 @@
                 <div class="card-block text-xs-center">
                   <!--Category & Title-->
                   <h5>{{ li.nama_kategori }}</h5>
-                  <h4 class="card-title"><strong><a href="">{{ li.nama_barang }}</a></strong></h4>
+                  <h4 class="card-title yellow-text"><strong>{{ li.nama_barang }}</strong></h4>
 
                   <!--Card footer-->
-                  <div class="card-footer">
+                  <div class="card-footer green-text">
                     <span class="center">Rp. {{ li.harga }}</span>
                   </div>
 
