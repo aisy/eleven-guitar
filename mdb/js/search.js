@@ -51,12 +51,17 @@ app.controller('searchctrl', function($scope, $http, filterFilter){
 
 			// $watch pencarian untuk mengubah pagination, watch diambil dari model
 			$scope.$watch('cari', function (newVal, oldVal) {
-
 				$scope.filtered 		= filterFilter($scope.items, newVal);
 				$scope.totalItems 	= $scope.filtered.length;
 				$scope.noOfPages 		= Math.ceil($scope.totalItems / $scope.entryLimit);
 				$scope.currentPage 	= 1;
 			}, true);
+
+			$scope.$watch('activeMenu', function (newVal, oldVal) {
+				$scope.totalItems 	= $scope.length;
+				$scope.noOfPages 		= Math.ceil($scope.totalItems / $scope.entryLimit);
+				$scope.currentPage 	= 1;
+			});
 
 			$scope.rangePrice = function(li){
 				var harga  = parseFloat(li.harga);
@@ -69,9 +74,9 @@ app.controller('searchctrl', function($scope, $http, filterFilter){
 
 				if(maxVal && harga > maxVal){ return false; };
 
-				// $scope.totalItems 	= $scope.filtered.length;
-				// $scope.noOfPages 		= Math.ceil($scope.totalItems / $scope.entryLimit);
-				// $scope.currentPage 	= 1;
+				$scope.totalItems 	= $scope.length;
+				$scope.noOfPages 		= Math.ceil($scope.totalItems / $scope.entryLimit);
+				$scope.currentPage 	= 1;
 
 				return true;
 			};
