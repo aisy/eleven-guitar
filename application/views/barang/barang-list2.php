@@ -65,7 +65,7 @@
           <!-- List item -->
           <div class="row">
 
-            <div class="col-md-6" ng-repeat="li in filtered = items | filter:cari | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit | filter:rangePrice">
+            <div class="col-md-6" ng-repeat="li in filtered = items | filter:cari | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit | filter:rangePrice as priceFilter">
 
               <!--Card-->
               <div class="card ovf-hidden">
