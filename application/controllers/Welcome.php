@@ -13,7 +13,7 @@ class Welcome extends CI_Controller {
 	public function index(){
 
 		$this->load->view('head');
-		$this->load->view('homepage/navbar');
+		$this->load->view('navbar');
 		$this->load->view('homepage/index');
 		// $this->load->view('homepage/profile');
 		$this->load->view('javascript');
@@ -25,21 +25,28 @@ class Welcome extends CI_Controller {
 		$data['nama_kategori'] = "Semua Items";
 
 		$this->load->view('head');
-		$this->load->view('homepage/navbar');
-		$this->load->view('barang/barang-list2', $data);
+		$this->load->view('navbar');
+		$this->load->view('barang/barang', $data);
 		$this->load->view('javascript');
 	}
 
-	public function detail_barang($id){
+	public function testimoni(){
 		$this->load->view('head');
-		$this->load->view('homepage/navbar');
-		$this->load->view('barang/barang');
+		$this->load->view('navbar');
+		$this->load->view('testimoni/testimoni');
+		$this->load->view('javascript');
+	}
+
+	public function pembayaran(){
+		$this->load->view('head');
+		$this->load->view('navbar');
+		$this->load->view('pembayaran/pembayaran');
 		$this->load->view('javascript');
 	}
 
 	public function about(){
 		$this->load->view('head');
-		$this->load->view('homepage/navbar');
+		$this->load->view('navbar');
 		$this->load->view('homepage/profile');
 		$this->load->view('javascript');
 	}

@@ -35,28 +35,18 @@
         </li>
         <li>
           <a href="<?= base_url('pembayaran/') ?>" class="waves-effect">
-            <i class="fa fa-money"></i></i> Cara pembayaran
+            <i class="fa fa-credit-card"></i></i> Cara pembayaran
           </a>
         </li>
-        <li><a class="collapsible-header waves-effect arrow-r"><i class="fa fa-briefcase"></i> Fall / Winter<i class="fa fa-angle-down rotate-icon"></i></a>
-          <div class="collapsible-body">
-            <ul>
-              <li><a href="#" class="waves-effect">Coats</a>
-              </li>
-              <li><a href="#" class="waves-effect">Boots</a>
-              </li>
-            </ul>
-          </div>
+        <li>
+          <a href="<?= base_url('testimoni/') ?>" class="waves-effect">
+            <i class="fa fa-comments-o"></i> Testimoni
+          </a>
         </li>
-        <li><a class="collapsible-header waves-effect arrow-r"><i class="fa fa-coffee "></i> Spring<i class="fa fa-angle-down rotate-icon"></i></a>
-          <div class="collapsible-body">
-            <ul>
-              <li><a href="#" class="waves-effect">Denim jackets</a>
-              </li>
-              <li><a href="#" class="waves-effect">Sneakers</a>
-              </li>
-            </ul>
-          </div>
+        <li>
+          <a href="<?= base_url('about/') ?>" class="waves-effect">
+            <i class="fa fa-info"></i> Tentang Kami
+          </a>
         </li>
       </ul>
     </li>
@@ -84,6 +74,12 @@
         <a href="<?= base_url('produk') ?>" class="nav-link">
           <i class="fa fa-shopping-bag"></i>
           <span class="hidden-sm-down">Produk</span>
+        </a>
+      </li>
+      <li class="nav-item ">
+        <a href="<?= base_url('pembayaran') ?>" class="nav-link">
+          <i class="fa fa-credit-card"></i>
+          <span class="hidden-sm-down">Cara Pembayaran</span>
         </a>
       </li>
       <li class="nav-item ">

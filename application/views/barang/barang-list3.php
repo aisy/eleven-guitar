@@ -61,11 +61,10 @@
             <input type="text" class="form-control grey lighten-5 search" placeholder="Cari Nama Produk..." ng-model="cari.nama_barang">
           </div>
 
-
           <!-- List item -->
           <div class="row">
 
-            <div class="col-md-6" ng-repeat="li in filtered = items | filter:cari | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit | filter:rangePrice as priceFilter">
+            <div class="col-md-6" ng-repeat="li in filtered = items | filter:cari | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit | filter:rangePrice">
 
               <!--Card-->
               <div class="card ovf-hidden">

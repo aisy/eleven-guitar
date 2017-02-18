@@ -74,4 +74,4 @@ $route['produk']			      = 'Welcome/produk';
 $route['produk/(:any)']     = 'Welcome/detail_barang/$1';
 $route['about']             = 'Welcome/about';
 $route['pembayaran']        = 'Welcome/pembayaran';
-// $route['']
+$route['testimoni']         = 'Welcome/testimoni';
