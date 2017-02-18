@@ -55,6 +55,7 @@
 
 .search {
 	border-bottom: none !important;
+	box-shadow: none !important;
 }
 
 .card .activator {

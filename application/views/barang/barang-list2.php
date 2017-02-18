@@ -61,7 +61,6 @@
             <input type="text" class="form-control grey lighten-5 search" placeholder="Cari Nama Produk..." ng-model="cari.nama_barang">
           </div>
 
-
           <!-- List item -->
           <div class="row">
 
