@@ -11,7 +11,7 @@
 </head>
 <body>
   <!--Navigation & Intro-->
-  <header>
+  <header class="header_login">
 
       <!--Mask-->
       <div class="view hm-black-strong">
@@ -35,6 +35,9 @@
                           <!--Form-->
                           <div class="card">
                               <div class="card-block">
+
+                                <form action="<?= base_url('login/process_login') ?>" method="post">
+
                                 <!--Header-->
                                 <div class="form-header yellow darken-1">
                                   <h3><i class="fa fa-user"></i> Login </h3>
@@ -43,13 +46,13 @@
                                   <!--Body-->
                                   <div class="md-form">
                                       <i class="fa fa-envelope prefix"></i>
-                                      <input type="text" id="username" class="form-control">
+                                      <input type="text" name="username" id="username" class="form-control">
                                       <label for="username">Username</label>
                                   </div>
 
                                   <div class="md-form">
                                       <i class="fa fa-lock prefix"></i>
-                                      <input type="text" id="password" class="form-control">
+                                      <input type="password" name="password" id="password" class="form-control">
                                       <label for="password">Password</label>
                                   </div>
 
@@ -57,6 +60,8 @@
                                       <button class="btn btn-primary btn-lg btn-block green">Sign up</button>
 
                                   </div>
+
+                                </form>
 
                               </div>
                           </div>

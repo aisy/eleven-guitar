@@ -42,7 +42,7 @@
 
 html,
 body,
-header,
+.header_login,
 .view {
 		height: 100%;
 }
