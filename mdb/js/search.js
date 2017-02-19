@@ -45,7 +45,7 @@ app.controller('searchctrl', function($scope, $http, filterFilter){
 			// mengatur pagination
 			$scope.currentPage	= 1;
 			$scope.totalItems		= $scope.items.lenght;
-			$scope.entryLimit		= 9;
+			$scope.entryLimit		= 3;
 			$scope.maxSize			= 5;
 			$scope.noOfPages		= Math.ceil($scope.totalItems / $scope.entryLimit);
 
@@ -61,16 +61,16 @@ app.controller('searchctrl', function($scope, $http, filterFilter){
 			$scope.$watch('priceMin', function (newVal, oldVal) {
 
 				$scope.totalItems 	= $scope.priceFilter.length;
-				$scope.noOfPages 		= Math.ceil($scope.totalItems / $scope.entryLimit);
+				// $scope.noOfPages 		= Math.ceil($scope.totalItems / $scope.entryLimit);
 				$scope.currentPage 	= 1;
 			}, true);
 
-			$scope.$watch('priceMax', function (newVal, oldVal) {
-
-				$scope.totalItems 	= $scope.priceFilter.length;
-				$scope.noOfPages 		= Math.ceil($scope.totalItems / $scope.entryLimit);
-				$scope.currentPage 	= 1;
-			}, true);
+			// $scope.$watch('priceMax', function (newVal, oldVal) {
+			//
+			// 	$scope.totalItems 	= $scope.priceFilter.length;
+			// 	$scope.noOfPages 		= Math.ceil($scope.totalItems / $scope.entryLimit);
+			// 	$scope.currentPage 	= 1;
+			// }, true);
 
 			$scope.rangePrice = function(li){
 				var harga  = parseFloat(li.harga);

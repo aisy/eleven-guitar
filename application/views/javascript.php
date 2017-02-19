@@ -30,5 +30,6 @@
 <!-- ANGULAR -->
 <script src="<?= base_url('mdb/js/angular.min.js') ?>"></script>
 <script src="<?= base_url('mdb/js/pagination.js') ?>"></script>
-<script src="<?= base_url('mdb/js/search.js') ?>"></script>
+<script src="<?= base_url('mdb/js/apps.js') ?>"></script>
+<script src="<?= base_url('mdb/js/ng-infinite-scroll.min.js') ?>" charset="utf-8"></script>
 <script src="<?= base_url('mdb/js/ui-bootstrap-tpls-0.10.0.js') ?>" type="text/javascript"></script>

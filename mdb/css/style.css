@@ -70,6 +70,16 @@
     border-color: #fdd835;
 }
 
+.btn-floating.btn-xlarge {
+    width: 95.5px;
+    height: 95.5px;
+}
+
+.btn-floating.btn-xlarge i {
+    line-height: 95.5px;
+		font-size: xx-large;
+}
+
 /*.md-form.input-group .form-control {
 margin: 0;
 padding-left: 1rem;

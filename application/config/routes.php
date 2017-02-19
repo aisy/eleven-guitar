@@ -75,3 +75,7 @@ $route['produk/(:any)']     = 'Welcome/detail_barang/$1';
 $route['about']             = 'Welcome/about';
 $route['pembayaran']        = 'Welcome/pembayaran';
 $route['testimoni']         = 'Welcome/testimoni';
+
+
+// ======================== API ===================================
+$route['lol/(:any)/(:any)'] = 'Barang/barang_json/$1/$2';

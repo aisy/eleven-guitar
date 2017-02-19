@@ -8,6 +8,17 @@ class Model_Barang extends CI_Model {
 		$this->db->from('barang');
 		$this->db->join('kategori', 'barang.id_kategori = kategori.id_kategori');
 		$data = $this->db->get();
+		
+		return $data->result();
+	}
+
+	public function getPage($nomor, $offset){
+		$this->db->select('*');
+		$this->db->from('barang');
+		$this->db->join('kategori', 'barang.id_kategori = kategori.id_kategori');
+		$this->db->limit($nomor, $offset);
+		$data = $this->db->get();
+
 		return $data->result();
 	}
 
