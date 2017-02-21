@@ -1,13 +1,41 @@
 
 var app = angular.module('apps',['infinite-scroll']);
 
+app.filter('priceFilter', function () {
+  return function (input, priceCategory) {
+    var out = [];
+
+    angular.forEach(input, function(row) {
+      switch (priceCategory) {
+        case 1:
+          out.push(row);
+        break;
+
+        case 2:
+          if(row.harga <= 50)
+            out.push(row);
+        break;
+
+        case 3:
+          if(row.harga > 50)
+            out.push(row);
+        break;
+      }
+    });
+
+    return out;
+  };
+});
+
 app.controller('searchCtrl', function($scope, $http){
 
   $scope.activeMenu = 'Seluruh';
+  $scope.priceCategory = 1;
 
   $http.get('http://localhost/eleven-guitar/barang/barang_json_get').then(
 
     function success(data, status, header, config){
+
       $scope.items       = data.data;
       $scope.totalItems  = $scope.items.length;
       $scope.data        = $scope.items.slice(0, 1);
@@ -16,10 +44,15 @@ app.controller('searchCtrl', function($scope, $http){
         $scope.data = $scope.items.slice(0, $scope.data.length + 4);
       }
 
+      $scope.resetFilters = function (){
+				$scope.cari = {};
+			};
+
     },
     function error(data, status, header, config){
       $scope.items = {};
     }
+
 
   );
 });

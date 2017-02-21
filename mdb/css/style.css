@@ -80,6 +80,14 @@
 		font-size: xx-large;
 }
 
+.card-header {
+
+}
+
+.card-header > a {
+	color: white;
+}
+
 /*.md-form.input-group .form-control {
 margin: 0;
 padding-left: 1rem;

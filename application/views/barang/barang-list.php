@@ -19,35 +19,68 @@
           <div class="widget-wrapper">
             <h4><i class="fa fa-list-alt"></i> Filter Item</h4>
             <br>
-            <div class="card">
-              <div class="card-block">
 
-                <!-- form range harga -->
-                <div class="md-form">
-                  <div class="row">
-                    <!--First column-->
-                    <div class="col-md-6">
-                      <div class="md-form">
-                        <input ng-model="priceMin" type="number" id="form81" class="form-control validate">
-                        <label for="form81">Harga Min</label>
-                      </div>
-                    </div>
+            <!--Accordion wrapper-->
+            <div class="accordion" id="accordion" role="tablist" aria-multiselectable="true">
+              <div class="card">
+                <div class="card-header" role="tab" id="headingOne">
+                  <a data-toggle="collapse" data-parent="#accordion" href="#collapseHarga" aria-expanded="true" aria-controls="collapseOne">
+                    <h5 class="mb-0">
+                      Harga <i class="fa fa-angle-down rotate-icon"></i>
+                    </h5>
+                  </a>
+                </div>
+                <div id="collapseHarga" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
+                  <div class="card-block">
+                    <fieldset class="form-group">
+                      <input name="group1" type="radio" id="price1" ng-model="priceCategory" ng-value="1">
+                      <label for="price1">Semua harga</label>
+                    </fieldset>
 
-                    <!--Second column-->
-                    <div class="col-md-6">
-                      <div class="md-form">
-                        <input ng-model="priceMax" type="number" id="form82" class="form-control validate">
-                        <label for="form82">Harga Max</label>
-                      </div>
-                    </div>
+                    <fieldset class="form-group">
+                      <input name="group1" type="radio" id="price2" ng-model="priceCategory" ng-value="2">
+                      <label for="price2">Dibawah 50</label>
+                    </fieldset>
+
+                    <fieldset class="form-group">
+                      <input name="group1" type="radio" id="price3" ng-model="priceCategory" ng-value="3">
+                      <label for="price3">Diatas 50</label>
+                    </fieldset>
                   </div>
                 </div>
-                <!-- form range harga -->
-                <!-- {{ totalItems }} -->
-                {{totalItems}}
-
+              </div>
+              <div class="card">
+                <div class="card-header" role="tab" id="headingTwo">
+                  <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    <h5 class="mb-0">
+                      Collapsible Group Item #2 <i class="fa fa-angle-down rotate-icon"></i>
+                    </h5>
+                  </a>
+                </div>
+                <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
+                  <div class="card-block">
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" role="tab" id="headingThree">
+                  <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    <h5 class="mb-0">
+                      Collapsible Group Item #3 <i class="fa fa-angle-down rotate-icon"></i>
+                    </h5>
+                  </a>
+                </div>
+                <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree">
+                  <div class="card-block">
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                  </div>
+                </div>
               </div>
             </div>
+            <!--/.Accordion wrapper-->
+
+
           </div>
 
         </div>
@@ -66,7 +99,7 @@
           <!-- <div class="row"> -->
           <div class="row" infinite-scroll="nextPage()">
 
-            <div class="col-md-6" ng-repeat="li in data">
+            <div class="col-md-6" ng-repeat="li in data | filter:cari | priceFilter:priceCategory">
 
               <!--Card-->
               <div class="card ovf-hidden">
@@ -128,24 +161,24 @@
             <div ng-show='elv.busy'>Loading data...</div>
 
             <!-- <div ng-hide="totalItems" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
-              <div class="jumbotron text-xs-center">
-                <div class="container">
-                  <i class="fa fa-frown-o fa-4x yellow-text"></i>
-                  <h1>Maaf Produk yang anda cari tidak di temukan atau tidak tersedia</h1>
-                </div>
-              </div>
-            </div> -->
-
+            <div class="jumbotron text-xs-center">
+            <div class="container">
+            <i class="fa fa-frown-o fa-4x yellow-text"></i>
+            <h1>Maaf Produk yang anda cari tidak di temukan atau tidak tersedia</h1>
           </div>
-          <!-- List item -->
-
-
         </div>
-
-      </div>
+      </div> -->
 
     </div>
-  </section>
+    <!-- List item -->
+
+
+  </div>
+
+</div>
+
+</div>
+</section>
 
 </div>
 </main>
