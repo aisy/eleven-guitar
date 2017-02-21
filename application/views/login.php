@@ -59,20 +59,12 @@
 
                       <div class="text-center">
 
-                        <button class="btn btn-yellow" type="submit">Login</button>
+                        <button class="btn btn-yellow btn-block" type="submit">Login</button>
 
                       </div>
 
                     </form>
 
-                  </div>
-
-                  <!--Footer-->
-                  <div class="modal-footer">
-                    <div class="options">
-                      <p>Not a member? <a href="#">Sign Up</a></p>
-                      <p>Forgot <a href="#">Password?</a></p>
-                    </div>
                   </div>
 
                 </div>

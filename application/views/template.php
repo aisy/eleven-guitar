@@ -14,7 +14,7 @@
 
   <link rel="stylesheet" type="text/css" href="<?= base_url().'mdb/' ?>css/bootstrap.css">
 
-  <link rel="stylesheet" type="text/css" href="<?= base_url().'mdb/' ?>css/mdb.min.css">
+  <link rel="stylesheet" type="text/css" href="<?= base_url().'mdb/' ?>css/mdb.css">
 
   <link rel="stylesheet" type="text/css" href="<?= base_url().'mdb/' ?>css/dataTables.bootstrap.min.css">
 
@@ -33,9 +33,9 @@
       <!-- Logo -->
       <li>
         <div class="logo-wrapper sn-ad-avatar-wrapper">
-          <!-- <img src="#" class="img-fluid rounded-circle"> -->
+          <img src="http://mdbootstrap.com/images/avatars/img%20(9)" class="img-fluid rounded-circle">
           <div class="rgba-stylish-strong">
-            <p class="user white-text"><?= $this->session->userdata('logged_in')['username']; ?></p>
+            <p class="user white-text">Admin<br><?= $this->session->userdata('logged_in')['username']; ?></p>
           </div>
         </div>
       </li>
@@ -62,6 +62,11 @@
                 </li>
               </ul>
             </div>
+          </li>
+          <li>
+            <a href="<?= base_url() ?>admin/barang" class="collapsible-header waves-effect arrow-r">
+              <i class="fa fa-comments-o"></i> Data Testimoni
+            </a>
           </li>
           <li>
             <a href="<?= base_url() ?>admin/barang" class="collapsible-header waves-effect arrow-r">
@@ -100,19 +105,6 @@
 
 
       <ul class="nav navbar-nav float-xs-right">
-
-        <li class="nav-item ">
-          <a class="nav-link"> <span class="tag red z-depth-1">2</span> <i class="fa fa-shopping-cart"></i> <span class="hidden-sm-down">Cart</span></a>
-        </li>
-        <li class="nav-item ">
-          <a class="nav-link"><i class="fa fa-envelope"></i> <span class="hidden-sm-down">Contact</span></a>
-        </li>
-        <li class="nav-item ">
-          <a class="nav-link"><i class="fa fa-comments-o"></i> <span class="hidden-sm-down">Support</span></a>
-        </li>
-        <li class="nav-item ">
-          <a class="nav-link"><i class="fa fa-sign-in"></i> <span class="hidden-sm-down">Register</span></a>
-        </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user"></i> <span class="hidden-sm-down">Profile</span></a>
           <div class="dropdown-menu dropdown-primary dd-right" aria-labelledby="dropdownMenu1" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
@@ -136,7 +128,7 @@
   <script type="text/javascript" src="<?= base_url().'mdb/' ?>js/jquery-3.1.1.min.js"></script>
   <script type="text/javascript" src="<?= base_url().'mdb/' ?>js/tether.min.js"></script>
   <script type="text/javascript" src="<?= base_url().'mdb/' ?>js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="<?= base_url().'mdb/' ?>js/mdb.min.js"></script>
+  <script type="text/javascript" src="<?= base_url().'mdb/' ?>js/mdb.js"></script>
   <script type="text/javascript" src="<?= base_url().'mdb/' ?>js/dataTables.min.js"></script>
   <script type="text/javascript" src="<?= base_url().'mdb/' ?>js/dataTables.bootstrap.min.js"></script>
 
