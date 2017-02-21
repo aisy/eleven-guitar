@@ -9,10 +9,17 @@ class Login extends CI_Controller{
   }
 
   function index(){
+    // $data['error_message'] = $this->session->flashdata('error_message');
+
     $this->load->view('login');
   }
 
   public function process_login(){
+
+    // validation
+    // $this->form_validation->set_rules('username', 'Username', 'required|alpha_dash|xss_clean');
+    // $this->form_validation->set_rules('password', 'Password', 'required');
+    //
     $result = $this->Model_admin->login();
 
     if ($result != FALSE) {
