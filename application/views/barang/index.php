@@ -1,7 +1,7 @@
 <main>
   <div class="container-fluid">
 
-    <div class="col-lg-6 col-md-12">
+    <div class="col-md-8">
       <div class="card">
         <div class="card-block">
           <table id="data_barang" cellspacing="0" width="100%" class="table full-width">
@@ -41,13 +41,17 @@
         </div>
       </div>
 
-      <div class="col-lg-6 col-md-12">
+      <div class="col-md-4">
         <div class="card">
           <div class="card-block">
+            <!--Header-->
             <div class="text-center">
-              <i class="fa fa-plus-square"></i><span>Form Penambahan Data Barang</span>
-              <hr class="md-2">
+              <h3 class="yellow-text">
+                <i class="fa fa-plus-square-o"></i> Insert Barang
+              </h3>
+              <hr class="mt-2 mb-2">
             </div>
+
             <form action="<?= base_url() ?>barang/tambah_data" method="POST" enctype="multipart/form-data">
 
               <div class="form-group">
@@ -56,8 +60,8 @@
 
               <div class="form-group">
                 <select class="mdb-select" name="id_kategori">
-                    <option value="" disabled selected>Pilih kategori...</option>
-                    <?php foreach ($kategori as $key) { ?>
+                  <option value="" disabled selected>Pilih kategori...</option>
+                  <?php foreach ($kategori as $key) { ?>
                     <option value="<?= $key->id_kategori ?>"><?= $key->nama_kategori ?></option>
                     <?php } ?>
                   </select>
@@ -65,8 +69,9 @@
 
                 <div class="form-group">
                   <div class="file-field">
-                    <div class="btn btn-primary btn-sm">
-                      <span>Choose file</span>
+                    <div class="btn btn-warning btn-sm">
+                      <!-- <span>Pilih file</span> -->
+                      <i class="fa fa-paperclip"></i>
                       <input type="file" name="foto">
                     </div>
                     <div class="file-path-wrapper">
@@ -76,13 +81,13 @@
                 </div>
 
                 <div class="form-group">
-                  <input type="text" class="form-control" name="harga" id="" placeholder="Harga...">
+                  <input type="number" class="form-control" name="harga" id="" placeholder="Harga...">
                 </div>
                 <div class="form-group">
                   <textarea name="keterangan" class="md-textarea" rows="3" placeholder="Keterangan..."></textarea>
                 </div>
 
-                <button type="submit" class="btn btn-primary btn-sm">
+                <button type="submit" class="btn btn-success btn-block">
                   Masukkan Data
                 </button>
 

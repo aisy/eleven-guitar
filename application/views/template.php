@@ -46,53 +46,37 @@
         <ul class="collapsible collapsible-accordion">
           <li>
             <a href="<?= base_url() ?>admin/halaman-utama" class="collapsible-header waves-effect arrow-r">
-              <i class="fa fa-home"></i> Halaman Utama
+              <i class="fa fa-dashboard"></i> Dashboard awal
             </a>
+          </li>
+          <li><a class="collapsible-header waves-effect arrow-r"><i class="fa fa-newspaper-o"></i> Halaman<i class="fa fa-angle-down rotate-icon"></i></a>
+            <div class="collapsible-body">
+              <ul>
+                <li><a href="#" class="waves-effect">Halaman awal</a>
+                </li>
+                <li><a href="#" class="waves-effect">Halaman pembayaran</a>
+                </li>
+                <li><a href="#" class="waves-effect">Halaman testimoni</a>
+                </li>
+                <li><a href="#" class="waves-effect">Halaman profil</a>
+                </li>
+              </ul>
+            </div>
           </li>
           <li>
             <a href="<?= base_url() ?>admin/barang" class="collapsible-header waves-effect arrow-r">
-              <i class="fa fa-list"></i> Barang
+              <i class="fa fa-list"></i> Data Produk
             </a>
           </li>
           <li>
             <a href="<?= base_url() ?>admin/kategori" class="collapsible-header waves-effect arrow-r">
-              <i class="fa fa-tags"></i> Kategori
+              <i class="fa fa-tags"></i> Data Kategori
             </a>
           </li>
           <li>
             <a href="<?= base_url() ?>admin/user" class="collapsible-header waves-effect arrow-r">
-              <i class="fa fa-user"></i> User
+              <i class="fa fa-user"></i> Data Pengelola
             </a>
-          </li>
-          <li><a class="collapsible-header waves-effect arrow-r"><i class="fa fa-sun-o"></i> Summer<i class="fa fa-angle-down rotate-icon"></i></a>
-            <div class="collapsible-body">
-              <ul>
-                <li><a href="#" class="waves-effect">Swimsuits</a>
-                </li>
-                <li><a href="#" class="waves-effect">Sandals</a>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li><a class="collapsible-header waves-effect arrow-r"><i class="fa fa-briefcase"></i> Fall / Winter<i class="fa fa-angle-down rotate-icon"></i></a>
-            <div class="collapsible-body">
-              <ul>
-                <li><a href="#" class="waves-effect">Coats</a>
-                </li>
-                <li><a href="#" class="waves-effect">Boots</a>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li><a class="collapsible-header waves-effect arrow-r"><i class="fa fa-coffee "></i> Spring<i class="fa fa-angle-down rotate-icon"></i></a>
-            <div class="collapsible-body">
-              <ul>
-                <li><a href="#" class="waves-effect">Denim jackets</a>
-                </li>
-                <li><a href="#" class="waves-effect">Sneakers</a>
-                </li>
-              </ul>
-            </div>
           </li>
         </ul>
       </li>
@@ -102,7 +86,7 @@
     <!--/. Sidebar navigation -->
 
     <!--Navbar-->
-    <nav class="navbar navbar-fixed-top scrolling-navbar double-nav yellow darken-1">
+    <nav class="navbar navbar-fixed-top double-nav yellow darken-1">
 
       <!-- SideNav slide-out button -->
       <div class="float-xs-left">
@@ -153,14 +137,15 @@
   <script type="text/javascript" src="<?= base_url().'mdb/' ?>js/tether.min.js"></script>
   <script type="text/javascript" src="<?= base_url().'mdb/' ?>js/bootstrap.min.js"></script>
   <script type="text/javascript" src="<?= base_url().'mdb/' ?>js/mdb.min.js"></script>
-  <script type="text/javascript" src="<?= base_url().'mdb/' ?>js/dataTables.bootstrap.min.js"></script>
   <script type="text/javascript" src="<?= base_url().'mdb/' ?>js/dataTables.min.js"></script>
+  <script type="text/javascript" src="<?= base_url().'mdb/' ?>js/dataTables.bootstrap.min.js"></script>
+
 
   <script type="text/javascript">
-  	$(document).ready(function() {
-  		$('#data_barang').DataTable();
-      $('.mdb-select').material_select();
-  	} );
+  $(document).ready(function() {
+    $('#data_barang').DataTable();
+    $('.mdb-select').material_select();
+  } );
   </script>
 
   <script>
