@@ -23,10 +23,10 @@
             <!--Accordion wrapper-->
             <div class="accordion" id="accordion" role="tablist" aria-multiselectable="true">
               <div class="card">
-                <div class="card-header" role="tab" id="headingOne">
+                <div class="card-header yellow darken-1" role="tab" id="headingOne">
                   <a data-toggle="collapse" data-parent="#accordion" href="#collapseHarga" aria-expanded="true" aria-controls="collapseOne">
                     <h5 class="mb-0">
-                      Harga <i class="fa fa-angle-down rotate-icon"></i>
+                      <i class="fa fa-price"></i> Harga <i class="fa fa-angle-down rotate-icon"></i>
                     </h5>
                   </a>
                 </div>
@@ -50,30 +50,27 @@
                 </div>
               </div>
               <div class="card">
-                <div class="card-header" role="tab" id="headingTwo">
+                <div class="card-header yellow darken-1" role="tab" id="headingTwo">
                   <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                     <h5 class="mb-0">
-                      Collapsible Group Item #2 <i class="fa fa-angle-down rotate-icon"></i>
+                      Nama <i class="fa fa-angle-down rotate-icon"></i>
                     </h5>
                   </a>
                 </div>
                 <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
                   <div class="card-block">
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                  </div>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-header" role="tab" id="headingThree">
-                  <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                    <h5 class="mb-0">
-                      Collapsible Group Item #3 <i class="fa fa-angle-down rotate-icon"></i>
-                    </h5>
-                  </a>
-                </div>
-                <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree">
-                  <div class="card-block">
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    <div class="card-block">
+                      <fieldset class="form-group">
+                        <input name="group1" type="radio" id="name1" ng-model="nameFil" ng-value="1">
+                        <label for="name1">Dari huruf A-Z</label>
+                      </fieldset>
+
+                      <fieldset class="form-group">
+                        <input name="group1" type="radio" id="name2" ng-model="nameFil" ng-value="2">
+                        <label for="name2">Dari hurud Z-A</label>
+                      </fieldset>
+
+                    </div>
                   </div>
                 </div>
               </div>
@@ -97,9 +94,9 @@
 
           <!-- List item -->
           <!-- <div class="row"> -->
-          <div class="row" infinite-scroll="nextPage()">
+          <div class="row" infinite-scroll="nextPage()" infinite-scroll-distance="1">
 
-            <div class="col-md-6" ng-repeat="li in data | filter:cari | priceFilter:priceCategory">
+            <div class="col-md-6" ng-repeat="li in items | filter:cari | priceFilter:priceCategory | limitTo:batas">
 
               <!--Card-->
               <div class="card ovf-hidden">
@@ -158,27 +155,27 @@
 
             </div>
 
-            <div ng-show='elv.busy'>Loading data...</div>
+            <!-- <div ng-show='elv.busy'>Loading data...</div> -->
 
-            <!-- <div ng-hide="totalItems" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
-            <div class="jumbotron text-xs-center">
-            <div class="container">
-            <i class="fa fa-frown-o fa-4x yellow-text"></i>
-            <h1>Maaf Produk yang anda cari tidak di temukan atau tidak tersedia</h1>
+            <!-- <div ng-hide="cari.length" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+              <div class="jumbotron text-xs-center">
+                <div class="container">
+                  <i class="fa fa-frown-o fa-3x yellow-text"></i>
+                  <h5>Maaf Produk yang anda cari tidak di temukan atau tidak tersedia</h5>
+                </div>
+              </div>
+            </div> -->
+
           </div>
+          <!-- List item -->
+
+
         </div>
-      </div> -->
+
+      </div>
 
     </div>
-    <!-- List item -->
-
-
-  </div>
-
-</div>
-
-</div>
-</section>
+  </section>
 
 </div>
 </main>

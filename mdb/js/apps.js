@@ -7,15 +7,12 @@ app.filter('priceFilter', function () {
 
     angular.forEach(input, function(row) {
       switch (priceCategory) {
-        case 1:
-          out.push(row);
+        case 1: out.push(row);
         break;
-
         case 2:
           if(row.harga <= 50)
             out.push(row);
         break;
-
         case 3:
           if(row.harga > 50)
             out.push(row);
@@ -36,12 +33,21 @@ app.controller('searchCtrl', function($scope, $http){
 
     function success(data, status, header, config){
 
+      // $scope.cari        = $scope.items.length;
       $scope.items       = data.data;
       $scope.totalItems  = $scope.items.length;
-      $scope.data        = $scope.items.slice(0, 1);
+      $scope.batas       = 2;
+      // $scope.data        = $scope.items.slice(0, 1);
 
       $scope.nextPage = function(){
-        $scope.data = $scope.items.slice(0, $scope.data.length + 4);
+
+        if($scope.batas +2 <= $scope.items.length){
+          $scope.batas += 2;
+        }else{
+          $scope.batas = $scope.items.length;
+        }
+        // $scope.data = $scope.items.slice(0, $scope.data.length + 4);
+
       }
 
       $scope.resetFilters = function (){
