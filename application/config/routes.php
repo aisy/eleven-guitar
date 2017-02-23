@@ -49,29 +49,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
-$route['default_controller'] 	= 'welcome';
+$route['default_controller'] 	= 'Login';
 $route['404_override'] 			= '';
 $route['translate_uri_dashes'] 	= FALSE;
 
 
 // ======================== ROUTE ADMIN ============================
-$route['admin'] 			 	   	= 'Administrator/index';
-$route['admin/halaman-utama'] 	   	= 'Administrator/halaman_utama';
-$route['admin/logout']				= 'Administrator/logout';
+$route['admin/halaman-utama'] 	   	 = 'Administrator/halaman_utama';
 
-$route['admin/user']        = 'User';
+$route['admin/user']                 = 'User';
 
-$route['admin/barang'] 			   	= 'Barang/index';
-$route['admin/barang/tambah']		= 'Barang/tambah';
-$route['admin/barang/edit/(:num)'] 	= 'Barang/edit/$1';
-$route['admin/barang/hapus/(:num)'] = 'Barang/hapus/$1';
+$route['admin/kategori']             = 'Kategori';
+$route['admin/kategori/tambah']		    = 'Kategori/tambah';
+$route['admin/kategori/edit/(:num)'] 	= 'Kategori/edit/$1';
+$route['admin/kategori/hapus/(:num)'] = 'Kategori/hapus/$1';
 
-// $route['Admin/']					= '';
-
-// ======================== HALAMAN UTAMA ==========================
-$route['kategori/(:any)']	  = 'Welcome/kategori/$1';
-$route['produk']			      = 'Welcome/produk';
-$route['produk/(:any)']     = 'Welcome/detail_barang/$1';
-$route['about']             = 'Welcome/about';
-$route['pembayaran']        = 'Welcome/pembayaran';
-// $route['']
+$route['admin/barang'] 			   	     = 'Barang/index';
+$route['admin/barang/tambah']		     = 'Barang/tambah';
+$route['admin/barang/edit/(:num)'] 	 = 'Barang/edit/$1';
+$route['admin/barang/hapus/(:num)']  = 'Barang/hapus/$1';

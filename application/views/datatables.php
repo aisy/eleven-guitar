@@ -1,5 +1,5 @@
 
-<link rel="stylesheet" type="text/css" href="<?= base_url('mdl/css/dataTables.material.min.css') ?>">
+
 
 <script src="<?= base_url('mdl/js/jquery.min.js') ?>"></script>
 <script src="<?= base_url('mdl/js/jquery.dataTables.min.js') ?>"></script>

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 24 Jan 2017 pada 11.12
+-- Generation Time: 21 Feb 2017 pada 09.15
 -- Versi Server: 10.1.19-MariaDB
 -- PHP Version: 7.0.9
 
@@ -29,16 +29,17 @@ SET time_zone = "+00:00";
 CREATE TABLE `admin` (
   `id_admin` int(10) NOT NULL,
   `username` varchar(30) NOT NULL,
-  `password` varchar(100) NOT NULL
+  `password` varchar(100) NOT NULL,
+  `admin` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data untuk tabel `admin`
 --
 
-INSERT INTO `admin` (`id_admin`, `username`, `password`) VALUES
-(1, 'vidi', '123456'),
-(2, 'aisymr', '1241180090');
+INSERT INTO `admin` (`id_admin`, `username`, `password`, `admin`) VALUES
+(1, 'vidi', '123456', 1),
+(2, 'aisymr', '1241180090', 1);
 
 -- --------------------------------------------------------
 
@@ -60,12 +61,11 @@ CREATE TABLE `barang` (
 --
 
 INSERT INTO `barang` (`id_barang`, `nama_barang`, `id_kategori`, `foto`, `harga`, `keterangan`) VALUES
-(1, 'piano', '3', 'c9e53c18122bb3ff7e1fcab1b19ac0bb06499a4d_hq4.jpg', '30', 'dlkwhdlwkd'),
-(2, 'gitar', '2', 'c9e53c18122bb3ff7e1fcab1b19ac0bb06499a4d_hq5.jpg', '35', 'yolyolyo'),
-(3, 'drumb', '2', 'wizard-of-oz-love-quote.jpg', '400', 'd;ljdljd'),
 (4, 'gitar f', '1', '11.jpg', '23', 'lkfhdlkfh'),
 (5, 'bass', '2', '41.jpg', '40', ';LDESPROPE'),
-(6, 'MELODI', '4', '21.jpg', '50', 'SLKDHLFKDFH');
+(6, 'MELODI', '4', '21.jpg', '50', 'SLKDHLFKDFH'),
+(8, 'asas', '2', 'Asset_11.png', 'as', 'as'),
+(9, 'sds', '1', '541d2ca34b11da334ba710f8d7fd7961.jpg', '23', 'sdsd');
 
 -- --------------------------------------------------------
 
@@ -74,7 +74,7 @@ INSERT INTO `barang` (`id_barang`, `nama_barang`, `id_kategori`, `foto`, `harga`
 --
 
 CREATE TABLE `kategori` (
-  `id_kategori` varchar(10) NOT NULL,
+  `id_kategori` int(10) NOT NULL,
   `nama_kategori` varchar(40) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -83,11 +83,12 @@ CREATE TABLE `kategori` (
 --
 
 INSERT INTO `kategori` (`id_kategori`, `nama_kategori`) VALUES
-('1', 'Gitar'),
-('2', 'Bass'),
-('3', 'Ampli'),
-('4', 'Effect'),
-('5', 'pickup');
+(1, 'Gitar'),
+(2, 'Bass'),
+(3, 'Ampli'),
+(4, 'Effect'),
+(5, 'pickup'),
+(6, 'sdfdsf');
 
 --
 -- Indexes for dumped tables
@@ -116,10 +117,20 @@ ALTER TABLE `kategori`
 --
 
 --
+-- AUTO_INCREMENT for table `admin`
+--
+ALTER TABLE `admin`
+  MODIFY `id_admin` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+--
 -- AUTO_INCREMENT for table `barang`
 --
 ALTER TABLE `barang`
-  MODIFY `id_barang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_barang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+--
+-- AUTO_INCREMENT for table `kategori`
+--
+ALTER TABLE `kategori`
+  MODIFY `id_kategori` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

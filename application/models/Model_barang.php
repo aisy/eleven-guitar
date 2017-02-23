@@ -11,11 +11,17 @@ class Model_Barang extends CI_Model {
 		return $data->result();
 	}
 
+	public function get_kategori(){
+		$this->db->select('*');
+		$data = $this->db->get('kategori');
+		return $data->result();
+	}
+
 	public function tambah($nama_file){
 		$object = array(
 			'id_barang' 	=> NULL,
 			'nama_barang' 	=> $this->input->post('nama_barang'),
-			'id_kategori' 	=> $this->input->post('kategori_barang'),
+			'id_kategori' 	=> $this->input->post('id_kategori'),
 			'foto' 			=> $nama_file,
 			'harga' 		=> $this->input->post('harga'),
 			'keterangan' 	=> $this->input->post('keterangan')
