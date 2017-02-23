@@ -33,9 +33,11 @@
       <!-- Logo -->
       <li>
         <div class="logo-wrapper sn-ad-avatar-wrapper">
+
           <!-- <img src="#" class="img-fluid rounded-circle"> -->
           <div class="rgba-stylish-strong">
             <p class="user white-text"><?= $this->session->userdata('logged_in')['username']; ?></p>
+
           </div>
         </div>
       </li>
@@ -62,6 +64,11 @@
                 </li>
               </ul>
             </div>
+          </li>
+          <li>
+            <a href="<?= base_url() ?>admin/barang" class="collapsible-header waves-effect arrow-r">
+              <i class="fa fa-comments-o"></i> Data Testimoni
+            </a>
           </li>
           <li>
             <a href="<?= base_url() ?>admin/barang" class="collapsible-header waves-effect arrow-r">
@@ -100,7 +107,6 @@
 
 
       <ul class="nav navbar-nav float-xs-right">
-
         <li class="nav-item ">
           <a class="nav-link"> <span class="tag red z-depth-1">2</span> <i class="fa fa-shopping-cart"></i> <span class="hidden-sm-down">Cart</span></a>
         </li>
@@ -187,6 +193,11 @@
     var option = {
       responsive: true,
     };
+
+
+    // // Chart-1
+    // var ctx = document.getElementById("myChart-1").getContext('2d');
+    // var myLineChart = new Chart(ctx).Line(data, option);
 
     // Chart-2
     var ctx = document.getElementById("myChart-2").getContext('2d');

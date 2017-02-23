@@ -89,7 +89,6 @@
 
                     <!--Third column-->
                     <div class="col-lg-6 col-md-12">
-
                         <!--Card-->
                         <div class="card">
 
