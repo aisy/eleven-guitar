@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 23 Feb 2017 pada 07.31
+-- Generation Time: 23 Feb 2017 pada 07.51
 -- Versi Server: 10.1.19-MariaDB
 -- PHP Version: 7.0.9
 
@@ -65,7 +65,12 @@ INSERT INTO `barang` (`id_barang`, `nama_barang`, `id_kategori`, `foto`, `harga`
 (5, 'bass', '2', '41.jpg', '40', ';LDESPROPE'),
 (6, 'MELODI', '4', '21.jpg', '50', 'SLKDHLFKDFH'),
 (8, 'asas', '2', 'Asset_11.png', 'as', 'as'),
-(9, 'sds', '1', '541d2ca34b11da334ba710f8d7fd7961.jpg', '23', 'sdsd');
+(9, 'sds', '1', '541d2ca34b11da334ba710f8d7fd7961.jpg', '23', 'sdsd'),
+(10, 'Gitar 2', '1', 'd17f099e7ed57c852cdfeb297a83e7a0.jpg', '200000', 'gitar baru'),
+(11, 'Bass 2', '2', '5d12831862c1e089bb731de67b4cd702.jpg', '300000', 'bass baru'),
+(12, 'Effect 2', '4', '247a7b04367e0dd03c9b69d9c565c757.jpg', '250000', 'Effect gitar'),
+(13, 'Ampli 2', '3', '629772ecd73699c66ad996f156586b72.jpg', '230000', 'yolo'),
+(14, 'picup', '5', '4a118790307c55048a5cbcb6dbecc28b.png', '150000', 'falalalalala');
 
 -- --------------------------------------------------------
 
@@ -314,7 +319,7 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `barang`
 --
 ALTER TABLE `barang`
-  MODIFY `id_barang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id_barang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 --
 -- AUTO_INCREMENT for table `barang_kategori`
 --

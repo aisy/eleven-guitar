@@ -6,14 +6,14 @@ class Model_Barang extends CI_Model {
 	public function get(){
 		$this->db->select('*');
 		$this->db->from('barang');
-		$this->db->join('kategori', 'barang.id_kategori = kategori.id_kategori');
+		$this->db->join('barang_kategori', 'barang.id_kategori = barang_kategori.id_kategori');
 		$data = $this->db->get();
 		return $data->result();
 	}
 
 	public function get_kategori(){
 		$this->db->select('*');
-		$data = $this->db->get('kategori');
+		$data = $this->db->get('barang_kategori');
 		return $data->result();
 	}
 
@@ -49,7 +49,7 @@ class Model_Barang extends CI_Model {
 
 	public function select_byid($id){
 		$this->db->from('barang');
-		$this->db->join('kategori', 'barang.id_kategori = kategori.id_kategori');
+		$this->db->join('barang_kategori', 'barang.id_kategori = barang_kategori.id_kategori');
 		$this->db->where('barang.id_barang', $id);
 		$query = $this->db->get();
 
