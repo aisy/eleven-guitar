@@ -24,16 +24,18 @@ app.filter('priceFilter', function () {
   };
 });
 
-app.controller('searchCtrl', function($scope, $http){
+app.controller('searchCtrl', function($scope, $http, $filter){
 
   $scope.activeMenu = 'Seluruh';
   $scope.priceCategory = 1;
+  $scope.orderName = "id_barang";
+  $scope.orderLabel = 3;
+  $scope.desc = true;
 
   $http.get('http://localhost/eleven-guitar/barang/barang_json_get').then(
 
     function success(data, status, header, config){
 
-      // $scope.cari        = $scope.items.length;
       $scope.items       = data.data;
       $scope.totalItems  = $scope.items.length;
       $scope.batas       = 2;
@@ -53,6 +55,10 @@ app.controller('searchCtrl', function($scope, $http){
       $scope.resetFilters = function (){
 				$scope.cari = {};
 			};
+
+      $scope.ubahInt = function (harga) {
+        return parseInt(harga);
+      };
 
     },
     function error(data, status, header, config){

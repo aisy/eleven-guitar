@@ -23,7 +23,7 @@
             <!--Accordion wrapper-->
             <div class="accordion" id="accordion" role="tablist" aria-multiselectable="true">
               <div class="card">
-                <div class="card-header yellow darken-1" role="tab" id="headingOne">
+                <div class="card-header darken-1" role="tab" id="headingOne">
                   <a data-toggle="collapse" data-parent="#accordion" href="#collapseHarga" aria-expanded="true" aria-controls="collapseOne">
                     <h5 class="mb-0">
                       <i class="fa fa-price"></i> Harga <i class="fa fa-angle-down rotate-icon"></i>
@@ -50,26 +50,50 @@
                 </div>
               </div>
               <div class="card">
-                <div class="card-header yellow darken-1" role="tab" id="headingTwo">
+                <div class="card-header darken-1" role="tab" id="headingTwo">
                   <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                     <h5 class="mb-0">
-                      Nama <i class="fa fa-angle-down rotate-icon"></i>
+                      Urutkan <i class="fa fa-angle-down rotate-icon"></i>
                     </h5>
                   </a>
                 </div>
+
                 <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
                   <div class="card-block">
                     <div class="card-block">
+
                       <fieldset class="form-group">
-                        <input name="group1" type="radio" id="name1" ng-model="nameFil" ng-value="1">
-                        <label for="name1">Dari huruf A-Z</label>
+                        <input name="group2" type="radio" id="namaAsc" ng-model="orderLabel" ng-value="1">
+                        <label for="namaAsc" ng-click="orderName = 'nama_barang'; desc = false">Nama Barang (Ascending)</label>
                       </fieldset>
 
                       <fieldset class="form-group">
-                        <input name="group1" type="radio" id="name2" ng-model="nameFil" ng-value="2">
-                        <label for="name2">Dari hurud Z-A</label>
+                        <input name="group2" type="radio" id="namaDesc" ng-model="orderLabel" ng-value="2">
+                        <label for="namaDesc" ng-click="orderName = 'nama_barang'; desc = true">Nama Barang (Descending)</label>
                       </fieldset>
 
+                      <fieldset class="form-group">
+                        <input name="group2" type="radio" id="terbaru" ng-model="orderLabel" ng-value="3">
+                        <label for="terbaru" ng-click="orderName = 'id_barang'; desc = true">Produk Terbaru</label>
+                      </fieldset>
+
+                      <fieldset class="form-group">
+                        <input name="group2" type="radio" id="terlama" ng-model="orderLabel" ng-value="4">
+                        <label for="terlama" ng-click="orderName = 'id_barang'; desc = false">Produk Terlama</label>
+                      </fieldset>
+
+                      <fieldset class="form-group">
+                        <input name="group2" type="radio" id="termurah" ng-model="orderLabel" ng-value="5">
+                        <label for="termurah" ng-click="orderName = 'harga'; desc = false">Harga Termurah</label>
+                      </fieldset>
+
+                      <fieldset class="form-group">
+                        <input name="group2" type="radio" id="termahal" ng-model="orderLabel" ng-value="6">
+                        <label for="termahal" ng-click="orderName = 'harga'; desc = true">Harga Termahal</label>
+                      </fieldset>
+                      <!-- {{ orderLabel }}
+                      {{ orderName }}
+                      {{ desc }} -->
                     </div>
                   </div>
                 </div>
@@ -96,7 +120,7 @@
           <!-- <div class="row"> -->
           <div class="row" infinite-scroll="nextPage()" infinite-scroll-distance="1">
 
-            <div class="col-md-6" ng-repeat="li in items | filter:cari | priceFilter:priceCategory | limitTo:batas">
+            <div class="col-md-6" ng-repeat="li in items | orderBy:orderName:desc | filter:cari | priceFilter:priceCategory | limitTo:batas" ng-init="ubahInt(li.harga)">
 
               <!--Card-->
               <div class="card ovf-hidden">
@@ -121,7 +145,7 @@
 
                   <!--Card footer-->
                   <div class="card-footer green-text">
-                    <span class="center">Rp. {{ li.harga }}</span>
+                    <span class="center">{{ li.harga }}</span>
                   </div>
 
                 </div>
@@ -158,24 +182,24 @@
             <!-- <div ng-show='elv.busy'>Loading data...</div> -->
 
             <!-- <div ng-hide="cari.length" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
-              <div class="jumbotron text-xs-center">
-                <div class="container">
-                  <i class="fa fa-frown-o fa-3x yellow-text"></i>
-                  <h5>Maaf Produk yang anda cari tidak di temukan atau tidak tersedia</h5>
-                </div>
-              </div>
-            </div> -->
-
+            <div class="jumbotron text-xs-center">
+            <div class="container">
+            <i class="fa fa-frown-o fa-3x yellow-text"></i>
+            <h5>Maaf Produk yang anda cari tidak di temukan atau tidak tersedia</h5>
           </div>
-          <!-- List item -->
-
-
         </div>
-
-      </div>
+      </div> -->
 
     </div>
-  </section>
+    <!-- List item -->
+
+
+  </div>
+
+</div>
+
+</div>
+</section>
 
 </div>
 </main>

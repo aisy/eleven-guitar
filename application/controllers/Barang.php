@@ -35,7 +35,7 @@ class Barang extends CI_Controller {
 		// mengambil data dari json, (cocok untuk web service)
 		$this->output
 		->set_content_type('application/json')
-		->set_output(json_encode($data))
+		->set_output(json_encode($data, JSON_NUMERIC_CHECK))
 		->_display();
 		exit;
 	}
