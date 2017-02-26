@@ -2,6 +2,16 @@
 /*.side-nav .logo-wrapper, .side-nav .logo-wrapper a {
 	height: 170px;
 }*/
+
+li.paginate_button:hover {
+	background: transparent !important;
+	border-color: transparent !important;
+}
+
+li.paginate_button {
+	padding: 0 !important;
+}
+
 .yellow-text {
 	color: #fdd835!important;
 }
@@ -110,17 +120,4 @@ footer.page-footer {
 	margin-left: 15px;
 	font: inherit;
 	font-size: small;
-
-.dataTables_wrapper .dataTables_paginate .paginate_button {
-    box-sizing: border-box;
-    display: inline-block;
-    min-width: 1.5em;
-    padding: 0.5em 1em;
-    margin-left: 2px;
-    text-align: center;
-    text-decoration: none !important;
-    cursor: pointer;
-    color: #333 !important;
-    border: 1px solid transparent;
-    border-radius: 2px;
 }

@@ -25,12 +25,14 @@
                   <td><?= $key->nama_kategori ?></td>
                   <td>Rp.<?= $key->harga ?></td>
                   <td>
-                    <a href="<?= base_url().'barang/edit/'.$key->id_barang ?>" class="btn btn-primary btn-sm">
-                      Edit
-                    </a>
-                    <a href="<?= base_url().'barang/hapus/'.$key->id_barang ?>" class="btn btn-danger btn-sm" onclick="return confirm('Yakin..!!, Akan hapus barang ini ?')">
-                      Hapus
-                    </a>
+                    <div class="btn-group">
+                      <a href="<?= base_url().'barang/edit/'.$key->id_barang ?>" class="btn btn-primary waves-effect btn-sm">
+                        <i class="fa fa-pencil"></i>
+                      </a>
+                      <a href="<?= base_url().'barang/hapus/'.$key->id_barang ?>" class="btn btn-danger waves-effect btn-sm" onclick="return confirm('Yakin..!!, Akan hapus barang ini ?')">
+                        <i class="fa fa-trash"></i>
+                      </a>
+                    </div>
                   </td>
                 </tr>
                 <?php } ?>
