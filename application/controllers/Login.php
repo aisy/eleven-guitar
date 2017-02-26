@@ -44,4 +44,6 @@ class Login extends CI_Controller{
     $this->session->unset_userdata('logged_in');
     redirect('/');
   }
+
+  //lolololololol...
 }
