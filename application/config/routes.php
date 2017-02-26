@@ -55,16 +55,21 @@ $route['translate_uri_dashes'] 	= FALSE;
 
 
 // ======================== ROUTE ADMIN ============================
-$route['admin/halaman-utama'] 	   	 = 'Administrator/halaman_utama';
+$route['admin/halaman-utama'] 	   	       = 'Administrator/halaman_utama';
 
-$route['admin/user']                 = 'User';
+$route['admin/user']                       = 'User';
 
-$route['admin/kategori']             = 'Kategori';
-$route['admin/kategori/tambah']		    = 'Kategori/tambah';
-$route['admin/kategori/edit/(:num)'] 	= 'Kategori/edit/$1';
-$route['admin/kategori/hapus/(:num)'] = 'Kategori/hapus/$1';
+$route['admin/kategori']                   = 'Kategori';
+$route['admin/kategori/tambah']		         = 'Kategori/tambah';
+$route['admin/kategori/edit/(:num)']       = 'Kategori/edit/$1';
+$route['admin/kategori/hapus/(:num)']      = 'Kategori/hapus/$1';
 
-$route['admin/barang'] 			   	     = 'Barang/index';
-$route['admin/barang/tambah']		     = 'Barang/tambah';
-$route['admin/barang/edit/(:num)'] 	 = 'Barang/edit/$1';
-$route['admin/barang/hapus/(:num)']  = 'Barang/hapus/$1';
+$route['admin/barang'] 			   	           = 'Barang/index';
+$route['admin/barang/tambah']		           = 'Barang/tambah';
+$route['admin/barang/edit/(:num)'] 	       = 'Barang/edit/$1';
+$route['admin/barang/hapus/(:num)']        = 'Barang/hapus/$1';
+
+$route['admin/testimoni']                  = 'Testimoni';
+$route['admin/testimoni/tambah']		       = 'Testimoni/tambah';
+$route['admin/testimoni/edit/(:num)']      = 'Testimoni/edit/$1';
+$route['admin/testimoni/hapus/(:num)']     = 'Testimoni/hapus/$1';
