@@ -69,7 +69,7 @@ $route['admin/barang/tambah']		           = 'Barang/tambah';
 $route['admin/barang/edit/(:num)'] 	       = 'Barang/edit/$1';
 $route['admin/barang/hapus/(:num)']        = 'Barang/hapus/$1';
 
-$route['admin/testimoni']                  = 'Testimoni';
-$route['admin/testimoni/tambah']		       = 'Testimoni/tambah';
-$route['admin/testimoni/edit/(:num)']      = 'Testimoni/edit/$1';
-$route['admin/testimoni/hapus/(:num)']     = 'Testimoni/hapus/$1';
+$route['admin/testimoni']                  = 'halaman/Testimoni';
+$route['admin/testimoni/tambah']		       = 'halaman/Testimoni/tambah';
+$route['admin/testimoni/edit/(:num)']      = 'halaman/Testimoni/edit/$1';
+$route['admin/testimoni/hapus/(:num)']     = 'halaman/Testimoni/hapus/$1';
