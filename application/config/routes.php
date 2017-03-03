@@ -58,18 +58,33 @@ $route['translate_uri_dashes'] 	= FALSE;
 $route['admin/halaman-utama'] 	   	       = 'Administrator/halaman_utama';
 
 $route['admin/user']                       = 'User';
-
+// =============================================================================
+// Kategori
+// =============================================================================
 $route['admin/kategori']                   = 'Kategori';
 $route['admin/kategori/tambah']		         = 'Kategori/tambah';
 $route['admin/kategori/edit/(:num)']       = 'Kategori/edit/$1';
 $route['admin/kategori/hapus/(:num)']      = 'Kategori/hapus/$1';
-
+// =============================================================================
+// Barang
+// =============================================================================
 $route['admin/barang'] 			   	           = 'Barang/index';
 $route['admin/barang/tambah']		           = 'Barang/tambah';
 $route['admin/barang/edit/(:num)'] 	       = 'Barang/edit/$1';
 $route['admin/barang/hapus/(:num)']        = 'Barang/hapus/$1';
+// =============================================================================
+// Tentang kami
+// =============================================================================
+$route['admin/tentang']                  = 'halaman/Tentang';
+$route['admin/tentang/tambah']		       = 'halaman/Tentang/tambah';
+$route['admin/tentang/edit/(:num)']      = 'halaman/Tentang/edit/$1';
+$route['admin/tentang/hapus/(:num)']     = 'halaman/Tentang/hapus/$1';
 
-$route['admin/testimoni']                  = 'halaman/Testimoni';
-$route['admin/testimoni/tambah']		       = 'halaman/Testimoni/tambah';
-$route['admin/testimoni/edit/(:num)']      = 'halaman/Testimoni/edit/$1';
-$route['admin/testimoni/hapus/(:num)']     = 'halaman/Testimoni/hapus/$1';
+$route['admin/profil/tambah']		        = 'halaman/Profil/tambah';
+$route['admin/profil/edit/(:num)']      = 'halaman/Profil/edit/$1';
+$route['admin/profil/hapus/(:num)']     = 'halaman/Profil/hapus/$1';
+
+$route['admin/owner']                  = 'halaman/Profil_owner';
+$route['admin/owner/tambah']		       = 'halaman/Profil_owner/tambah';
+$route['admin/owner/edit/(:num)']      = 'halaman/Profil_owner/edit/$1';
+$route['admin/owner/hapus/(:num)']     = 'halaman/Profil_owner/hapus/$1';

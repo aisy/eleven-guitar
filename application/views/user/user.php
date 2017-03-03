@@ -1,7 +1,7 @@
 <main>
   <div class="container-fluid">
 
-    <div class="col-lg-6 col-md-12">
+    <div class="col-lg-7 col-md-12">
       <div class="card">
         <div class="card-block">
           <table id="data_barang" cellspacing="0" width="100%" class="table full-width">
@@ -26,12 +26,14 @@
                   }
                   ?></td>
                   <td>
-                    <a href="<?= base_url().'user/edit/'.$key->id_admin ?>" class="btn btn-primary btn-sm">
-                      Edit
+                    <div class="btn-group">
+                    <a href="<?= base_url().'user/edit/'.$key->id_admin ?>" class="btn btn-primary waves-effect btn-sm">
+                      <i class="fa fa-pencil"></i>
                     </a>
-                    <a href="<?= base_url().'user/hapus/'.$key->id_admin ?>" class="btn btn-danger btn-sm" onclick="return confirm('Yahin..!!, Akan hapus admin ini ?')">
-                      Hapus
+                    <a href="<?= base_url().'user/hapus/'.$key->id_admin ?>" class="btn btn-danger waves-effect btn-sm" onclick="return confirm('Yahin..!!, Akan hapus admin ini ?')">
+                      <i class="fa fa-trash"></i>
                     </a>
+                  </div>
                   </td>
                 </tr>
                 <?php } ?>
@@ -41,7 +43,7 @@
         </div>
       </div>
 
-      <div class="col-lg-6 col-md-12">
+      <div class="col-lg-5 col-md-12">
         <div class="card">
           <div class="card-block">
             <div class="text-center">

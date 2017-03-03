@@ -11,7 +11,7 @@
   <link rel="shortcut icon" type="image/png" href="<?= base_url().'/mdb/' ?>favicon.ico"/>
 
   <link rel="stylesheet" href="<?= base_url().'mdb/' ?>font-awesome/css/font-awesome.css">
-  
+
   <link rel="stylesheet" type="text/css" href="<?= base_url().'mdb/' ?>css/bootstrap.css">
 
   <link rel="stylesheet" type="text/css" href="<?= base_url().'mdb/' ?>css/mdb.css">
@@ -60,7 +60,9 @@
                 </li>
                 <li><a href="<?= base_url() ?>admin/testimoni" class="waves-effect">Halaman testimoni</a>
                 </li>
-                <li><a href="<?= base_url() ?>admin/profil" class="waves-effect">Halaman profil</a>
+                <li><a href="<?= base_url() ?>admin/tentang" class="waves-effect">Halaman Tentang Kami</a>
+                </li>
+                <li><a href="<?= base_url() ?>admin/owner" class="waves-effect">Halaman Profil Owner</a>
                 </li>
               </ul>
             </div>
@@ -108,16 +110,13 @@
 
       <ul class="nav navbar-nav float-xs-right">
         <li class="nav-item ">
-          <a class="nav-link"> <span class="tag red z-depth-1">2</span> <i class="fa fa-shopping-cart"></i> <span class="hidden-sm-down">Cart</span></a>
-        </li>
-        <li class="nav-item ">
           <a class="nav-link"><i class="fa fa-envelope"></i> <span class="hidden-sm-down">Contact</span></a>
         </li>
         <li class="nav-item ">
           <a class="nav-link"><i class="fa fa-comments-o"></i> <span class="hidden-sm-down">Support</span></a>
         </li>
         <li class="nav-item ">
-          <a class="nav-link"><i class="fa fa-sign-in"></i> <span class="hidden-sm-down">Register</span></a>
+          <a href="<?= base_url() ?>admin/user" class="nav-link"><i class="fa fa-sign-in"></i> <span class="hidden-sm-down">Register</span></a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user"></i> <span class="hidden-sm-down">Profile</span></a>

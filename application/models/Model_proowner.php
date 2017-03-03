@@ -8,12 +8,11 @@ class Model_proowner extends CI_Model {
 		return $data->result();
 	}
 
-	public function tambah(){
+	public function tambah($file_name){
 		$object = array(
 			'id_powner'   => NULL,
 			'nama_owner'  => $this->input->post('nama_owner'),
-			'foto' 	      => $this->input->post('foto'),
-			'id_listown'  => $this->input->post('id_listown')
+			'foto' 	      => $file_name
 		);
 
 		$this->db->insert('profil_owner', $object);
@@ -38,7 +37,6 @@ class Model_proowner extends CI_Model {
 
 	public function select_byid($id){
 		$this->db->from('profil_owner');
-		$this->db->join('profil_owner_kategori', 'profil_owner.id_kategori = profil_owner_kategori.id_kategori');
 		$this->db->where('profil_owner.id_powner', $id);
 		$query = $this->db->get();
 

@@ -8,10 +8,11 @@ class Model_profil extends CI_Model {
 		return $data->result();
 	}
 
-	public function tambah('gambar'){
+	public function tambah($file_name){
 		$object = array(
-			'id_profil'				=> NULL,
-			'gambar_header' => $this->input->post('gambar_header'),
+			'id_profil'			=> NULL,
+			'judul'					=> $this->input->post('judul'),
+			'gambar_header' => $file_name,
       'isi_profil' 		=> $this->input->post('isi_profil')
 		);
 
@@ -37,7 +38,6 @@ class Model_profil extends CI_Model {
 
 	public function select_byid($id){
 		$this->db->from('profil');
-		$this->db->join('profil_kategori', 'profil.id_kategori = profil_kategori.id_kategori');
 		$this->db->where('profil.id_profil', $id);
 		$query = $this->db->get();
 

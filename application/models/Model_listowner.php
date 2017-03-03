@@ -4,7 +4,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Model_listowner extends CI_Model {
 
 	public function get(){
-		$data = $this->db->get('list_owner');
+		$this->db->from('list_owner');
+		$this->db->join('profil_owner', 'list_owner.id_powner = profil_owner.id_powner');
+		$data = $this->db->get();
+		return $data->result();
+	}
+
+	public function get_owner(){
+		$this->db->select('*');
+		$data = $this->db->get('profil_owner');
 		return $data->result();
 	}
 
@@ -13,7 +21,7 @@ class Model_listowner extends CI_Model {
 			'id_listown'=> NULL,
 			'nama_list' => $this->input->post('nama_list'),
 			'caption' 	=> $this->input->post('caption'),
-			'icon' 			=> $this->input->post('icon')
+			'id_powner' => $this->input->post('id_powner')
 		);
 
 		$this->db->insert('list_owner', $object);
@@ -38,7 +46,6 @@ class Model_listowner extends CI_Model {
 
 	public function select_byid($id){
 		$this->db->from('list_owner');
-		$this->db->join('list_owner_kategori', 'list_owner.id_kategori = list_owner_kategori.id_kategori');
 		$this->db->where('list_owner.id_listown', $id);
 		$query = $this->db->get();
 

@@ -68,7 +68,7 @@ class Barang extends Admin_Controller {
 				// echo $data;
 
 				$file_name = $this->upload->data('file_name');
-				echo $file_name;
+				// echo $file_name;
 				$this->Model_barang->tambah($file_name);
 				redirect('admin/barang','refresh');
 			}
