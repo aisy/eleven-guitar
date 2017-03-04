@@ -26,10 +26,10 @@
                   </td>
                   <td>
                     <div class="btn-group">
-                      <button title="ubah" type="submit" name="button" form="form<?=$key->id_kategori ?>" class="btn btn-primary waves-effect btn-sm">
+                      <button data-toggle="tooltip" data-placement="bottom" title="ubah" type="submit" name="button" form="form<?=$key->id_kategori ?>" class="btn btn-primary waves-effect btn-sm">
                         <i class="fa fa-pencil"></i>
                       </button>
-                      <a title="hapus" href="<?= base_url().'admin/kategori/hapus/'.$key->id_kategori ?>" class="btn btn-danger waves-effect btn-sm" onclick="return confirm('Yakin..!!, Akan hapus kategori ini ?')">
+                      <a data-toggle="tooltip" data-placement="bottom" title="hapus" href="<?= base_url().'admin/kategori/hapus/'.$key->id_kategori ?>" class="btn btn-danger waves-effect btn-sm" onclick="return confirm('Yakin..!!, Akan hapus kategori ini ?')">
                         <i class="fa fa-trash"></i>
                       </a>
                     </div>

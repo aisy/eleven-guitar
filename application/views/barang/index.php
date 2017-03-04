@@ -26,10 +26,10 @@
                   <td>Rp.<?= $key->harga ?></td>
                   <td>
                     <div class="btn-group">
-                      <a href="<?= base_url().'barang/edit/'.$key->id_barang ?>" class="btn btn-primary waves-effect btn-sm">
+                      <a data-toggle="tooltip" data-placement="bottom" title="ubah" href="<?= base_url().'barang/edit/'.$key->id_barang ?>" class="btn btn-primary waves-effect btn-sm">
                         <i class="fa fa-pencil"></i>
                       </a>
-                      <a href="<?= base_url().'barang/hapus/'.$key->id_barang ?>" class="btn btn-danger waves-effect btn-sm" onclick="return confirm('Yakin..!!, Akan hapus barang ini ?')">
+                      <a data-toggle="tooltip" data-placement="bottom" title="hapus" href="<?= base_url().'barang/hapus/'.$key->id_barang ?>" class="btn btn-danger waves-effect btn-sm" onclick="return confirm('Yakin..!!, Akan hapus barang ini ?')">
                         <i class="fa fa-trash"></i>
                       </a>
                     </div>
