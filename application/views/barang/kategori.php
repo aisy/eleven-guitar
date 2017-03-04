@@ -22,15 +22,17 @@
                   <td>
                     <form id="form<?=$key->id_kategori?>" action="<?= base_url() ?>admin/kategori/edit/<?= $key->id_kategori ?>" method="POST" enctype="multipart/form-data">
                       <input class="form-control" name="nama_kategori" type="text" value="<?= $key->nama_kategori ?>">
-                      <span class="hidden"><?= $key->nama_kategori ?></span>
                     </form>
                   </td>
                   <td>
-
-                    <input form="form<?=$key->id_kategori ?>" type="submit" value="UBAH" class="btn btn-warning btn-form">
-                    <a href="<?= base_url().'admin/kategori/hapus/'.$key->id_kategori ?>" class="btn btn-danger btn" onclick="return confirm('Yakin..!!, Akan hapus kategori ini ?')">
-                      Hapus
-                    </a>
+                    <div class="btn-group">
+                      <button title="ubah" type="submit" name="button" form="form<?=$key->id_kategori ?>" class="btn btn-primary waves-effect btn-sm">
+                        <i class="fa fa-pencil"></i>
+                      </button>
+                      <a title="hapus" href="<?= base_url().'admin/kategori/hapus/'.$key->id_kategori ?>" class="btn btn-danger waves-effect btn-sm" onclick="return confirm('Yakin..!!, Akan hapus kategori ini ?')">
+                        <i class="fa fa-trash"></i>
+                      </a>
+                    </div>
                   </td>
                 </tr>
                 <?php } ?>
