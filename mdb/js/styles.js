@@ -2,6 +2,11 @@ $(document).ready(function() {
   $('#data_barang').DataTable();
   $('#data_halaman').DataTable();
   $('.mdb-select').material_select();
+
+  // Tooltips Initialization
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip();
+  });
 } );
 
 // SideNav init

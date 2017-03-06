@@ -27,10 +27,10 @@
                   ?></td>
                   <td>
                     <div class="btn-group">
-                    <a href="<?= base_url().'user/edit/'.$key->id_admin ?>" class="btn btn-primary waves-effect btn-sm">
+                    <a data-toggle="tooltip" data-placement="bottom" title="ubah" href="<?= base_url().'user/edit/'.$key->id_admin ?>" class="btn btn-primary waves-effect btn-sm">
                       <i class="fa fa-pencil"></i>
                     </a>
-                    <a href="<?= base_url().'user/hapus/'.$key->id_admin ?>" class="btn btn-danger waves-effect btn-sm" onclick="return confirm('Yahin..!!, Akan hapus admin ini ?')">
+                    <a data-toggle="tooltip" data-placement="bottom" title="hapus" href="<?= base_url().'user/hapus/'.$key->id_admin ?>" class="btn btn-danger waves-effect btn-sm" onclick="return confirm('Yahin..!!, Akan hapus admin ini ?')">
                       <i class="fa fa-trash"></i>
                     </a>
                   </div>
