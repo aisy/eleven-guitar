@@ -52,11 +52,11 @@
             </div>
             <form action="<?= base_url() ?>user/tambah" method="POST" enctype="multipart/form-data">
               <div class="form-group">
-                <input type="text" class="form-control" id="" name="username" placeholder="Username...">
+                <input type="text" class="form-control" name="username" placeholder="Username...">
               </div>
 
               <div class="form-group">
-                <input type="password" class="form-control" name="password" id="" placeholder="Password...">
+                <input type="password" class="form-control" name="password" placeholder="Password...">
               </div>
 
               <button type="submit" class="btn btn-primary btn-sm">
