@@ -22,9 +22,9 @@ class ServiceBarang extends CI_Controller{
 
   }
 
-  public function getBarangPage(){
-    $page = 1;
-    $size = 5;
+  public function getBarangPage($page, $size){
+    // $page = 1;
+    // $size = 5;
 
     $respone = array(
       "total_count" => count($this->Model_barang->get()),
