@@ -11,6 +11,13 @@ class Model_Barang extends CI_Model {
 		return $data->result();
 	}
 
+	public function get_api($page, $size){
+
+			$data = $this->db->get('barang', $size, $page);
+			return $data->result();
+
+	}
+
 	public function get_kategori(){
 		$this->db->select('*');
 		$data = $this->db->get('barang_kategori');
