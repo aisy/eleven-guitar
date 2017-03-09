@@ -7,6 +7,7 @@ class ServiceBarang extends CI_Controller{
     parent::__construct();
     //Codeigniter : Write Less Do More
     $this->load->model('Model_barang');
+    $this->output->set_header("Access-Control-Allow-Origin:*");
   }
 
   function getBarang(){
