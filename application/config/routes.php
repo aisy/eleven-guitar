@@ -76,6 +76,7 @@ $route['admin/barang/edit/(:num)'] 	       = 'Barang/edit/$1';
 $route['admin/barang/hapus/(:num)']        = 'Barang/hapus/$1';
 
 $route['barang/api/(:any)/(:any)'] = 'ServiceBarang/getBarangPage/$1/$2';
+$route['barang/api']               = 'ServiceBarang/getBarang';
 
 
 // =============================================================================

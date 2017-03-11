@@ -8,6 +8,7 @@ class Model_Barang extends CI_Model {
 		$this->db->from('barang');
 		$this->db->join('barang_kategori', 'barang.id_kategori = barang_kategori.id_kategori');
 		$data = $this->db->get();
+		
 		return $data->result();
 	}
 
@@ -16,7 +17,7 @@ class Model_Barang extends CI_Model {
 		$this->db->select('*');
 		$this->db->from('barang');
 		$this->db->join('barang_kategori', 'barang.id_kategori = barang_kategori.id_kategori');
-		$this->db->limit($size, $page);		
+		$this->db->limit($size, $page);
 
 		$data = $this->db->get();
 		// $data = $this->db->get('barang', $size, $page);
