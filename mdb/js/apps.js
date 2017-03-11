@@ -38,7 +38,8 @@ app.factory('GHRepo', function($http) {
       if (this.busy) return;
       this.busy = true;
 
-      var url = "http://localhost/eleven-guitar-admin/barang/api/" + this.page + "/5";
+      var url = "http://localhost/elv-admin/barang/api/" + this.page + "/5";
+      // var url = "http://localhost/eleven-guitar-admin/barang/api/" + this.page + "/5";
       $http.get(url).then(function(response) {
         console.log(response.data);
         var items = response.data.items;
@@ -65,13 +66,14 @@ app.controller('searchCtrl', function($scope, $http, $filter, GHRepo){
   $scope.desc = true;
   $scope.ghRepo = new GHRepo();
 
-  $http.get('http://localhost/eleven-guitar/barang/barang_json_get').then(
+  $http.get('http://localhost/elv-admin/barang/api').then(
 
     function success(data, status, header, config){
 
       $scope.items       = data.data;
       $scope.totalItems  = $scope.items.length;
       $scope.batas       = 2;
+
       // $scope.data        = $scope.items.slice(0, 1);
 
       // $scope.nextPage = function(){
@@ -86,6 +88,7 @@ app.controller('searchCtrl', function($scope, $http, $filter, GHRepo){
 
       $scope.resetFilters = function (){
 				$scope.cari = {};
+        // $scope.ghRepo = new GHRepo();
 			};
 
       $scope.ubahInt = function (harga) {
