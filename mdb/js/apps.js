@@ -24,13 +24,46 @@ app.filter('priceFilter', function () {
   };
 });
 
-app.controller('searchCtrl', function($scope, $http, $filter){
+app.factory('GHRepo', function($http) {
+  var GHRepo = function() {
+    this.repos = [];
+    this.busy = false;
+    this.page = 1;
+    this.allData = 1;
+  };
+
+  GHRepo.prototype.nextPage = function() {
+    if(this.repos.length < this.allData)
+    {
+      if (this.busy) return;
+      this.busy = true;
+
+      var url = "http://localhost/eleven-guitar-admin/barang/api/" + this.page + "/5";
+      $http.get(url).then(function(response) {
+        console.log(response.data);
+        var items = response.data.items;
+
+        for (var i = 0; i < items.length; i++) {
+          this.repos.push(items[i]);
+        }
+        this.page += 1;
+        this.busy = false;
+        this.allData = response.data.total_count;
+      }.bind(this));
+    }
+  };
+
+  return GHRepo;
+});
+
+app.controller('searchCtrl', function($scope, $http, $filter, GHRepo){
 
   $scope.activeMenu = 'Seluruh';
   $scope.priceCategory = 1;
   $scope.orderName = "id_barang";
   $scope.orderLabel = 3;
   $scope.desc = true;
+  $scope.ghRepo = new GHRepo();
 
   $http.get('http://localhost/eleven-guitar/barang/barang_json_get').then(
 
@@ -41,16 +74,15 @@ app.controller('searchCtrl', function($scope, $http, $filter){
       $scope.batas       = 2;
       // $scope.data        = $scope.items.slice(0, 1);
 
-      $scope.nextPage = function(){
-
-        if($scope.batas +2 <= $scope.items.length){
-          $scope.batas += 2;
-        }else{
-          $scope.batas = $scope.items.length;
-        }
-        // $scope.data = $scope.items.slice(0, $scope.data.length + 4);
-
-      }
+      // $scope.nextPage = function(){
+      //
+      //   if($scope.batas +2 <= $scope.items.length){
+      //     $scope.batas += 2;
+      //   }else{
+      //     $scope.batas = $scope.items.length;
+      //   }
+      //   // $scope.data = $scope.items.slice(0, $scope.data.length + 4);
+      // }
 
       $scope.resetFilters = function (){
 				$scope.cari = {};

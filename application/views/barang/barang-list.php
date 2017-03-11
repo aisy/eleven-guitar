@@ -119,9 +119,9 @@ yolo
 
           <!-- List item -->
           <!-- <div class="row"> -->
-          <div class="row" infinite-scroll="nextPage()" infinite-scroll-distance="1">
+          <div class="row" infinite-scroll="ghRepo.nextPage()" infinite-scroll-distance="1">
 
-            <div class="col-md-6" ng-repeat="li in items | orderBy:orderName:desc | filter:cari | priceFilter:priceCategory | limitTo:batas" ng-init="ubahInt(li.harga)">
+            <div class="col-md-6" ng-repeat="li in ghRepo.repos | orderBy:orderName:desc | filter:cari | priceFilter:priceCategory" ng-init="ubahInt(li.harga)">
 
               <!--Card-->
               <div class="card ovf-hidden">
@@ -179,7 +179,23 @@ yolo
               <!--/.Card-->
 
             </div>
-
+            
+            <div ng-show='ghRepo.busy'>
+              <div class="preloader-wrapper small active">
+                <div class="spinner-layer spinner-yellow-only">
+                  <div class="circle-clipper left">
+                    <div class="circle"></div>
+                  </div>
+                  <div class="gap-patch">
+                    <div class="circle"></div>
+                  </div>
+                  <div class="circle-clipper right">
+                    <div class="circle"></div>
+                  </div>
+                </div>
+              </div>
+              Loading
+            </div>
             <!-- <div ng-show='elv.busy'>Loading data...</div> -->
 
             <!-- <div ng-hide="cari.length" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
