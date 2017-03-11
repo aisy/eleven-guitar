@@ -37,7 +37,7 @@ class Model_lipembayaran extends CI_Model {
 		$this->db->delete('list_pembayaran');
 	}
 
-	public function select_byid($id){
+	public function get_byid($id){
 		$this->db->from('list_pembayaran');
 		$this->db->join('list_pembayaran_kategori', 'list_pembayaran.id_kategori = list_pembayaran_kategori.id_kategori');
 		$this->db->where('list_pembayaran.id_list', $id);

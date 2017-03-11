@@ -58,6 +58,7 @@ $route['translate_uri_dashes'] 	= FALSE;
 $route['admin/halaman-utama'] 	   	       = 'Administrator/halaman_utama';
 
 $route['admin/user']                       = 'User';
+
 // =============================================================================
 // Kategori
 // =============================================================================
@@ -65,6 +66,7 @@ $route['admin/kategori']                   = 'Kategori';
 $route['admin/kategori/tambah']		         = 'Kategori/tambah';
 $route['admin/kategori/edit/(:num)']       = 'Kategori/edit/$1';
 $route['admin/kategori/hapus/(:num)']      = 'Kategori/hapus/$1';
+
 // =============================================================================
 // Barang
 // =============================================================================
@@ -74,6 +76,13 @@ $route['admin/barang/edit/(:num)'] 	       = 'Barang/edit/$1';
 $route['admin/barang/hapus/(:num)']        = 'Barang/hapus/$1';
 
 $route['barang/api/(:any)/(:any)'] = 'ServiceBarang/getBarangPage/$1/$2';
+
+
+// =============================================================================
+// Pembayaran
+// =============================================================================
+$route['admin/pembayaran']          = 'halaman/Pembayaran';
+
 // =============================================================================
 // Tentang kami
 // =============================================================================

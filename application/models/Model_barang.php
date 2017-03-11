@@ -13,8 +13,14 @@ class Model_Barang extends CI_Model {
 
 	public function get_api($page, $size){
 
-			$data = $this->db->get('barang', $size, $page);
-			return $data->result();
+		$this->db->select('*');
+		$this->db->from('barang');
+		$this->db->join('barang_kategori', 'barang.id_kategori = barang_kategori.id_kategori');
+		$this->db->limit($size, $page);		
+
+		$data = $this->db->get();
+		// $data = $this->db->get('barang', $size, $page);
+		return $data->result();
 
 	}
 
