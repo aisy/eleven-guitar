@@ -121,7 +121,7 @@ yolo
           <!-- <div class="row"> -->
           <div class="row" infinite-scroll="ghRepo.nextPage()" infinite-scroll-distance="1">
 
-            <div class="col-md-6" ng-repeat="li in ghRepo.repos | orderBy:orderName:desc | filter:cari | priceFilter:priceCategory" ng-init="ubahInt(li.harga)">
+            <div class="col-md-6" ng-repeat="li in ghRepo.repos | orderBy:orderName:desc | filter:cari | priceFilter:priceCategory as filteredItems" ng-init="ubahInt(li.harga)">
 
               <!--Card-->
               <div class="card ovf-hidden">
@@ -199,14 +199,14 @@ yolo
             </div>
             <!-- <div ng-show='elv.busy'>Loading data...</div> -->
 
-            <!-- <div ng-hide="cari.length" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
-            <div class="jumbotron text-xs-center">
-            <div class="container">
-            <i class="fa fa-frown-o fa-3x yellow-text"></i>
-            <h5>Maaf Produk yang anda cari tidak di temukan atau tidak tersedia</h5>
-          </div>
-        </div>
-      </div> -->
+            <div ng-hide="filteredItems.length" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+              <div class="jumbotron text-xs-center">
+                <div class="container">
+                  <i class="fa fa-frown-o fa-3x yellow-text"></i>
+                  <h5>Maaf Produk yang anda cari tidak di temukan atau tidak tersedia</h5>
+                </div>
+              </div>
+            </div>
 
     </div>
     <!-- List item -->
