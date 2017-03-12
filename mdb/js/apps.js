@@ -39,7 +39,6 @@ app.factory('GHRepo', function($http) {
       this.busy = true;
 
       var url = "http://localhost/elv-admin/barang/api/" + this.page + "/5";
-      // var url = "http://localhost/eleven-guitar-admin/barang/api/" + this.page + "/5";
       $http.get(url).then(function(response) {
         console.log(response.data);
         var items = response.data.items;
@@ -95,6 +94,9 @@ app.controller('searchCtrl', function($scope, $http, $filter, GHRepo){
         return parseInt(harga);
       };
 
+      $scope.$watch('cari.nama_kategori', (newVal, oldVal) => {
+        $scope.ghRepo.nextPage();
+      });
     },
     function error(data, status, header, config){
       $scope.items = {};

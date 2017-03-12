@@ -179,22 +179,23 @@ yolo
               <!--/.Card-->
 
             </div>
-            
+
             <div ng-show='ghRepo.busy'>
-              <div class="preloader-wrapper small active">
-                <div class="spinner-layer spinner-yellow-only">
-                  <div class="circle-clipper left">
-                    <div class="circle"></div>
-                  </div>
-                  <div class="gap-patch">
-                    <div class="circle"></div>
-                  </div>
-                  <div class="circle-clipper right">
-                    <div class="circle"></div>
+              <div class="row">
+                <div class="col-lg-12" align="center">
+                  <div class="preloader-wrapper small active">
+                    <div class="spinner-layer spinner-yellow-only">
+                      <div class="circle-clipper left">
+                        <div class="circle"></div>
+                      </div><div class="gap-patch">
+                        <div class="circle"></div>
+                      </div><div class="circle-clipper right">
+                        <div class="circle"></div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-              Loading
             </div>
             <!-- <div ng-show='elv.busy'>Loading data...</div> -->
 
