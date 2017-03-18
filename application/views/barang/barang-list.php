@@ -127,7 +127,7 @@
 
                 <!--Card image-->
                 <div class="view overlay hm-white-slight">
-                  <img src="http://mdbootstrap.com/images/ecommerce/reg/reg%20(21).jpg" class="img-fluid" alt="">
+                  <img src="<?= base_url() ?>products/1.jpg" class="img-fluid" alt="">
                   <a>
                     <div class="mask waves-effect waves-light"></div>
                   </a>
@@ -135,7 +135,7 @@
                 <!--/.Card image-->
 
                 <!--Button-->
-                <a class="btn-floating btn-action activator yellow darken-1"><i class="fa fa-chevron-right"></i></a>
+                <a class="btn-floating btn-action activator yellow darken-1"><i class="fa fa-th-list"></i></a>
 
                 <!--Card content-->
                 <div class="card-block text-xs-center">
@@ -145,7 +145,7 @@
 
                   <!--Card footer-->
                   <div class="card-footer green-text">
-                    <span class="center">{{ li.harga }}</span>
+                    <span class="center">Rp. {{ li.harga }}</span>
                   </div>
 
                 </div>
