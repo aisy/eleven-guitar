@@ -27,7 +27,7 @@
               <p class="flex-item">The most powerful and free UI KIT for Bootstrap</p>
             </li>
             <li>
-              <a target="_blank" href="http://mdbootstrap.com/material-design-for-bootstrap/" class="btn btn-default btn-lg flex-item">Learn more</a>
+              <a target="_blank" href="http://mdbootstrap.com/material-design-for-bootstrap/" class="btn btn-outline-white btn-lg wow fadeInLeft waves-effect waves-light flex-item">Learn more</a>
             </li>
           </ul>
         </div>
@@ -49,7 +49,7 @@
               <p>And all of them are FREE!</p>
             </li>
             <li>
-              <a target="_blank" href="http://mdbootstrap.com/bootstrap-tutorial/" class="btn btn-primary btn-lg">Start learning</a>
+              <a target="_blank" href="http://mdbootstrap.com/bootstrap-tutorial/" class="btn btn-outline-white btn-lg wow fadeInLeft waves-effect waves-light">Start learning</a>
             </li>
           </ul>
         </div>
@@ -70,7 +70,7 @@
                 <p>Our community can help you with any question</p>
               </li>
               <li>
-                <a target="_blank" href="http://mdbootstrap.com/forums/forum/support/" class="btn btn-default btn-lg">Support forum</a>
+                <a target="_blank" href="http://mdbootstrap.com/forums/forum/support/" class="btn btn-outline-white btn-lg wow fadeInLeft waves-effect waves-light">Support forum</a>
               </li>
             </ul>
           </div>
