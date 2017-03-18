@@ -164,9 +164,9 @@
                     <hr>
 
                     <!--Social Icons-->
-                    <button type="button" class="btn btn-default">
+                    <a class="btn btn-default" href="produk/{{ li.id_barang }}">
                       Lihat Selengkapnya
-                    </button>
+                    </a>
 
                   </div>
                   <!--/.Content-->

@@ -20,21 +20,26 @@ body,
 }
 
 .carousel-item:nth-child(1) {
-		background-image: url("http://mdbootstrap.com/images/regular/nature/img%20(54).jpg");
+		background-image: url("../img/carousel/carousel-1.jpg");
 		background-repeat: no-repeat;
 		background-size: cover;
 }
 
 .carousel-item:nth-child(2) {
-		background-image: url("http://mdbootstrap.com/images/regular/nature/img%20(4).jpg");
+		background-image: url("../img/carousel/carousel-2.jpg");
 		background-repeat: no-repeat;
 		background-size: cover;
 }
 
 .carousel-item:nth-child(3) {
-		background-image: url("http://mdbootstrap.com/images/regular/nature/img%20(3).jpg");
+		background-image: url("../img/carousel/carousel-3.jpg");
 		background-repeat: no-repeat;
 		background-size: cover;
+}
+
+.image-carousel {
+	display: inline !important;
+	margin-bottom: 30px;
 }
 
 .flex-center {

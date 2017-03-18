@@ -52,7 +52,7 @@ class Model_Barang extends CI_Model {
 		$this->db->delete('barang');
 	}
 
-	public function select_byid($id){
+	public function select_by_id($id){
 		$this->db->from('barang');
 		$this->db->join('barang_kategori', 'barang.id_kategori = barang_kategori.id_kategori');
 		$this->db->where('barang.id_barang', $id);

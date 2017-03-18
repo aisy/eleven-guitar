@@ -71,6 +71,12 @@
 
     <ul class="nav navbar-nav float-xs-right">
       <li class="nav-item ">
+        <a href="<?= base_url('') ?>" class="nav-link">
+          <i class="fa fa-home"></i>
+          <span class="hidden-sm-down">Halaman Utama</span>
+        </a>
+      </li>
+      <li class="nav-item ">
         <a href="<?= base_url('produk') ?>" class="nav-link">
           <i class="fa fa-shopping-bag"></i>
           <span class="hidden-sm-down">Produk</span>

@@ -7,23 +7,28 @@
 
 <!-- Custom JS -->
 <script>
-    // SideNav init
-    $(document).ready(function() {
-   $('.mdb-select').material_select();
- });
+// SideNav init
+$(document).ready(function() {
+  $('.mdb-select').material_select();
+});
 
-    $(".button-collapse").sideNav();
-    var el = document.querySelector('.custom-scrollbar');
-    Ps.initialize(el);
+$(".button-collapse").sideNav();
+var el = document.querySelector('.custom-scrollbar');
+Ps.initialize(el);
 
-    $(function () {
-        $('[data-toggle="tooltip"]').tooltip()
-    });
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+});
+
+// MDB Lightbox Init
+$(function () {
+  $("#mdb-lightbox-ui").load("<?= base_url() ?>mdb/mdb-addons/mdb-lightbox-ui.html");
+});
 
 </script>
 
 <script>
-	new WOW().init();
+new WOW().init();
 </script>
 
 
