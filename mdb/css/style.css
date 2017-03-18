@@ -38,12 +38,14 @@ body,
 }
 
 .image-carousel {
-	display: inline !important;
-	margin-bottom: 30px;
+	display: inline-block !important;
+	margin-bottom: 30px !important;
+	max-width: 90%;
 }
 
 .flex-center {
 		color: #fff;
+		padding: 0px 20px;
 }
 
 @media (min-width: 776px) {
