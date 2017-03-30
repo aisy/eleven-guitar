@@ -130,7 +130,7 @@
               <!--Card image-->
               <div class="view  hm-zoom">
                 <img src="<?= base_url('mdb/img/products/guitar.jpg') ?>" class="img-fluid" alt="">
-                <div class="stripe yell">
+                <div class="stripe yellow darken-2">
                   <a>
                     <p>Gitar <i class="fa fa-chevron-right"></i></p>
                   </a>
@@ -151,7 +151,7 @@
               <!--Card image-->
               <div class="view  hm-zoom">
                 <img src="<?= base_url('mdb/img/products/bass.jpg') ?>" class="img-fluid" alt="">
-                <div class="stripe yell">
+                <div class="stripe yellow darken-2">
                   <a>
                     <p>Bass <i class="fa fa-chevron-right"></i></p>
                   </a>
@@ -172,7 +172,7 @@
               <!--Card image-->
               <div class="view  hm-zoom">
                 <img src="<?= base_url('mdb/img/products/pick.jpg') ?>" class="img-fluid" alt="">
-                <div class="stripe yell">
+                <div class="stripe yellow darken-2">
                   <a>
                     <p>Pick <i class="fa fa-chevron-right"></i></p>
                   </a>
@@ -193,7 +193,7 @@
               <!--Card image-->
               <div class="view  hm-zoom">
                 <img src="<?= base_url('mdb/img/products/ampli.jpg') ?>" class="img-fluid" alt="">
-                <div class="stripe yell">
+                <div class="stripe yellow darken-2">
                   <a>
                     <p>Ampli <i class="fa fa-chevron-right"></i></p>
                   </a>

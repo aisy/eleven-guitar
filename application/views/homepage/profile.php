@@ -32,7 +32,7 @@
             <section class="section feature-box">
 
                 <!--Section heading-->
-                <h1 class="section-heading">Pemilik</h1>
+                <h1 class="section-heading yellow-text">Pemilik</h1>
                 <!--Section sescription-->
                 <!-- <p class="section-description lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, error amet numquam iure provident voluptate esse quasi, veritatis totam voluptas nostrum quisquam eum porro a pariatur accusamus veniam. Quia, minima?</p> -->
 

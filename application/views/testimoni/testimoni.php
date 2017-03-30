@@ -5,7 +5,7 @@
 <section class="section team-section">
 
     <!--Section heading-->
-    <h1 class="section-heading">Testimoni</h1>
+    <h1 class="section-heading yellow-text">Testimoni</h1>
     <!--Section description-->
     <p class="section-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, error amet numquam iure provident voluptate esse quasi, veritatis totam voluptas nostrum quisquam eum porro a pariatur accusamus veniam. Quia, minima?</p>
 

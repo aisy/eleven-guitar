@@ -5,7 +5,7 @@
         <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
 
           <div class="widget-wrapper">
-            <h4><i class="fa fa-shopping-bag"></i> Kategori Produk :</h4>
+            <h4><i class="fa fa-shopping-bag"></i> Kategori Produk </h4>
             <br>
             <div class="list-group">
               <a href="#" ng-class="{active : activeMenu === 'Seluruh'}" ng-click="resetFilters(); activeMenu = 'Seluruh';" class="list-group-item">Seluruh Produk</a>
@@ -135,7 +135,7 @@
                 <!--/.Card image-->
 
                 <!--Button-->
-                <a class="btn-floating btn-action activator yellow darken-1"><i class="fa fa-th-list"></i></a>
+                <a class="btn-floating btn-action activator yellow darken-2"><i class="fa fa-th-list"></i></a>
 
                 <!--Card content-->
                 <div class="card-block text-xs-center">

@@ -142,6 +142,10 @@ body,
 	color: white;
 }
 
+.navbar-fixed-top {
+	border-radius: 0px !important;
+}
+
 /*.md-form.input-group .form-control {
 margin: 0;
 padding-left: 1rem;
