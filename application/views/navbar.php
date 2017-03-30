@@ -56,7 +56,7 @@
   <!--/. Sidebar navigation -->
 
   <!--Navbar-->
-  <nav class="navbar navbar-fixed-top yellow darken-1 scrolling-navbar double-nav ">
+  <nav class="navbar navbar-fixed-top yellow darken-2 scrolling-navbar double-nav ">
 
     <!-- SideNav slide-out button -->
     <div class="float-xs-left">
