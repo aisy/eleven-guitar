@@ -19,7 +19,7 @@
       <!--Mask-->
       <div class="view hm-black-strong">
         <div class="full-bg-img flex-center">
-          <ul class="animated fadeInUp col-md-12">
+          <ul class="animated fadeInUp col-md-12 smooth-scroll">
             <li>
               <img class="responsive image-carousel" src="<?= base_url('mdb/img/Asset6.png') ?>" alt="">
             </li>
@@ -27,7 +27,7 @@
               <p class="flex-item">The most powerful and free UI KIT for Bootstrap</p>
             </li>
             <li>
-              <a target="_blank" href="http://mdbootstrap.com/material-design-for-bootstrap/" class="btn btn-outline-white btn-lg wow fadeInLeft waves-effect waves-light flex-item">Learn more</a>
+              <a target="_blank" href="#penawaran" class="btn btn-outline-white btn-lg wow fadeInLeft waves-effect waves-light flex-item">Penawaran Kami</a>
             </li>
           </ul>
         </div>
@@ -112,7 +112,7 @@
       <!--/Section: Main carousel-->
 
       <!--Section: Penawaran-->
-      <section class="section">
+      <section class="section" id="penawaran">
 
         <!--Section heading-->
         <h1 class="section-heading wow fadeIn yellow-text" data-wow-delay="0.2s">Yang kami Tawarkan</h1>
