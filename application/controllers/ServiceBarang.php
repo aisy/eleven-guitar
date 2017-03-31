@@ -38,4 +38,16 @@ class ServiceBarang extends CI_Controller{
 		exit;
 
   }
+
+  public function getBarangDetail($id){
+
+    $data = $this->Model_barang->getID($id);
+        
+    $this->output
+    ->set_content_type('application/json')
+    ->set_output(json_encode($data))
+    ->_display();
+    exit;
+    
+  }
 }
