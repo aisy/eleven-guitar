@@ -41,7 +41,7 @@ class ServiceBarang extends CI_Controller{
 
   public function getBarangDetail($id){
 
-    $data = $this->Model_barang->getID($id);
+    $data = $this->Model_barang->select_byid($id);
         
     $this->output
     ->set_content_type('application/json')
