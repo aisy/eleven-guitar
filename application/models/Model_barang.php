@@ -16,8 +16,17 @@ class Model_Barang extends CI_Model
 
     public function getID($id)
     {
-        $this->db->where('id_barang', $id);
-        $data = $this->db->get('barang');
+
+        $this->db->from('barang');
+        $this->db->join('barang_kategori', 'barang.id_kategori = barang_kategori.id_kategori');
+        $this->db->where('barang.id_barang', $id);
+        $query = $this->db->get();
+
+        if ($query->num_rows() == 1) {
+            return $query->first_row();
+        } else {
+            return false;
+        }
 
 		return $data->first_row();
     }
