@@ -1,6 +1,101 @@
 <main ng-app="apps">
   <div class="container">
     <section ng-controller="searchCtrl">
+
+      <!-- Modal Detail Barang  -->
+
+        <!-- Modal -->
+        <div class="modal fade ql-modal" id="detailBarang" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <!--Content-->
+                <div class="modal-content">
+                    <!--Header-->
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                        <h4 class="modal-title" id="myModalLabel">Quick look</h4>
+                    </div>
+                    <!--Body-->
+                    <div class="modal-body">
+                        <!--Grid-->
+                        <div class="container-fluid">
+                            <div class="row">
+
+                                <!--First column-->
+                                <div class="col-md-3">
+                                    <h4 class="yellow-text">Gambar Produk</h4>
+                                    <hr>
+                                    <!--Carousel Wrapper-->
+                                    <div id="carousel-example-1" class="carousel slide carousel-fade" data-ride="carousel">
+
+                                        <!--Slides-->
+                                        <div class="carousel-inner" role="listbox">
+                                            <div class="carousel-item active">
+                                                <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/img%20(13).jpg" alt="First slide">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/img%20(15).jpg" alt="Second slide">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/img%20(16).jpg" alt="Third slide">
+                                            </div>
+                                        </div>
+                                        <!--/.Slides-->
+
+                                        <!--Controls-->
+                                        <a class="carousel-control-prev" href="#carousel-example-1" role="button" data-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="sr-only">Previous</span>
+                                        </a>
+                                        <a class="carousel-control-next" href="#carousel-example-1" role="button" data-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="sr-only">Next</span>
+                                        </a>
+                                        <!--/.Controls-->
+                                    </div>
+                                    <!--/.Carousel Wrapper-->
+                                </div>
+                                <!--/.First column-->
+
+                                <!--Second column-->
+                                <div class="col-md-4">
+                                    <!--Title-->
+                                    <h4 class="yellow-text">{{ detail_nama_barang }}</h4> {{ detail_nama_kategori }}
+                                    <hr>
+                                    <!--Price-->
+                                    <div class="price">
+                                        <p><span class="price-after">Rp. {{ detail_harga }}</span></p>
+                                    </div>
+
+                                    <hr>
+
+                                    <h4 class="yellow-text">Keterangan</h4>
+                                    <hr>
+                                    <p>{{ detail_keterangan }}</p>
+                                    <br>
+
+                                </div>
+                                <!--/.Second column-->
+                            </div>
+                        </div>
+                        <!--/.Grid-->
+
+                    </div>
+                    <!--Footer-->
+                    <div class="modal-footer">
+                        <a class="btn btn-default">Ask about details</a>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+                <!--/.Content-->
+            </div>
+        </div>
+        <!--/Modal-->
+
+      <!-- Modal Detail Barang  -->
+
+
       <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
 
@@ -135,7 +230,7 @@
                 <!--/.Card image-->
 
                 <!--Button-->
-                <a class="btn-floating btn-action activator yellow darken-2"><i class="fa fa-th-list"></i></a>
+                <a class="btn-floating btn-action yellow darken-2" data-toggle="modal" data-target="#detailBarang" ng-click="showModal(li.id_barang)"><i class="fa fa-th-list"></i></a>
 
                 <!--Card content-->
                 <div class="card-block text-xs-center">
@@ -150,30 +245,6 @@
 
                 </div>
                 <!--/.Card content-->
-
-                <!--Card reveal-->
-                <div class="card-reveal">
-                  <!--Content-->
-                  <div class="content text-xs-center">
-
-                    <h4 class="card-title">Detail Produk <i class="fa fa-close"></i></h4>
-                    <hr>
-
-                    <!--Description-->
-                    <p class="card-text">{{ li.keterangan | limitTo:100 }}</p>
-                    <hr>
-
-                    <!--Social Icons-->
-                    <a class="btn btn-default" href="produk/{{ li.id_barang }}">
-                      Lihat Selengkapnya
-                    </a>
-
-                  </div>
-                  <!--/.Content-->
-
-                </div>
-                <!--/.Card reveal-->
-
               </div>
               <!--/.Card-->
 

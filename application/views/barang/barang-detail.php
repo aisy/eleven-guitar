@@ -1,155 +1,207 @@
+<!--Main layout-->
+<main ng-app="apps" ng-controller="barangDetail">
+    <div class="container-fluid">
 
-    <!--Main layout-->
-    <main>
-        <div class="container-fluid">
+        <!--Section: Product intro-->
+        <section class="section section-blog-fw">
 
-            <!--Section: Product intro-->
-            <section class="section section-blog-fw">
+            <!--First row-->
+            <div class="row">
+                <div class="col-md-12 wow fadeInUp">
+                    <!--Grid-->
+                    <div class="container-fluid">
+                        <div class="row">
 
-                <!--First row-->
-                <div class="row">
-                    <div class="col-md-12 wow fadeInUp">
-                        <!--Featured image-->
-                        <img src="http://mdbootstrap.com/images/slides/slide%20(25).jpg">
+                            <!--First column-->
+                            <div class="col-md-3">
+                                <h4 class="yellow-text">Gambar Produk</h4>
+                                <hr>
+                                <!--Carousel Wrapper-->
+                                <div id="carousel-example-1" class="carousel slide carousel-fade" data-ride="carousel">
 
-                        <!--Post data-->
-                        <div class="jumbotron wow fadeInUp" data-wow-delay="0.2s">
-                            <h1 class="h1-responsive">Big Handbag for Fall / Winter Season</h1>
-                            <hr class="mb-1">
-                            <p>Short description</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat maiores dicta, illo ullam reiciendis sed, ab recusandae et perferendis in, distinctio, harum molestias eum quasi totam enim! Quibusdam, iure ipsa.</p>
-                            <a href="" class="btn btn-primary"><i class="fa fa-shopping-cart left"></i> <span class="hidden-sm-down">Add to cart</span></a>
-                            <a href="" class="btn btn-default"><i class="fa fa-star left"></i> <span class="hidden-sm-down">Live preview</span></a>
-                            <a href="" class="btn btn-secondary"><i class="fa fa-envelope left"></i> <span class="hidden-sm-down">Ask for details</span></a>
+                                    <!--Slides-->
+                                    <div class="carousel-inner" role="listbox">
+                                        <div class="carousel-item active">
+                                            <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/img%20(13).jpg" alt="First slide">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/img%20(15).jpg" alt="Second slide">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/img%20(16).jpg" alt="Third slide">
+                                        </div>
+                                    </div>
+                                    <!--/.Slides-->
 
+                                    <!--Controls-->
+                                    <a class="carousel-control-prev" href="#carousel-example-1" role="button" data-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="sr-only">Previous</span>
+                                    </a>
+                                    <a class="carousel-control-next" href="#carousel-example-1" role="button" data-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="sr-only">Next</span>
+                                    </a>
+                                    <!--/.Controls-->
+                                </div>
+                                <!--/.Carousel Wrapper-->
+                            </div>
+                            <!--/.First column-->
+
+                            <!--Second column-->
+                            <div class="col-md-4">
+                                <!--Title-->
+                                <a>
+                                    <h4 class="yellow-text">{{ nama_barang }} <small>{{ nama_kategori }}</small></h4>
+                                </a>
+                                <hr>
+                                <!--Price-->
+                                <div class="price">
+                                    <p><span class="price-after">Rp. {{ harga }}</span></p>
+                                </div>
+
+                                <hr>
+
+                                <h4 class="yellow-text">Keterangan</h4>
+                                <hr>
+                                <p>{{ keterangan }}</p>
+                                <br>
+
+                            </div>
+                            <!--/.Second column-->
+
+                            <!--Third column-->
+                            <div class="col-md-5">
+                                <h4 class="yellow-text">Rekomendasi Produk</h4>
+                                <hr>
+
+                                <!--First review-->
+                                <div class="media">
+                                    <a class="media-left waves-light">
+                                        <img class="rounded-circle" src="https://mdbootstrap.com/img/Photos/Avatars/avatar-13.jpg" alt="Generic placeholder image">
+                                    </a>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">John Doe</h4>
+                                        <ul class="rating inline-ul">
+                                            <li><i class="fa fa-star amber-text"></i></li>
+                                            <li><i class="fa fa-star amber-text"></i></li>
+                                            <li><i class="fa fa-star amber-text"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                        </ul>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi cupiditate temporibus iure soluta. Quasi mollitia maxime nemo quam accusamus possimus.</p>
+                                    </div>
+                                </div>
+
+                                <!--Second review-->
+                                <div class="media">
+                                    <a class="media-left waves-light">
+                                        <img class="rounded-circle" src="https://mdbootstrap.com/img/Photos/Avatars/avatar-14.jpg" alt="Generic placeholder image">
+                                    </a>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">Nathan Casie</h4>
+                                        <ul class="rating inline-ul">
+                                            <li><i class="fa fa-star amber-text"></i></li>
+                                            <li><i class="fa fa-star amber-text"></i></li>
+                                            <li><i class="fa fa-star amber-text"></i></li>
+                                            <li><i class="fa fa-star amber-text"></i></li>
+                                            <li><i class="fa fa-star amber-text"></i></li>
+                                        </ul>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi cupiditate temporibus iure soluta. Quasi mollitia maxime nemo quam accusamus possimus.</p>
+                                    </div>
+                                </div>
+
+                                <!--Second review-->
+                                <div class="media">
+                                    <a class="media-left waves-light">
+                                        <img class="rounded-circle" src="https://mdbootstrap.com/img/Photos/Avatars/avatar-15.jpg" alt="Generic placeholder image">
+                                    </a>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">Dave Snow</h4>
+                                        <ul class="rating inline-ul">
+                                            <li><i class="fa fa-star amber-text"></i></li>
+                                            <li><i class="fa fa-star amber-text"></i></li>
+                                            <li><i class="fa fa-star amber-text"></i></li>
+                                            <li><i class="fa fa-star amber-text"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                        </ul>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi cupiditate temporibus iure soluta. Quasi mollitia maxime nemo quam accusamus possimus, voluptatum expedita assumenda. Earum sit id ullam eum vel delectus!
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/.Third column-->
                         </div>
-                        <!--/Post data-->
-
                     </div>
+                    <!--/.Grid-->
                 </div>
-                <!--/First row-->
+            </div>
+            <!--/First row-->
 
-            </section>
-            <!--/Section: Product intro-->
+        </section>
+        <!--/Section: Product intro-->
 
-            <!--Section: Product description-->
-            <section class="section">
 
-                <!--Section heading-->
-                <h1 class="section-heading wow fadeIn" data-wow-delay="0.2s">Product description</h1>
-                <!--Section sescription-->
+        <hr class="between-sections">
 
-                <!-- Nav tabs -->
-                <ul class="nav nav-tabs tabs-3 indigo wow fadeInUp" data-wow-delay="0.3s" role="tablist">
-                    <li class="nav-item">
-                        <a class="nav-link active" data-toggle="tab" href="#panel5" role="tab"><i class="fa fa-diamond"></i> Product description</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-toggle="tab" href="#panel6" role="tab"><i class="fa fa-heart-o"></i> About designer</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-toggle="tab" href="#panel7" role="tab"><i class="fa fa-coffee"></i> More product details</a>
-                    </li>
-                </ul>
+        <!--Section: Product gallery-->
+        <section class="section mb-4">
 
-                <!-- Tab panels -->
-                <div class="tab-content">
+            <!--Section heading-->
+            <h1 class="section-heading wow fadeIn" data-wow-delay="0.2s">Product gallery</h1>
 
-                    <!--Panel 1-->
-                    <div class="tab-pane fade in active" id="panel5" role="tabpanel">
-                        <br>
 
-                        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Tempora, placeat ratione porro voluptate odit minima.</p>
+            <div class="row">
+                <div class="col-md-12 wow fadeIn" data-wow-delay="0.3s">
+
+                    <div id="mdb-lightbox-ui"></div>
+
+                    <div class="mdb-lightbox no-margin">
+
+
+                        <figure class="col-md-4">
+                            <a href="http://mdbootstrap.com/images/docs/lightbox-gallery/img%20(52)" data-size="1600x1067">
+                                <img src="http://mdbootstrap.com/images/docs/lightbox-thumbs/img%20(52)" class="img-fluid" />
+                            </a>
+                        </figure>
+
+                        <figure class="col-md-4">
+                            <a href="http://mdbootstrap.com/images/docs/lightbox-gallery/img%20(53)" data-size="1600x1067">
+                                <img src="http://mdbootstrap.com/images/docs/lightbox-thumbs/img%20(53)" class="img-fluid" />
+                            </a>
+                        </figure>
+
+                        <figure class="col-md-4">
+                            <a href="http://mdbootstrap.com/images/docs/lightbox-gallery/img%20(55)" data-size="1600x1067">
+                                <img src="http://mdbootstrap.com/images/docs/lightbox-thumbs/img%20(55)" class="img-fluid" />
+                            </a>
+                        </figure>
+
+                        <figure class="col-md-4">
+                            <a href="http://mdbootstrap.com/images/docs/lightbox-gallery/img%20(54)" data-size="1600x1067">
+                                <img src="http://mdbootstrap.com/images/docs/lightbox-thumbs/img%20(54)" class="img-fluid" />
+                            </a>
+                        </figure>
+
+                        <figure class="col-md-4">
+                            <a href="http://mdbootstrap.com/images/docs/lightbox-gallery/img%20(57)" data-size="1600x1067">
+                                <img src="http://mdbootstrap.com/images/docs/lightbox-thumbs/img%20(57)" class="img-fluid" />
+                            </a>
+                        </figure>
+
+                        <figure class="col-md-4">
+                            <a href="http://mdbootstrap.com/images/docs/lightbox-gallery/img%20(56)" data-size="1600x1067">
+                                <img src="http://mdbootstrap.com/images/docs/lightbox-thumbs/img%20(56)" class="img-fluid" />
+                            </a>
+                        </figure>
 
                     </div>
-                    <!--/.Panel 1-->
-
-                    <!--Panel 2-->
-                    <div class="tab-pane fade" id="panel6" role="tabpanel">
-                        <br>
-
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil odit magnam minima, soluta doloribus reiciendis molestiae placeat unde eos molestias. Quisquam aperiam, pariatur. Tempora, placeat ratione porro voluptate odit minima.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil odit magnam minima, soluta doloribus reiciendis molestiae placeat unde eos molestias. Quisquam aperiam, pariatur. Tempora, placeat ratione porro voluptate odit minima.</p>
-
-                    </div>
-                    <!--/.Panel 2-->
-
-                    <!--Panel 3-->
-                    <div class="tab-pane fade" id="panel7" role="tabpanel">
-                        <br>
-                            <p><i class="fa fa-minus"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil odit magnam minima, soluta doloribus reiciendis molestiae placeat unde eos molestias. Quisquam aperiam, pariatur. Tempora, placeat ratione porro voluptate odit minima.</p>
-                            <p><i class="fa fa-minus"></i> Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
-                            <p><i class="fa fa-minus"></i> Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-
-                    </div>
-                    <!--/.Panel 3-->
 
                 </div>
+            </div>
 
-            </section>
-            <!--/Section: Product description-->
+        </section>
+    </div>
 
-            <hr class="between-sections">
-
-            <!--Section: Product gallery-->
-            <section class="section mb-4">
-
-                <!--Section heading-->
-                <h1 class="section-heading wow fadeIn" data-wow-delay="0.2s">Product gallery</h1>
-                <!--Section sescription-->
-                <p class="section-description wow fadeIn" data-wow-delay="0.4s">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, error amet numquam iure provident voluptate esse quasi, veritatis totam voluptas nostrum quisquam eum porro a pariatur accusamus veniam. Quia, minima?</p>
-
-
-                <div class="row">
-                    <div class="col-md-12 wow fadeIn" data-wow-delay="0.3s">
-
-                        <div id="mdb-lightbox-ui"></div>
-
-                        <div class="mdb-lightbox no-margin">
-
-
-                            <figure class="col-md-4">
-                                <a href="http://mdbootstrap.com/images/docs/lightbox-gallery/img%20(52)" data-size="1600x1067">
-                                    <img src="http://mdbootstrap.com/images/docs/lightbox-thumbs/img%20(52)" class="img-fluid" />
-                                </a>
-                            </figure>
-
-                            <figure class="col-md-4">
-                                <a href="http://mdbootstrap.com/images/docs/lightbox-gallery/img%20(53)" data-size="1600x1067">
-                                    <img src="http://mdbootstrap.com/images/docs/lightbox-thumbs/img%20(53)" class="img-fluid" />
-                                </a>
-                            </figure>
-
-                            <figure class="col-md-4">
-                                <a href="http://mdbootstrap.com/images/docs/lightbox-gallery/img%20(55)" data-size="1600x1067">
-                                    <img src="http://mdbootstrap.com/images/docs/lightbox-thumbs/img%20(55)" class="img-fluid" />
-                                </a>
-                            </figure>
-
-                            <figure class="col-md-4">
-                                <a href="http://mdbootstrap.com/images/docs/lightbox-gallery/img%20(54)" data-size="1600x1067">
-                                    <img src="http://mdbootstrap.com/images/docs/lightbox-thumbs/img%20(54)" class="img-fluid" />
-                                </a>
-                            </figure>
-
-                            <figure class="col-md-4">
-                                <a href="http://mdbootstrap.com/images/docs/lightbox-gallery/img%20(57)" data-size="1600x1067">
-                                    <img src="http://mdbootstrap.com/images/docs/lightbox-thumbs/img%20(57)" class="img-fluid" />
-                                </a>
-                            </figure>
-
-                            <figure class="col-md-4">
-                                <a href="http://mdbootstrap.com/images/docs/lightbox-gallery/img%20(56)" data-size="1600x1067">
-                                    <img src="http://mdbootstrap.com/images/docs/lightbox-thumbs/img%20(56)" class="img-fluid" />
-                                </a>
-                            </figure>
-
-                        </div>
-
-                    </div>
-                </div>
-
-            </section>
-        </div>
-    </main>
-    <!--/Main layout-->
+</main>
+<!--/Main layout-->

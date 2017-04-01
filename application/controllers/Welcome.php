@@ -30,12 +30,12 @@ class Welcome extends CI_Controller {
 		$this->load->view('javascript');
 	}
 
-	public function produk_detail($id) {
-		$this->load->view('head');
-		$this->load->view('navbar');
-		$this->load->view('barang/barang-detail');
-		$this->load->view('javascript');
-	}
+	// public function produk_detail() {
+	// 	$this->load->view('head');
+	// 	$this->load->view('navbar');
+	// 	$this->load->view('barang/barang-detail');
+	// 	$this->load->view('javascript');
+	// }
 
 	public function testimoni(){
 		$this->load->view('head');
