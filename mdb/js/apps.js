@@ -55,7 +55,6 @@ app.factory('GHRepo', function($http) {
     return GHRepo;
 });
 
-
 app.controller('searchCtrl', function($scope, $http, $filter, GHRepo) {
 
     $scope.activeMenu = 'Seluruh';
@@ -122,6 +121,37 @@ app.controller('searchCtrl', function($scope, $http, $filter, GHRepo) {
 
       );
     };
+});
+
+app.controller('halamanUtama', function($scope, $http) {
+    $http.get('admin.elevenguitar.com/ServiceHalut/getData').then(
+      function success(data){
+        $scope.konten = data.data;
+      },function error(){
+        console.log("error");
+      }
+    );
+});
+
+app.controller('testimoni',function($scope, $http) {
+  $http.get('').then(
+    function success(data){
+      $scope.konten = data;
+    },function error(){
+      console.log("error");
+    }
+  );
+});
+
+app.controller('logika', function($scope, $http) {
+  $http.get('').then(
+    function success(data) {
+      $scope.konten = data;
+    },
+    function error() {
+      console.log("error");
+    }
+  );
 });
 
 // app.controller('searchCtrl', function($scope, Elv){
