@@ -5,7 +5,7 @@ class Model_kutama extends CI_Model {
 
 	public function get(){
 		$data = $this->db->get('konten_utama');
-		return $data->result();
+		return $data->first_row();
 	}
 
 	public function tambah($nama_file){
