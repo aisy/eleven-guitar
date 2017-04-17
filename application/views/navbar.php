@@ -16,6 +16,7 @@
       <ul class="social">
         <li><a href="#" class="icons-sm fb-ic"><i class="fa fa-facebook"> </i></a></li>
         <li><a href="#" class="icons-sm ins-ic"><i class="fa fa-instagram"> </i></a></li>
+        <li><a href="#" class="icons-sm tw-ic"><i class="fa fa-twitter"> </i></a></li>
       </ul>
     </li>
     <!--/Social-->

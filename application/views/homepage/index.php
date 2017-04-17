@@ -130,9 +130,9 @@
               <!--Card image-->
               <div class="view  hm-zoom">
                 <img src="<?= base_url('mdb/img/products/guitar.jpg') ?>" class="img-fluid" alt="">
-                <div class="stripe yellow darken-2">
+                <div class="stripe yell">
                   <a>
-                    <p>Gitar <i class="fa fa-chevron-right"></i></p>
+                    <p>Gitar</p>
                   </a>
                 </div>
               </div>
@@ -151,9 +151,9 @@
               <!--Card image-->
               <div class="view  hm-zoom">
                 <img src="<?= base_url('mdb/img/products/bass.jpg') ?>" class="img-fluid" alt="">
-                <div class="stripe yellow darken-2">
+                <div class="stripe yell">
                   <a>
-                    <p>Bass <i class="fa fa-chevron-right"></i></p>
+                    <p>Bass</p>
                   </a>
                 </div>
               </div>
@@ -172,9 +172,9 @@
               <!--Card image-->
               <div class="view  hm-zoom">
                 <img src="<?= base_url('mdb/img/products/pick.jpg') ?>" class="img-fluid" alt="">
-                <div class="stripe yellow darken-2">
+                <div class="stripe yell">
                   <a>
-                    <p>Pick <i class="fa fa-chevron-right"></i></p>
+                    <p>Pick</p>
                   </a>
                 </div>
               </div>
@@ -193,9 +193,9 @@
               <!--Card image-->
               <div class="view  hm-zoom">
                 <img src="<?= base_url('mdb/img/products/ampli.jpg') ?>" class="img-fluid" alt="">
-                <div class="stripe yellow darken-2">
+                <div class="stripe yell">
                   <a>
-                    <p>Ampli <i class="fa fa-chevron-right"></i></p>
+                    <p>Ampli</p>
                   </a>
                 </div>
               </div>
@@ -208,6 +208,12 @@
 
         </div>
         <!--/First row-->
+
+        <div class="center text-xs-center">
+            <a href="<?= base_url('produk') ?>" class="btn btn-warning btn-rounded">
+              <i class="fa fa-eye left"></i> Lihat Semua Produk
+            </a>
+        </div>
 
       </section>
       <!--/Section: Penawaran-->
@@ -336,6 +342,7 @@
       <ul>
         <li><a class="btn-floating btn-small btn-fb"><i class="fa fa-facebook"> </i></a></li>
         <li><a class="btn-floating btn-small btn-ins"><i class="fa fa-instagram"> </i></a></li>
+        <li><a class="btn-floating btn-small btn-tw"><i class="fa fa-twitter"> </i></a></li>
       </ul>
     </div>
     <!--/.Social buttons-->

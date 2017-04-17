@@ -1,97 +1,115 @@
-<main ng-app="apps">
+<main ng-app="apps" id="top-section">
+
+  <div class="fixed-action-btn smooth-scroll" style="bottom: 45px; right: 24px;">
+    <a href="#top-section" class="btn-floating btn-large yellow darken-2">
+      <i class="fa fa-arrow-up"></i>
+    </a>
+  </div>
+
   <div class="container">
     <section ng-controller="searchCtrl">
 
       <!-- Modal Detail Barang  -->
 
-        <!-- Modal -->
-        <div class="modal fade ql-modal" id="detailBarang" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <!--Content-->
-                <div class="modal-content">
-                    <!--Header-->
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                        <h4 class="modal-title" id="myModalLabel">Quick look</h4>
-                    </div>
-                    <!--Body-->
-                    <div class="modal-body">
-                        <!--Grid-->
-                        <div class="container-fluid">
-                            <div class="row">
-
-                                <!--First column-->
-                                <div class="col-md-3">
-                                    <h4 class="yellow-text">Gambar Produk</h4>
-                                    <hr>
-                                    <!--Carousel Wrapper-->
-                                    <div id="carousel-example-1" class="carousel slide carousel-fade" data-ride="carousel">
-
-                                        <!--Slides-->
-                                        <div class="carousel-inner" role="listbox">
-                                            <div class="carousel-item active">
-                                                <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/img%20(13).jpg" alt="First slide">
-                                            </div>
-                                            <div class="carousel-item">
-                                                <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/img%20(15).jpg" alt="Second slide">
-                                            </div>
-                                            <div class="carousel-item">
-                                                <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/img%20(16).jpg" alt="Third slide">
-                                            </div>
-                                        </div>
-                                        <!--/.Slides-->
-
-                                        <!--Controls-->
-                                        <a class="carousel-control-prev" href="#carousel-example-1" role="button" data-slide="prev">
-                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                            <span class="sr-only">Previous</span>
-                                        </a>
-                                        <a class="carousel-control-next" href="#carousel-example-1" role="button" data-slide="next">
-                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                            <span class="sr-only">Next</span>
-                                        </a>
-                                        <!--/.Controls-->
-                                    </div>
-                                    <!--/.Carousel Wrapper-->
-                                </div>
-                                <!--/.First column-->
-
-                                <!--Second column-->
-                                <div class="col-md-4">
-                                    <!--Title-->
-                                    <h4 class="yellow-text">{{ detail_nama_barang }}</h4> {{ detail_nama_kategori }}
-                                    <hr>
-                                    <!--Price-->
-                                    <div class="price">
-                                        <p><span class="price-after">Rp. {{ detail_harga }}</span></p>
-                                    </div>
-
-                                    <hr>
-
-                                    <h4 class="yellow-text">Keterangan</h4>
-                                    <hr>
-                                    <p>{{ detail_keterangan }}</p>
-                                    <br>
-
-                                </div>
-                                <!--/.Second column-->
-                            </div>
-                        </div>
-                        <!--/.Grid-->
-
-                    </div>
-                    <!--Footer-->
-                    <div class="modal-footer">
-                        <a class="btn btn-default">Ask about details</a>
-                        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-                    </div>
-                </div>
-                <!--/.Content-->
+      <!-- Modal -->
+      <div class="modal fade ql-modal" id="detailBarang" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <!--Content-->
+          <div class="modal-content">
+            <!--Header-->
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+              <h4 class="modal-title" id="myModalLabel">{{ detail_nama_barang }}</h4>
             </div>
+            <!--Body-->
+            <div class="modal-body">
+              <!--Grid-->
+              <div class="container-fluid">
+                <div class="row">
+
+                  <!--First column-->
+                  <div class="col-md-3">
+                    <h4>Galeri</h4>
+                    <hr>
+                    <!--Carousel Wrapper-->
+                    <div id="carousel-example-1" class="carousel slide carousel-fade" data-ride="carousel">
+
+                      <!--Slides-->
+                      <div class="carousel-inner" role="listbox">
+                        <div class="carousel-item active">
+                          <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/img%20(13).jpg" alt="First slide">
+                        </div>
+                        <div class="carousel-item">
+                          <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/img%20(15).jpg" alt="Second slide">
+                        </div>
+                        <div class="carousel-item">
+                          <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/img%20(16).jpg" alt="Third slide">
+                        </div>
+                      </div>
+                      <!--/.Slides-->
+
+                      <!--Controls-->
+                      <a class="left carousel-control" href="#carousel-example-1" role="button" data-slide="prev">
+                        <span class="icon-prev" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                      </a>
+                      <a class="right carousel-control" href="#carousel-example-1" role="button" data-slide="next">
+                        <span class="icon-next" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                      </a>
+                      <!--/.Controls-->
+                    </div>
+                    <!--/.Carousel Wrapper-->
+                  </div>
+                  <!--/.First column-->
+
+                  <!--Second column-->
+                  <div class="col-md-4">
+                    <!--Title-->
+                    <h4>Informasi Produk</h4>
+                    <hr>
+
+                    <h1 class="yellow-text">{{ detail_nama_barang }}</h1>
+
+                    <!--Price-->
+                    <div class="price">
+                      <p><span class="price-after">Rp. {{ detail_harga }}</span></p>
+                      <!-- <span class="label">-20%</span> -->
+                    </div>
+
+                    <div class="chip yellow darken-2 white-text">
+                      {{ detail_nama_kategori }}
+                    </div>
+
+                  </div>
+                  <!--/.Second column-->
+
+                  <!--Third column-->
+                  <div class="col-md-5">
+                    <h4>Penjelasan Produk</h4>
+                    <hr>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit est, ex nulla voluptates eaque aperiam repudiandae consectetur quae quod.</p>
+                    <br>
+                  </div>
+                  <!--/.Third column-->
+                </div>
+              </div>
+              <!--/.Grid-->
+
+            </div>
+            <!--Footer-->
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-dismiss="modal">Keluar</button>
+            </div>
+          </div>
+          <!--/.Content-->
         </div>
-        <!--/Modal-->
+      </div>
+      <!--/Modal-->
+
+
 
       <!-- Modal Detail Barang  -->
 
@@ -278,16 +296,16 @@
               </div>
             </div>
 
+          </div>
+          <!-- List item -->
+
+
+        </div>
+
+      </div>
+
     </div>
-    <!-- List item -->
-
-
-  </div>
-
-</div>
-
-</div>
-</section>
+  </section>
 
 </div>
 </main>
