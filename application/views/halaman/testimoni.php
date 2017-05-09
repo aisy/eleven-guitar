@@ -64,22 +64,18 @@
     <table id="" class="table" cellspacing="0" width="100%">
       <thead>
         <tr>
-          <th>No.</th>
-          <th>Nama</th>
-          <th>icon</th>
           <th>caption</th>
           <th>Warna</th>
           <th>pilihan</th>
         </tr>
       </thead>
       <tbody>
+        <?php foreach ($litestimoni as $key) { ?>
         <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td><?= $key->nama_user ?></td>
+          <td><?= $key->isi_testimoni ?></td>
         </tr>
+        <?php } ?>
       </tbody>
     </table>
 

@@ -11,6 +11,8 @@ class Testimoni extends Admin_Controller{
 
   public function index(){
     $data['testimoni'] = $this->Model_ktestimoni->get();
+    $data['litestimoni'] = $this->Model_litestimoni->get();
+    print_r($data['litestimoni']);
 
     $data['content'] = $this->load->view('halaman/testimoni', $data, true);
 
@@ -32,7 +34,6 @@ class Testimoni extends Admin_Controller{
     $data['testimoni'] = $this->Model_ktestimoni->select_byid($id);
 
     $data['content'] = $this->load->view('halaman/testimoni_edit', $data, true);
-    print_r($data['testimoni']);
 
     $this->load->view('template', $data);
   }
