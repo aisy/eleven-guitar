@@ -4,29 +4,35 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Model_ktestimoni extends CI_Model {
 
 	public function get(){
-		$data = $this->db->get('konten_testimoni');
-		return $data->result();
+		$query = $this->db->get('konten_testimoni');
+
+		if ($query->num_rows() == 1)
+		{
+			return $query->first_row();
+		}
+		else
+		{
+			return false;
+		}
 	}
 
-	public function tambah($nama_file){
+	public function tambah(){
 		$object = array(
-			'id_ktestimoni'=> NULL,
-			'nama_section' 	=> $this->input->post('nama_section'),
-			'judul_section' => $this->input->post('judul_section'),
-			'isi_section' 	=> $this->input->post('isi_section')
+			'id_ktestimoni'   => NULL,
+			'judul_testimoni' => $this->input->post('judul_testimoni'),
+			'caption' 	      => $this->input->post('caption')
 		);
 
 		$this->db->insert('konten_testimoni', $object);
 	}
 
-	public function data_edit($id){
-		$this->db->where('id_ktestimoni', $id);
-		$data = $this->db->get('konten_testimoni');
+	public function edit($id){
+		$data = array(
+			'id_ktestimoni'   => NULL,
+			'judul_testimoni' => $this->input->post('judul_testimoni'),
+			'caption' 	      => $this->input->post('caption')
+		);
 
-		return $data->first_row();
-	}
-
-	public function edit($data, $id){
 		$this->db->where('id_ktestimoni', $id);
 		$this->db->update('konten_testimoni',$data);
 	}
@@ -37,10 +43,8 @@ class Model_ktestimoni extends CI_Model {
 	}
 
 	public function select_byid($id){
-		$this->db->from('konten_testimoni');
-		$this->db->join('konten_testimoni_kategori', 'konten_testimoni.id_kategori = konten_testimoni_kategori.id_kategori');
-		$this->db->where('konten_testimoni.id_ktestimoni', $id);
-		$query = $this->db->get();
+		$this->db->where('id_ktestimoni', $id);
+		$query = $this->db->get('konten_testimoni');
 
 		if ($query->num_rows() == 1)
 		{

@@ -78,11 +78,18 @@ $route['admin/barang/hapus/(:num)']        = 'Barang/hapus/$1';
 $route['barang/api/(:any)/(:any)'] = 'ServiceBarang/getBarangPage/$1/$2';
 $route['barang/api']               = 'ServiceBarang/getBarang';
 
-
 // =============================================================================
 // Pembayaran
 // =============================================================================
 $route['admin/pembayaran']          = 'halaman/Pembayaran';
+
+// =============================================================================
+// Testimoni
+// =============================================================================
+$route['admin/testimoni']              = 'halaman/Testimoni';
+$route['admin/testimoni/tambah']		   = 'halaman/Testimoni/tambah';
+$route['admin/testimoni/edit/(:num)']  = 'halaman/Testimoni/edit/$1';
+$route['admin/testimoni/hapus/(:num)'] = 'halaman/Testimoni/hapus/$1';
 
 // =============================================================================
 // Tentang kami
